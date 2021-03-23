@@ -1,0 +1,12 @@
+{
+  "name": "aga-nash-app",
+  "displayName": "aga-nash-app",
+  "expo": {
+    "name": "aga-nash-app",
+    "slug": "aga-nash-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
