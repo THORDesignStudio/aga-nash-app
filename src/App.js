@@ -11,9 +11,12 @@ export default function App() {
         <View style={styles.borderBottom} > 
         <Text style={styles.nash}>NASH</Text>
         </View>
-        <Text style={styles.goldText}>This app helps primary care physicians, endrinologists and gastroenterologists</Text><Text>
-          screen for NAFLD with advanced fibrosis, manage patients at risk for NAFLD/NASH, know when to refer to a hepatologist.
+        <Text style={styles.goldText}>This app helps primary care physicians, endrinologists and gastroenterologists</Text><Text style={styles.splashText}>
+          screen for NAFLD with advanced fibrosis, manage patients at risk for NAFLD/NASH, know when to refer to a hepatologist
         </Text>
+      </View>
+      <View style={styles.begin}> 
+      <Text style={styles.beginText}>BEGIN</Text>
       </View>
     </View>
     <Footer />
@@ -29,16 +32,19 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   box:{
-    flex: .5,
-    backgroundColor: 'rgba(20,16,26,0.3)',
+    flex: .45,
+    backgroundColor: 'rgba(255,255,255,0.8)',
     marginEnd: 50,
     marginStart: 50,
   },
   nash:{
-    fontSize: 72,
+    fontSize: 64,
     marginStart: 20,
     marginEnd:20,
+    marginBottom: 20,
+    marginTop: 20,
     fontWeight: '700',
+    textAlign: "center",
   },
   borderBottom:{
     borderBottomColor: 'black',
@@ -47,6 +53,26 @@ const styles = StyleSheet.create({
     marginStart: 20,
   },
   goldText:{
+    color: "#faa61a",
+    textAlign: "center",
+    fontSize: 16,
+    fontWeight: '500',
+    marginTop: 25,
+    marginEnd: 10,
+    marginStart: 10,
+  },
+  splashText:{
+    textAlign: 'center',
+    fontSize: 16,
+    marginEnd: 10,
+    marginStart: 10,
+    fontWeight: '500',
+  },
+  begin:{
+    marginTop: 20,
+  },
+  beginText:{
+    fontSize: 20,
     color: 'white',
   }
 });
