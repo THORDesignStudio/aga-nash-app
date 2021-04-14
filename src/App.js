@@ -59,10 +59,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   box: {
-    flex: 0.45,
+    flex: 0.75,
     backgroundColor: "rgba(255,255,255,0.8)",
-    paddingBottom: 150,
     marginHorizontal: 50,
+    justifyContent: 'space-evenly',
   },
   nash: {
     fontSize: 64,
