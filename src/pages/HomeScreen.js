@@ -9,7 +9,7 @@ import {
 import Footer from "../components/global/footer";
 import Banner from '../components/global/banner'
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   return (
     <>
       <View style={styles.container}>
@@ -42,7 +42,7 @@ export default function HomeScreen() {
           </View>
           
           <View style={styles.riskContainer}>
-            <TouchableOpacity style={styles.risk}>
+            <TouchableOpacity style={styles.risk} onPress={() => navigation.navigate('Conditions')}>
               <Text style={styles.riskText}>CALCULATE RISK</Text>
             </TouchableOpacity>
           </View>
