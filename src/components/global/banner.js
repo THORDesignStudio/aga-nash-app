@@ -19,5 +19,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     height: 100,
-  }
+  },
+  img: {
+    resizeMode: "contain",
+    width: 300,
+  },
 });
