@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, ImageBackground, PixelRatio } from "react-native";
 import Footer from "../components/global/footer";
 import Banner from "../components/global/banner";
-import Button from "../components/global/button";
+import Button from "../components/primitives/button";
 
 export default function HomeScreen({ navigation }) {
   return (

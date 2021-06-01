@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import SectionsIcon from "../../assets/images/sectionsIcon";
-import OnlineIcon from "../../assets/images/onlineIcon";
-import ShareIcon from "../../assets/images/shareIcon";
+import NavigateIcon from "../../assets/images/NAVIGATE"
+import SourcesIcon from '../../assets/images/SOURCES'
+import AboutIcon from '../../assets/images/ABOUT'
 
 export default function NashFooter() {
   return (
@@ -10,21 +10,21 @@ export default function NashFooter() {
       <View style={styles.iconContainer}>
         <View style={styles.sectionView}>
           <TouchableOpacity>
-            <SectionsIcon />
+            <NavigateIcon />
           </TouchableOpacity>
-          <Text style={styles.iconText}>Sections</Text>
+          <Text style={styles.iconText}>Navigate</Text>
         </View>
         <View style={styles.onlineView}>
           <TouchableOpacity>
-            <OnlineIcon />
+            <SourcesIcon />
           </TouchableOpacity>
-          <Text style={styles.iconText}>Online</Text>
+          <Text style={styles.iconText}>Sources</Text>
         </View>
         <View style={styles.shareView}>
           <TouchableOpacity>
-            <ShareIcon />
+            <AboutIcon />
           </TouchableOpacity>
-          <Text style={styles.iconText}>Share</Text>
+          <Text style={styles.iconText}>About</Text>
         </View>
       </View>
     </>
@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
   iconText: {
     color: "white",
     fontSize: 12,
-    marginTop: -20,
     textAlign: "center",
   },
   sectionView: {
