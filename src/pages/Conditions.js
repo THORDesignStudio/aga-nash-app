@@ -1,12 +1,18 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import {
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  TouchableWithoutFeedback,
+} from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
 import LowRisk from "../assets/images/lowRisk";
-import IndeterminateRisk from '../assets/images/indeterminateRisk'
-import HighRiskDial from '../assets/images/highRisk'
+import IndeterminateRisk from "../assets/images/indeterminateRisk";
+import HighRiskDial from "../assets/images/highRisk";
 
 export default function Conditions({ navigation }) {
   return (
