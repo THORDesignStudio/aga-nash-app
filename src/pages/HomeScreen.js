@@ -1,8 +1,16 @@
 import React from "react";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, PixelRatio } from "react-native";
 import Footer from "../components/global/footer";
 import Banner from "../components/global/banner";
-import Button from "../components/global/button";
+import Button from "../components/primitives/button";
+import styled from 'styled-components/native'
+
+const Header = styled.Text`
+    fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};
+    marginHorizontal: 20px;
+    fontWeight: 700;
+    textAlign: center;
+`
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -14,9 +22,9 @@ export default function HomeScreen({ navigation }) {
         >
           <View style={styles.box}>
             <View>
-              <Text style={styles.nash}>
+              <Header>
                 NONALCOHOLIC FATTY LIVER DISEASE (NASH)
-              </Text>
+              </Header>
             </View>
             <View style={styles.criticalCareContainer}>
               <Text style={styles.criticalCareText}>
@@ -58,12 +66,6 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,0.8)",
     marginHorizontal: 50,
     justifyContent: "space-evenly",
-  },
-  nash: {
-    fontSize: 32,
-    marginHorizontal: 20,
-    fontWeight: "700",
-    textAlign: "center",
   },
   criticalCareContainer: {
     borderBottomColor: "black",

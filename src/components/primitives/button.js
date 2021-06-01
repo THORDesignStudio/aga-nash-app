@@ -4,7 +4,7 @@ import styled from "styled-components/native";
 const ButtonView = styled.View`
   alignItems: center;
   justifyContent: center;
-  height: 100;
+  height: 110;
 `;
 
 const ButtonOpacity = styled.TouchableOpacity`
@@ -20,10 +20,10 @@ const ButtonOpacity = styled.TouchableOpacity`
 
 const ButtonText = styled.Text`
   fontSize: 20;
-  fontWeight: 700;
+  fontWeight: 500;
   color: ${(props) => props.textClr || 'black'};
   textAlign: center;
-  marginVertical: 10;
+  marginVertical: 15;
 `;
 
 export default function HomeScreen({
