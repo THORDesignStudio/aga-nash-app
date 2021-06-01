@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, PixelRatio } from "react-native";
 import Footer from "../components/global/footer";
 import Banner from "../components/global/banner";
 import Button from "../components/global/button";
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   nash: {
-    fontSize: 32,
+    fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
     marginHorizontal: 20,
     fontWeight: "700",
     textAlign: "center",
