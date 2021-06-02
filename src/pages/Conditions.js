@@ -10,9 +10,7 @@ import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
-import LowRisk from "../assets/images/lowRisk";
-import IndeterminateRisk from "../assets/images/indeterminateRisk";
-import HighRiskDial from "../assets/images/highRisk";
+import Radio from "../components/primitives/radio";
 
 export default function Conditions({ navigation }) {
   return (
@@ -33,6 +31,7 @@ export default function Conditions({ navigation }) {
             <TouchableOpacity></TouchableOpacity>
           </View>
         </View>
+        <Radio label="Hello World" onPress={() => {alert("Hello")}} />
       </View>
       <NextBack backOnpress={() => navigation.goBack()} />
       <Pearls />
