@@ -42,15 +42,10 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate("Conditions")}
             textClr="#faa61a"
           />
-          {/* <View style={styles.riskContainer}>
-            <TouchableOpacity style={styles.risk} onPress={() => navigation.navigate('Conditions')}>
-              <Text style={styles.riskText}>LOW RISK NASH MANAGEMENT</Text>
-            </TouchableOpacity>
-          </View> */}
         </ImageBackground>
       </View>
       <Banner />
-      <Footer />
+      <Footer navigation={navigation}/>
     </>
   );
 }

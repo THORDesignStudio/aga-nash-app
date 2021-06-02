@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import NavigateIcon from "../../assets/images/NAVIGATE"
-import SourcesIcon from '../../assets/images/SOURCES'
-import AboutIcon from '../../assets/images/ABOUT'
+import NavigateIcon from "../../assets/images/NAVIGATE";
+import SourcesIcon from "../../assets/images/SOURCES";
+import AboutIcon from "../../assets/images/ABOUT";
 
-export default function NashFooter() {
+export default function NashFooter({ navigation }) {
   return (
     <>
       <View style={styles.iconContainer}>
@@ -15,13 +15,13 @@ export default function NashFooter() {
           <Text style={styles.iconText}>Navigate</Text>
         </View>
         <View style={styles.onlineView}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Sources")} >
             <SourcesIcon />
           </TouchableOpacity>
           <Text style={styles.iconText}>Sources</Text>
         </View>
         <View style={styles.shareView}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("About")}>
             <AboutIcon />
           </TouchableOpacity>
           <Text style={styles.iconText}>About</Text>
