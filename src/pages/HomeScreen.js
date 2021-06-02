@@ -1,16 +1,22 @@
 import React from "react";
-import { Text, View, StyleSheet, ImageBackground, PixelRatio } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  ImageBackground,
+  PixelRatio,
+} from "react-native";
 import Footer from "../components/global/footer";
 import Banner from "../components/global/banner";
 import Button from "../components/primitives/button";
-import styled from 'styled-components/native'
+import styled from "styled-components/native";
 
 const Header = styled.Text`
-    fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};
-    marginHorizontal: 20px;
-    fontWeight: 700;
-    textAlign: center;
-`
+  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};
+  marginHorizontal: 20px;
+  fontWeight: 700;
+  textAlign: center;
+`;
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -22,9 +28,7 @@ export default function HomeScreen({ navigation }) {
         >
           <View style={styles.box}>
             <View>
-              <Header>
-                NONALCOHOLIC FATTY LIVER DISEASE (NASH)
-              </Header>
+              <Header>NONALCOHOLIC FATTY LIVER DISEASE (NASH)</Header>
             </View>
             <View style={styles.criticalCareContainer}>
               <Text style={styles.criticalCareText}>
@@ -39,13 +43,14 @@ export default function HomeScreen({ navigation }) {
           </View>
           <Button
             buttonText="START"
-            onPress={() => navigation.navigate("Conditions")}
+            onPress={() => navigation.navigate("Navigate")}
             textClr="#faa61a"
+            marginTop='20'
           />
         </ImageBackground>
       </View>
       <Banner />
-      <Footer navigation={navigation}/>
+      <Footer navigation={navigation} />
     </>
   );
 }

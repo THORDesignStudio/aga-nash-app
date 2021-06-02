@@ -23,7 +23,7 @@ export default function AbbreviationsFootnotes (){
 
 const styles = StyleSheet.create({
   container:{
-    backgroundColor: 'grey',
+    backgroundColor: '#676767',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     height: 50,

@@ -31,11 +31,10 @@ export default function Conditions({ navigation }) {
             <TouchableOpacity></TouchableOpacity>
           </View>
         </View>
-        <Radio label="Hello World" onPress={() => {alert("Hello")}} />
       </View>
       <NextBack backOnpress={() => navigation.goBack()} />
       <Pearls />
-      <Footer />
+      <Footer navigation={navigation}/>
     </>
   );
 }
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   conditions: {
-    flex: 0.6,
+    flex: 1,
     justifyContent: "space-evenly",
   },
   singleCondition: {

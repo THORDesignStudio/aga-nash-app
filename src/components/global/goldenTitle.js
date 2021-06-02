@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components/native";
 
 const Header = styled.View`
-  flex: .6;
+  flex: ${(props) => props.flex || .6};
   justifyContent: center;
   alignItems: center;
 `;
@@ -14,9 +14,9 @@ const Background = styled.ImageBackground`
   alignItems: center;
 `;
 
-export default function GoldenTitle({ children }) {
+export default function GoldenTitle({ children, flex }) {
   return (
-    <Header>
+    <Header flex={flex}>
       <Background source={require("../../assets/images/NASH_bkgd.png")}>
         {children}
       </Background>

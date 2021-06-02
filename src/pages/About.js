@@ -3,13 +3,10 @@ import styled from "styled-components/native";
 import GoldenTitle from "../components/global/goldenTitle";
 import Banner from "../components/global/banner";
 import Footer from "../components/global/footer";
+import ScrollableView from '../components/global/scrollableContainer'
 import { PixelRatio, Text } from "react-native";
 
-const Container = styled.ScrollView`
-  flex: 1;
-  display: flex;
-  marginVertical: 20;
-`;
+
 
 const HeaderTextContainer = styled.View`
   flex: 0.6;
@@ -19,12 +16,6 @@ const HeaderTextContainer = styled.View`
   justifyContent: space-evenly;
 `;
 
-const style = {
-  wrapper: {
-    justifyContent: "flex-start",
-    alignItems: "center",
-  },
-};
 
 const Title = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(16)};
@@ -44,7 +35,7 @@ export default function About({ navigation }) {
           <Title>ABOUT</Title>
         </HeaderTextContainer>
       </GoldenTitle>
-      <Container contentContainerStyle={style.wrapper}>
+      <ScrollableView>
         <Paragraph>
           Non-alcoholic fatty liver disease (NAFLD) currently affects
           approximately 37% of U.S. adults.
@@ -80,7 +71,7 @@ export default function About({ navigation }) {
           from Intercept Pharmaceuticals, Inc., Pfizer Inc., Allergan and
           Genfit.
         </Paragraph>
-      </Container>
+        </ScrollableView>
       <Banner />
       <Footer navigation={navigation} />
     </>
