@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 import GoldenTitle from "../components/global/goldenTitle";
 import Banner from "../components/global/banner";
 import Footer from "../components/global/footer";
-import ScrollableView from '../components/global/scrollableContainer'
+import ScrollableView from '../components/primitives/scrollableContainer'
 import { PixelRatio, Text } from "react-native";
 
 
@@ -72,7 +72,6 @@ export default function About({ navigation }) {
           Genfit.
         </Paragraph>
         </ScrollableView>
-      <Banner />
       <Footer navigation={navigation} />
     </>
   );

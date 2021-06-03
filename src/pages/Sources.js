@@ -38,7 +38,7 @@ const Paragraph = styled.Text`
 export default function About({ navigation }) {
   return (
     <>
-      <GoldenTitle flex={.5} >
+      <GoldenTitle>
         <HeaderTextContainer>
           <Title>SOURCES</Title>
         </HeaderTextContainer>

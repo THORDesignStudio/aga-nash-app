@@ -12,10 +12,10 @@ const ButtonOpacity = styled.TouchableOpacity`
   flex: 1;
   backgroundColor: ${(props) => props.buttonBgClr || 'white'};
   width: 250;
-  borderStyle: solid;
+  borderStyle: ${(props) => props.borderStyle || 'solid'};
   borderColor: black;
-  borderWidth: 1;
-  borderRadius: 20;
+  borderWidth: ${(props) => props.borderWidth || 1 };
+  borderRadius: ${(props) => props.borderRadius || 20};
   justifyContent: center;
   alignItems: center;
 `;
@@ -44,11 +44,14 @@ export default function HomeScreen({
   fontSize,
   buttonHeight,
   marginTop,
+  borderRadius,
+  borderWidth,
+  borderStyle
 }) {
   return (
     <>
       <ButtonView buttonHeight={buttonHeight} marginTop={marginTop}>
-        <ButtonOpacity buttonBgClr={buttonBgClr} onPress={onPress}>
+        <ButtonOpacity buttonBgClr={buttonBgClr} onPress={onPress} borderRadius={borderRadius} borderWidth={borderWidth} borderStyle={borderStyle}>
           <TextContianer width={textWidth} >
           <ButtonText textClr={textClr} fontSize={fontSize}>{buttonText}</ButtonText>
           </TextContianer>

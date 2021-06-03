@@ -9,6 +9,7 @@ import {
 import Footer from "../components/global/footer";
 import Banner from "../components/global/banner";
 import Button from "../components/primitives/button";
+import Container from '../components/primitives/container'
 import styled from "styled-components/native";
 
 const Header = styled.Text`
@@ -19,9 +20,21 @@ const Header = styled.Text`
 `;
 
 export default function HomeScreen({ navigation }) {
+
+  // React.useLayoutEffect(() => {
+  //   navigation.setOptions({
+  //     headerTitle: (props) => (
+  //       <Banner />
+  //     ),
+  //     headerStyle: {
+  //       backgroundColor: '#f4511e', //Set Header color
+  //     },
+  //   });
+  // }, [navigation]);
+
   return (
     <>
-      <View style={styles.container}>
+      <Container>
         <ImageBackground
           source={require("../assets/images/NASH_bkgd.png")}
           style={styles.background}
@@ -46,9 +59,10 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate("Navigate")}
             textClr="#faa61a"
             marginTop='20'
+            borderStyle='solid'
           />
         </ImageBackground>
-      </View>
+        </Container>
       <Banner />
       <Footer navigation={navigation} />
     </>
@@ -56,11 +70,6 @@ export default function HomeScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
   box: {
     flex: 0.75,
     backgroundColor: "rgba(255,255,255,0.8)",

@@ -9,7 +9,7 @@ export default function NashFooter({ navigation }) {
     <>
       <View style={styles.iconContainer}>
         <View style={styles.sectionView}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Navigate")}>
             <NavigateIcon />
           </TouchableOpacity>
           <Text style={styles.iconText}>Navigate</Text>
