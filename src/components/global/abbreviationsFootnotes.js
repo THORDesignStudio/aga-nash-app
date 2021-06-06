@@ -1,7 +1,7 @@
 import React from 'react'
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 
-export default function AbbreviationsFootnotes (){
+export default function AbbreviationsFootnotes ({navigation}){
   return(
     <View style={styles.container}>
       <TouchableOpacity>
@@ -12,7 +12,7 @@ export default function AbbreviationsFootnotes (){
       <Text style={styles.text}>
         |
       </Text>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Footnotes")} > 
       <Text style={styles.text}>
         FOOTNOTES
       </Text>

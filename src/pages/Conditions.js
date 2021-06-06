@@ -4,15 +4,19 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
-  TouchableWithoutFeedback,
 } from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
-import Radio from "../components/primitives/radio";
+import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from "@expo-google-fonts/nunito-sans";
 
 export default function Conditions({ navigation }) {
+
+  let [fontsLoaded] = useFonts({
+    NunitoSans_700Bold,
+  });
+
   return (
     <>
       <View style={styles.container}>
@@ -20,20 +24,17 @@ export default function Conditions({ navigation }) {
         <View style={styles.conditions}>
           <View style={styles.singleCondition}>
             <Text style={styles.text}>Two or more metabollic risk factors</Text>
-            <TouchableOpacity></TouchableOpacity>
           </View>
           <View style={styles.singleCondition}>
             <Text style={styles.text}>Type 2 diabetes</Text>
-            <TouchableOpacity></TouchableOpacity>
           </View>
           <View style={styles.singleCondition}>
             <Text style={styles.text}>Steatosis on any imaging modality</Text>
-            <TouchableOpacity></TouchableOpacity>
           </View>
         </View>
       </View>
       <NextBack backOnpress={() => navigation.goBack()} />
-      <Pearls />
+      <Pearls navigation={navigation} />
       <Footer navigation={navigation}/>
     </>
   );

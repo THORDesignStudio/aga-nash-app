@@ -1,18 +1,19 @@
-import React from 'react'
-import { Text, StyleSheet} from 'react-native'
+import React from "react";
+import { Text, StyleSheet } from "react-native";
+import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from "@expo-google-fonts/nunito-sans";
+import styled from 'styled-components'
 
-export default function PageTitle ({pageTitle}){
-  return(
-      <Text style={styles.title}>
-        {pageTitle}
-      </Text>
-  )
+const Title = styled.Text`
+ fontSize: 20;
+ fontFamily: NunitoSans_700Bold;
+`
+
+export default function PageTitle({ pageTitle }) {
+  let [fontsLoaded] = useFonts({
+    NunitoSans_700Bold,
+  });
+
+  return <Title>{pageTitle}</Title>;
 }
 
-const styles = StyleSheet.create({
-  title:{
-    fontWeight:"700",
-    fontSize: 20,
-    color: "black",
-  }
-})
+
