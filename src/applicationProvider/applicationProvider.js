@@ -1,9 +1,10 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 export const ApplicationContext = createContext();
 
 export default function ApplicationProvider({ children }) {
-  const value = {};
+  const [pageId, setPageId] = useState('')
+  const value = {pageId, setPageId};
 
   return (
     <ApplicationContext.Provider value={value}>

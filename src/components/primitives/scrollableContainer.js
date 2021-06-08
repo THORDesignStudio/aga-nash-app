@@ -10,7 +10,6 @@ const Container = styled.ScrollView`
 const style = {
   wrapper: {
     justifyContent: "flex-start",
-    alignItems: "center",
   },
 };
 

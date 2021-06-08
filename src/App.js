@@ -7,8 +7,8 @@ import About from "./pages/About";
 import Sources from "./pages/Sources";
 import Navigate from "./pages/Navigate";
 import Footnotes from "./pages/Footnotes";
+import Abbreviations from './pages/Abbreviations'
 import ApplicationProvider from "./applicationProvider/applicationProvider";
-import { ImageBackground } from "react-native";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +24,7 @@ export default function App() {
           <Stack.Screen name="Sources" component={Sources} />
           <Stack.Screen name="Navigate" component={Navigate} />
           <Stack.Screen name="Footnotes" component={Footnotes} />
+          <Stack.Screen name ='Abbreviations' component={Abbreviations} />
         </Stack.Navigator>
       </NavigationContainer>
     </ApplicationProvider>

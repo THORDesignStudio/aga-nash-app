@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext,useEffect} from "react";
 import {
   View,
   StyleSheet,
@@ -11,6 +11,7 @@ import NextBack from "../components/global/nextBackButtons";
 import {useFonts} from 'expo-font'
 import styled from 'styled-components'
 import {PixelRatio} from 'react-native'
+import {ApplicationContext} from '../applicationProvider/applicationProvider'
 
 const Condition = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(10)};
@@ -19,6 +20,9 @@ const Condition = styled.Text`
 `
 
 export default function Conditions({ navigation }) {
+  const {setPageId} = useContext(ApplicationContext)
+
+    setPageId('Conditions');
 
   let [fontsLoaded] = useFonts({
     'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),

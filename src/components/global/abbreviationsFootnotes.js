@@ -10,7 +10,7 @@ export default function AbbreviationsFootnotes ({navigation}){
 
   return(
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Abbreviations")}>
       <Text style={styles.text}>
         ABBREVIATIONS
       </Text>
