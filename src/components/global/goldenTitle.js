@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components/native";
 
 const Header = styled.View`
-  flex: ${(props) => props.flex || .25};
-  justifyContent: flex-start ;
+  flex: ${(props) => props.flex || .4};
+  justifyContent: flex-start;
 `;
 
 const Background = styled.ImageBackground`

@@ -5,6 +5,7 @@ import Footer from "../components/global/footer";
 import Button from "../components/primitives/button";
 import Container from "../components/primitives/container";
 import { PixelRatio } from "react-native";
+import {useFonts} from 'expo-font'
 
 const SectionContainer = styled.View`
   flexDirection: column;
@@ -19,6 +20,7 @@ const TextContainer = styled.View`
 
 const SectionText = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(10)};
+  fontFamily: 'NunitoSans-Bold';
 `;
 const ButtonContainer = styled.View`
   alignItems: center;
@@ -27,6 +29,12 @@ const ButtonContainer = styled.View`
 `;
 
 export default function Navigate({ navigation }) {
+
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
+    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+  });
+
   return (
     <>
       <GoldenTitle>

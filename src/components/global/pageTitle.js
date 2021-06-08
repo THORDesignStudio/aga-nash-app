@@ -1,16 +1,15 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
-import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from "@expo-google-fonts/nunito-sans";
+import { useFonts } from "expo-font";
 import styled from 'styled-components'
 
 const Title = styled.Text`
  fontSize: 20;
- fontFamily: NunitoSans_700Bold;
+ fontFamily: 'NunitoSans-Bold';
 `
 
 export default function PageTitle({ pageTitle }) {
   let [fontsLoaded] = useFonts({
-    NunitoSans_700Bold,
+    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
   });
 
   return <Title>{pageTitle}</Title>;

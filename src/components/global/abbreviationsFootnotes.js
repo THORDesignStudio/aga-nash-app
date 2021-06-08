@@ -1,7 +1,13 @@
 import React from 'react'
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
+import {useFonts} from 'expo-font'
 
 export default function AbbreviationsFootnotes ({navigation}){
+
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
+  });
+
   return(
     <View style={styles.container}>
       <TouchableOpacity>
@@ -31,5 +37,6 @@ const styles = StyleSheet.create({
   },
   text:{
     color: "white",
+    fontFamily: 'NunitoSans-Regular',
   }
 })

@@ -9,28 +9,24 @@ import {
 import Footer from "../components/global/footer";
 import Banner from "../components/global/banner";
 import Button from "../components/primitives/button";
-import Container from '../components/primitives/container'
+import Container from "../components/primitives/container";
 import styled from "styled-components/native";
+import {useFonts} from 'expo-font'
 
 const Header = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};
+  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(13)};
   marginHorizontal: 20px;
   fontWeight: 700;
   textAlign: center;
+  fontFamily: 'NunitoSans-Bold';
 `;
 
 export default function HomeScreen({ navigation }) {
-
-  // React.useLayoutEffect(() => {
-  //   navigation.setOptions({
-  //     headerTitle: (props) => (
-  //       <Banner />
-  //     ),
-  //     headerStyle: {
-  //       backgroundColor: '#f4511e', //Set Header color
-  //     },
-  //   });
-  // }, [navigation]);
+  
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
+    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+  });
 
   return (
     <>
@@ -58,11 +54,11 @@ export default function HomeScreen({ navigation }) {
             buttonText="START"
             onPress={() => navigation.navigate("Navigate")}
             textClr="#faa61a"
-            marginTop='20'
-            borderStyle='solid'
+            marginTop="20"
+            borderStyle="solid"
           />
         </ImageBackground>
-        </Container>
+      </Container>
       <Banner />
       <Footer navigation={navigation} />
     </>
@@ -87,27 +83,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginHorizontal: 15,
     fontWeight: "500",
+    fontFamily: 'NunitoSans-Regular',
   },
   riskContainer: {
     alignItems: "center",
     justifyContent: "center",
-  },
-  risk: {
-    marginVertical: 25,
-    backgroundColor: "white",
-    width: 250,
-    borderStyle: "solid",
-    borderColor: "black",
-    borderWidth: 1,
-    borderRadius: 20,
-    height: 75,
-  },
-  riskText: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#faa61a",
-    textAlign: "center",
-    marginVertical: 10,
   },
   background: {
     flex: 1,
@@ -121,5 +101,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     marginVertical: 10,
     color: "#faa61a",
+    fontFamily: 'NunitoSans-Regular'
   },
 });

@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components/native";
 import GoldenTitle from "../components/global/goldenTitle";
-import Banner from "../components/global/banner";
 import Footer from "../components/global/footer";
 import ScrollableView from '../components/primitives/scrollableContainer'
-import { PixelRatio, Text } from "react-native";
-
+import { PixelRatio } from "react-native";
+import {useFonts} from 'expo-font'
 
 
 const HeaderTextContainer = styled.View`
-  flex: 0.6;
+  flex: 0.4;
   width: 75%;
   backgroundColor: rgba(255, 255, 255, 0.8);
   marginHorizontal: 50;
@@ -20,14 +19,23 @@ const HeaderTextContainer = styled.View`
 const Title = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(16)};
   textAlign: center;
+  fontFamily: 'NunitoSans-Bold';
 `;
 
 const Paragraph = styled.Text`
+  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};
   marginHorizontal: 20;
   marginBottom: 10;
+  fontFamily: 'NunitoSans-Regular';
 `;
 
 export default function About({ navigation }) {
+
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
+    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+  });
+
   return (
     <>
       <GoldenTitle>
@@ -36,7 +44,7 @@ export default function About({ navigation }) {
         </HeaderTextContainer>
       </GoldenTitle>
       <ScrollableView>
-        <Paragraph>
+        <Paragraph >
           Non-alcoholic fatty liver disease (NAFLD) currently affects
           approximately 37% of U.S. adults.
         </Paragraph>

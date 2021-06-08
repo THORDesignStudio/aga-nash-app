@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-
+import {useFonts} from 'expo-font'
 const ButtonView = styled.View`
   alignItems: center;
   justifyContent: center;
@@ -33,6 +33,7 @@ const ButtonText = styled.Text`
   textAlign: center;
   justifyContent: center;
   alignItems: center;
+  fontFamily: 'NunitoSans-Regular'
 `;
 
 export default function HomeScreen({
@@ -48,6 +49,11 @@ export default function HomeScreen({
   borderWidth,
   borderStyle
 }) {
+
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
+  });
+
   return (
     <>
       <ButtonView buttonHeight={buttonHeight} marginTop={marginTop}>

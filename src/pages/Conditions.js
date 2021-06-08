@@ -2,19 +2,26 @@ import React from "react";
 import {
   View,
   StyleSheet,
-  TouchableOpacity,
   Text,
 } from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
-import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from "@expo-google-fonts/nunito-sans";
+import {useFonts} from 'expo-font'
+import styled from 'styled-components'
+import {PixelRatio} from 'react-native'
+
+const Condition = styled.Text`
+  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(10)};
+  paddingEnd: 2;
+  fontFamily: 'NunitoSans-Regular';
+`
 
 export default function Conditions({ navigation }) {
 
   let [fontsLoaded] = useFonts({
-    NunitoSans_700Bold,
+    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
   });
 
   return (
@@ -23,13 +30,13 @@ export default function Conditions({ navigation }) {
         <PageTitle pageTitle="Patients with these conditions are at greatest risk of advanced fibrosis related to NAFLD/NASH:" />
         <View style={styles.conditions}>
           <View style={styles.singleCondition}>
-            <Text style={styles.text}>Two or more metabollic risk factors</Text>
+            <Condition>Two or more metabollic risk factors</Condition>
           </View>
           <View style={styles.singleCondition}>
-            <Text style={styles.text}>Type 2 diabetes</Text>
+            <Condition>Type 2 diabetes</Condition>
           </View>
           <View style={styles.singleCondition}>
-            <Text style={styles.text}>Steatosis on any imaging modality</Text>
+            <Condition>Steatosis on any imaging modality</Condition>
           </View>
         </View>
       </View>
@@ -43,7 +50,7 @@ export default function Conditions({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 20,
+    paddingTop: 50,
     paddingHorizontal: 20,
   },
   conditions: {
@@ -52,9 +59,5 @@ const styles = StyleSheet.create({
   },
   singleCondition: {
     flexDirection: "row",
-  },
-  text: {
-    fontSize: 16,
-    paddingEnd: 2,
   },
 });

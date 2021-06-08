@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components/native";
 import GoldenTitle from "../components/global/goldenTitle";
 import Footer from "../components/global/footer";
-import { PixelRatio, Text } from "react-native";
+import { PixelRatio } from "react-native";
+
 
 const Container = styled.ScrollView`
   flex: 1;
@@ -36,6 +37,8 @@ const Paragraph = styled.Text`
 `;
 
 export default function About({ navigation }) {
+
+
   return (
     <>
       <GoldenTitle>

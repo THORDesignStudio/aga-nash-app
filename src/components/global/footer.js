@@ -1,10 +1,17 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, PixelRatio } from "react-native";
 import NavigateIcon from "../../assets/images/NAVIGATE";
 import SourcesIcon from "../../assets/images/SOURCES";
 import AboutIcon from "../../assets/images/ABOUT";
+import {useFonts} from 'expo-font'
 
 export default function NashFooter({ navigation }) {
+
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
+    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
+  });
+
   return (
     <>
       <View style={styles.iconContainer}>
@@ -41,8 +48,9 @@ const styles = StyleSheet.create({
   },
   iconText: {
     color: "white",
-    fontSize: 12,
+    fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
     textAlign: "center",
+    fontFamily: 'NunitoSans-Regular'
   },
   sectionView: {
     justifyContent: "center",

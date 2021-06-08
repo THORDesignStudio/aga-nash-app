@@ -5,17 +5,19 @@ import HomeScreen from "./pages/HomeScreen";
 import Conditions from "./pages/Conditions";
 import About from "./pages/About";
 import Sources from "./pages/Sources";
-import Navigate from "./pages/Navigate"
-import Footnotes from "./pages/Footnotes"
+import Navigate from "./pages/Navigate";
+import Footnotes from "./pages/Footnotes";
 import ApplicationProvider from "./applicationProvider/applicationProvider";
+import { ImageBackground } from "react-native";
 
 const Stack = createStackNavigator();
 
 export default function App() {
+
   return (
     <ApplicationProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false,}}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Conditions" component={Conditions} />
           <Stack.Screen name="About" component={About} />
