@@ -11,7 +11,7 @@ Use the package manager [yarn](https://yarnpkg.com/) to install aga-nash-app.
 yarn install
 ```
 
-In order to run the app, you'll need `expo cli` installed [expo](https://docs.expo.io/workflow/expo-cli/)
+In order to run the app, you'll need [expo cli](https://docs.expo.io/workflow/expo-cli/) installed
 
 ```bash
 yarn install expo-cli
