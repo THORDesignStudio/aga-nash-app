@@ -3,6 +3,7 @@ import styled from "styled-components/native";
 import GoldenTitle from "../components/global/goldenTitle";
 import Footer from "../components/global/footer";
 import { PixelRatio } from "react-native";
+import BackButton from '../components/global/backButton'
 
 /**
  * Sources
@@ -13,33 +14,37 @@ import { PixelRatio } from "react-native";
 const Container = styled.ScrollView`
   flex: 1;
   display: flex;
-  marginvertical: 20;
+  marginVertical: 20;
 `;
 
 const HeaderTextContainer = styled.View`
   flex: 0.6;
   width: 75%;
-  backgroundcolor: rgba(255, 255, 255, 0.8);
-  marginhorizontal: 50;
-  justifycontent: space-evenly;
+  backgroundColor: rgba(255, 255, 255, 0.8);
+  marginHorizontal: 50;
+  justifyContent: space-evenly;
 `;
 
 const style = {
   wrapper: {
-    justifyContent: "flex-start",
+    justifyContent: "flex-end",
     alignItems: "center",
   },
 };
 
 const Title = styled.Text`
-  fontsize: ${PixelRatio.getPixelSizeForLayoutSize(16)};
-  textalign: center;
+  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(16)};
+  textAlign: center;
 `;
 
 const Paragraph = styled.Text`
-  marginhorizontal: 20;
-  marginbottom: 10;
+  marginHorizontal: 20;
+  marginBottom: 10;
 `;
+
+const BackContainer = styled.View`
+  justifyContent: flex-end;
+`
 
 export default function About({ navigation }) {
   return (
@@ -49,7 +54,9 @@ export default function About({ navigation }) {
           <Title>SOURCES</Title>
         </HeaderTextContainer>
       </GoldenTitle>
-      <Container contentContainerStyle={style.wrapper}></Container>
+      <Container contentContainerStyle={style.wrapper}>
+      </Container>
+      <BackButton navigation={navigation}/>
       <Footer navigation={navigation} />
     </>
   );

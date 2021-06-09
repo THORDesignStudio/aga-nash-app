@@ -5,6 +5,7 @@ import Footer from "../components/global/footer";
 import ScrollableView from '../components/primitives/scrollableContainer'
 import { PixelRatio } from "react-native";
 import {useFonts} from 'expo-font'
+import BackButton from '../components/global/backButton'
 
 /**
  * About
@@ -87,6 +88,7 @@ export default function About({ navigation }) {
           Genfit.
         </Paragraph>
         </ScrollableView>
+        <BackButton navigation={navigation}/>
       <Footer navigation={navigation} />
     </>
   );
