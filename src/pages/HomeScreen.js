@@ -13,6 +13,14 @@ import Container from "../components/primitives/container";
 import styled from "styled-components/native";
 import {useFonts} from 'expo-font'
 
+/**
+ * Homescreen
+ * 
+ * This is the first page that users see. This takes them to the @param {page} Navigate page. 
+ * Other than that, note there's some mixture of stylesheet and styled components here. That's because I haven't
+ * gotten around to converting things yet.
+ */
+
 const Header = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(13)};
   marginHorizontal: 20px;

@@ -4,6 +4,13 @@ import NextIcon from "../../assets/images/nextIcon";
 import BackIcon from "../../assets/images/backIcon";
 import {useFonts} from 'expo-font'
 
+/**
+ * This component is used to go from one step of the path to the next, or to allow the user to move back to the last step.
+ * 
+ * @param {function} nextOnPress - this allows us to tell the next button what page is supposed to go next 
+ * @param {function}  backOnpress - this allows us to tell the back button what page is supposed to go back to
+ */
+
 export default function NextBack({ nextOnpress, backOnpress }) {
 
   let [fontsLoaded] = useFonts({

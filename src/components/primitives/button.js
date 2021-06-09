@@ -1,6 +1,22 @@
 import React from "react";
 import styled from "styled-components/native";
 import {useFonts} from 'expo-font'
+
+/**
+ * @param buttonHeight - height of the button
+ * @param marginTop - space between the top of the button and the above component
+ * @param buttonBgClr - background color of the button
+ * @param borderStyle - there are only 3 styles you can pass here: solid, dashed and dotted.
+ * @param borderWidth - width of the border
+ * @param borderRadius - border radius
+ * @param fontSize - size of the text
+ * @param width - width of the container that holds the text within the button
+ * @param textClr - color of the text
+ * 
+ */
+
+
+
 const ButtonView = styled.View`
   alignItems: center;
   justifyContent: center;

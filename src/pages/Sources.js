@@ -4,19 +4,24 @@ import GoldenTitle from "../components/global/goldenTitle";
 import Footer from "../components/global/footer";
 import { PixelRatio } from "react-native";
 
+/**
+ * Sources
+ *
+ * Currently there is no content. Waiting to hear from Colby about what's going to end up here.
+ */
 
 const Container = styled.ScrollView`
   flex: 1;
   display: flex;
-  marginVertical: 20;
+  marginvertical: 20;
 `;
 
 const HeaderTextContainer = styled.View`
   flex: 0.6;
   width: 75%;
-  backgroundColor: rgba(255, 255, 255, 0.8);
-  marginHorizontal: 50;
-  justifyContent: space-evenly;
+  backgroundcolor: rgba(255, 255, 255, 0.8);
+  marginhorizontal: 50;
+  justifycontent: space-evenly;
 `;
 
 const style = {
@@ -27,18 +32,16 @@ const style = {
 };
 
 const Title = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(16)};
-  textAlign: center;
+  fontsize: ${PixelRatio.getPixelSizeForLayoutSize(16)};
+  textalign: center;
 `;
 
 const Paragraph = styled.Text`
-  marginHorizontal: 20;
-  marginBottom: 10;
+  marginhorizontal: 20;
+  marginbottom: 10;
 `;
 
 export default function About({ navigation }) {
-
-
   return (
     <>
       <GoldenTitle>
@@ -46,8 +49,7 @@ export default function About({ navigation }) {
           <Title>SOURCES</Title>
         </HeaderTextContainer>
       </GoldenTitle>
-      <Container contentContainerStyle={style.wrapper}>
-      </Container>
+      <Container contentContainerStyle={style.wrapper}></Container>
       <Footer navigation={navigation} />
     </>
   );

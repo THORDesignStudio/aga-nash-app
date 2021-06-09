@@ -7,6 +7,13 @@ import Container from "../components/primitives/container";
 import { PixelRatio } from "react-native";
 import {useFonts} from 'expo-font'
 
+/**
+ * Navigate
+ * 
+ * This is kind of the like the central nervous system of the entire thing. It helps the user,
+ * like the title of the page says, navigate between various areas of the app. Nothing super specail going on here.
+ */
+
 const SectionContainer = styled.View`
   flexDirection: column;
   alignItems: center;

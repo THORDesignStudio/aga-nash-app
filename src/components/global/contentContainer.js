@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import {useFonts} from 'expo-font'
 
+/**
+ * This container is used only to wrap around the content for Abbreviations and Footnotes. It formats the
+ * layout properly for you.
+ */
+
 const Content = styled.Text`
   fontSize: 20;
   marginHorizontal: 20;

@@ -5,6 +5,11 @@ import SourcesIcon from "../../assets/images/SOURCES";
 import AboutIcon from "../../assets/images/ABOUT";
 import {useFonts} from 'expo-font'
 
+/**
+ * This footer is static. It's seen throughout the entire app to allow the user to quickly get to a few key pages.
+ *
+ */
+
 export default function NashFooter({ navigation }) {
 
   let [fontsLoaded] = useFonts({

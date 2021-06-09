@@ -2,6 +2,11 @@ import React from "react";
 import { View, Image, StyleSheet} from "react-native";
 import banner from "../../assets/images/banner.png";
 
+/**
+ * AGA banner that goes at the bottom of some pages. Static component.
+ * 
+ */
+
 
 export default function Banner() {
   return (

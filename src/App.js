@@ -10,6 +10,12 @@ import Footnotes from "./pages/Footnotes";
 import Abbreviations from './pages/Abbreviations'
 import ApplicationProvider from "./applicationProvider/applicationProvider";
 
+/**
+ * This is the central hub of the app....clearly. Essentially all the pages live here and we use 
+ * @param {package} reactNavigation - in order to set up nav between pages. Alot of this is using the 
+ * @param {prop} navigation - to navigate between pages. You'll see this prop everywhere, so you'll get familiar real quick.
+ */
+
 const Stack = createStackNavigator();
 
 export default function App() {

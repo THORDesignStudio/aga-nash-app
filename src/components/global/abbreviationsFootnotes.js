@@ -2,6 +2,11 @@ import React from 'react'
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import {useFonts} from 'expo-font'
 
+/**
+ * This is the gray bar at the bottom of most pages that allows users to go to the associated abbreviations and footnotes of a page.
+ * This is static, the logic happens in the context that wraps the entire app and in the Footnotes and Abbreviations pages.
+ */
+
 export default function AbbreviationsFootnotes ({navigation}){
 
   let [fontsLoaded] = useFonts({

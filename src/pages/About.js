@@ -6,6 +6,13 @@ import ScrollableView from '../components/primitives/scrollableContainer'
 import { PixelRatio } from "react-native";
 import {useFonts} from 'expo-font'
 
+/**
+ * About
+ * 
+ * Static page that doesn't have anything major going on in it at the moment.
+ * 
+ */
+
 
 const HeaderTextContainer = styled.View`
   flex: 0.4;

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components/native";
 
+/**
+ * @param label - label of the radio button
+ * 
+ */
+
 const Container = styled.View`
   marginBottom: 5;
   alignItems: center;
