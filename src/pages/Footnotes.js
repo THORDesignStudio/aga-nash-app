@@ -1,10 +1,11 @@
 import React, {useContext} from "react";
 import PageTitle from "../components/global/pageTitle";
-import styled from 'styled-components'
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
 import ScrollableView from '../components/primitives/scrollableContainer'
 import ConditionContent from '../components/content/footnotes/conditions'
-
+import TitleContainer from '../components/global/titleContainer'
+import BackButton from '../components/global/backButton'
+import Footer from '../components/global/footer'
 
 /**
  * Footnotes
@@ -17,11 +18,6 @@ import ConditionContent from '../components/content/footnotes/conditions'
  * Depending on the pageId, we render different content, which we get from the content folder in assets. Pretty simple concept.
  */
 
-const TitleContainer = styled.View`
-  flex: .05;
-  paddingTop: 50;
-  paddingHorizontal: 20;
-`
 
 
 export default function Footnotes({navigation}) {
@@ -57,6 +53,8 @@ export default function Footnotes({navigation}) {
     <ScrollableView>
       {content}
     </ScrollableView>
+    <BackButton navigation={navigation} />
+    <Footer navigation={navigation} />
     </>
   );
 }

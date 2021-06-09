@@ -1,14 +1,16 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import ApplicationProvider from "./applicationProvider/applicationProvider";
 import HomeScreen from "./pages/HomeScreen";
 import Conditions from "./pages/Conditions";
 import About from "./pages/About";
 import Sources from "./pages/Sources";
 import Navigate from "./pages/Navigate";
 import Footnotes from "./pages/Footnotes";
-import Abbreviations from './pages/Abbreviations'
-import ApplicationProvider from "./applicationProvider/applicationProvider";
+import Abbreviations from './pages/Abbreviations';
+import FIB4 from './pages/FIB4';
+
 
 /**
  * This is the central hub of the app....clearly. Essentially all the pages live here and we use 
@@ -31,6 +33,7 @@ export default function App() {
           <Stack.Screen name="Navigate" component={Navigate} />
           <Stack.Screen name="Footnotes" component={Footnotes} />
           <Stack.Screen name ='Abbreviations' component={Abbreviations} />
+          <Stack.Screen name ='FIB4' component={FIB4} />
         </Stack.Navigator>
       </NavigationContainer>
     </ApplicationProvider>

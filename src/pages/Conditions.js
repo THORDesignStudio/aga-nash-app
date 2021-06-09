@@ -2,7 +2,7 @@ import React, {useContext,useEffect} from "react";
 import {
   View,
   StyleSheet,
-  Text,
+  PixelRatio
 } from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
@@ -10,8 +10,8 @@ import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
 import {useFonts} from 'expo-font'
 import styled from 'styled-components'
-import {PixelRatio} from 'react-native'
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
+import TitleContainer from '../components/global/titleContainer'
 
 const Condition = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(10)};
@@ -31,7 +31,9 @@ export default function Conditions({ navigation }) {
   return (
     <>
       <View style={styles.container}>
-        <PageTitle pageTitle="Patients with these conditions are at greatest risk of advanced fibrosis related to NAFLD/NASH:" />
+        <TitleContainer>
+          <PageTitle pageTitle="Patients with these conditions are at greatest risk of advanced fibrosis related to NAFLD/NASH:" />
+        </TitleContainer>
         <View style={styles.conditions}>
           <View style={styles.singleCondition}>
             <Condition>Two or more metabollic risk factors</Condition>
@@ -44,7 +46,7 @@ export default function Conditions({ navigation }) {
           </View>
         </View>
       </View>
-      <NextBack backOnpress={() => navigation.goBack()} />
+      <NextBack navigation={navigation} nextPage='FIB4' />
       <Pearls navigation={navigation} />
       <Footer navigation={navigation}/>
     </>
@@ -54,12 +56,11 @@ export default function Conditions({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 50,
-    paddingHorizontal: 20,
   },
   conditions: {
     flex: 1,
     justifyContent: "space-evenly",
+    marginHorizontal: 20,
   },
   singleCondition: {
     flexDirection: "row",

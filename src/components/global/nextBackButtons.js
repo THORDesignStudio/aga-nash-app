@@ -3,46 +3,49 @@ import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import NextIcon from "../../assets/images/nextIcon";
 import BackIcon from "../../assets/images/backIcon";
 import {useFonts} from 'expo-font'
+import styled from 'styled-components'
 
 /**
  * This component is used to go from one step of the path to the next, or to allow the user to move back to the last step.
  * 
- * @param {function} nextOnPress - this allows us to tell the next button what page is supposed to go next 
- * @param {function}  backOnpress - this allows us to tell the back button what page is supposed to go back to
+ * @param {function} navigation - this allows the app to navigate between screens and is used for the navigation functionality
+ * @param {string}  nextPage - specifies what page to set as next
  */
 
-export default function NextBack({ nextOnpress, backOnpress }) {
+const Container = styled.View`
+  flexDirection: row;
+  justifyContent: center;
+  marginVertical: ${(props) => props.marginVertical || 50};
+`
+
+export default function NextBack({ nextPage, navigation, marginVertical }) {
 
   let [fontsLoaded] = useFonts({
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
   });
 
+
   return (
     <>
-      <View style={styles.nextBackContainer}>
+      <Container>
         <View style={styles.backContainer}>
           <Text style={styles.backText}>Back</Text>
-          <TouchableOpacity onPress={backOnpress}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <BackIcon />
           </TouchableOpacity>
         </View>
         <View style={styles.nextContainer}>
-          <TouchableOpacity onPress={nextOnpress}>
+          <TouchableOpacity onPress={() => navigation.navigate(nextPage)}>
             <NextIcon />
           </TouchableOpacity>
           <Text style={styles.nextText}>Next</Text>
         </View>
-      </View>
+        </Container>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  nextBackContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    marginVertical: 50,
-  },
   nextContainer: {
     flexDirection: "row",
     alignItems: "center",

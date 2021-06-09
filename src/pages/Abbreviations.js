@@ -4,6 +4,8 @@ import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import ScrollableView from "../components/primitives/scrollableContainer";
 import ConditionContent from "../components/content/abbreviations/conditions";
 import PageTitle from "../components/global/pageTitle";
+import Footer from '../components/global/footer'
+import BackButton from '../components/global/backButton'
 
 
 /**
@@ -26,7 +28,7 @@ const TitleContainer = styled.View`
 `
 
 
-export default function Abbreviations() {
+export default function Abbreviations({navigation}) {
   const { pageId } = useContext(ApplicationContext);
 
   let content;
@@ -49,6 +51,8 @@ export default function Abbreviations() {
         <PageTitle pageTitle="ABBREVIATIONS" />
       </TitleContainer>
       <ScrollableView>{content}</ScrollableView>
+      <BackButton navigation={navigation} />
+      <Footer navigation={navigation} />
     </>
   );
 }

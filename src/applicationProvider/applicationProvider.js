@@ -5,14 +5,29 @@ export const ApplicationContext = createContext();
 /**
  * This context acts as the conduit to pass various state variables that we need to determine the risk of the patient
  * We also use it to know what page the user is on so that we can then properly set various conditions.
- * 
- * @param {state} pageId - the state variable that holds the pageId 
+ *
+ * @param {state} pageId - the state variable that holds the pageId
  * @param {state} setPageId - sets the pageId based on the page the user is on
  */
 
 export default function ApplicationProvider({ children }) {
-  const [pageId, setPageId] = useState('')
-  const value = {pageId, setPageId};
+  const [pageId, setPageId] = useState("");
+  const [age, setAge] = useState();
+  const [alt, setAlt] = useState();
+  const [ast, setAst] = useState();
+  const [plt, setPlt] = useState();
+  const value = {
+    pageId,
+    setPageId,
+    alt,
+    setAlt,
+    ast,
+    setAst,
+    age,
+    setAge,
+    plt,
+    setPlt,
+  };
 
   return (
     <ApplicationContext.Provider value={value}>
