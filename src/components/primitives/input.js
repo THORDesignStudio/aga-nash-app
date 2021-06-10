@@ -18,6 +18,7 @@ const Input = styled.TextInput`
   borderWidth: 1;
   borderRadius: 20;
   fontFamily: 'NunitoSans-Regular';
+  textAlign: center;
 `;
 const InputText = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};
@@ -26,7 +27,7 @@ const InputText = styled.Text`
   fontFamily: 'NunitoSans-Regular';
 `;
 
-export default function InputBox({ placeholder, text, value, onChangeText }) {
+export default function InputBox({ placeholder, text, onChangeText }) {
 
   let [fontsLoaded] = useFonts({
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
@@ -37,8 +38,8 @@ export default function InputBox({ placeholder, text, value, onChangeText }) {
     <Container>
       <Input
         placeholder={placeholder}
-        value={value}
         onChangeText={onChangeText}
+        placeholderTextColor='red'
       />
       <InputText>{text}</InputText>
     </Container>

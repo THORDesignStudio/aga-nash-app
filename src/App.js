@@ -10,6 +10,7 @@ import Navigate from "./pages/Navigate";
 import Footnotes from "./pages/Footnotes";
 import Abbreviations from './pages/Abbreviations';
 import FIB4 from './pages/FIB4';
+import ResultLow from './pages/ResultLow'
 
 
 /**
@@ -34,6 +35,7 @@ export default function App() {
           <Stack.Screen name="Footnotes" component={Footnotes} />
           <Stack.Screen name ='Abbreviations' component={Abbreviations} />
           <Stack.Screen name ='FIB4' component={FIB4} />
+          <Stack.Screen name ='ResultLow' component={ResultLow} />
         </Stack.Navigator>
       </NavigationContainer>
     </ApplicationProvider>
