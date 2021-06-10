@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const ApplicationContext = createContext();
 
@@ -13,6 +13,7 @@ export const ApplicationContext = createContext();
 export default function ApplicationProvider({ children }) {
   const [pageId, setPageId] = useState();
   const [fib4, setFib4] = useState();
+
   const value = {
     pageId,
     setPageId,

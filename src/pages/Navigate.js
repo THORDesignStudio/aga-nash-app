@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useEffect} from "react";
 import GoldenTitle from "../components/global/goldenTitle";
 import styled from "styled-components";
 import Footer from "../components/global/footer";
@@ -6,6 +6,8 @@ import Button from "../components/primitives/button";
 import Container from "../components/primitives/container";
 import { PixelRatio } from "react-native";
 import {useFonts} from 'expo-font'
+import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
 
 /**
  * Navigate
@@ -36,6 +38,12 @@ const ButtonContainer = styled.View`
 `;
 
 export default function Navigate({ navigation }) {
+  const {setPageId} = useContext(ApplicationContext)
+  useEffect(() => {
+    navigation.addListener('focus', () => {
+      setPageId("Navigate");
+    });
+  }, [navigation])
 
   let [fontsLoaded] = useFonts({
     'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),

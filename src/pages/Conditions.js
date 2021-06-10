@@ -1,31 +1,33 @@
-import React, {useContext,useEffect} from "react";
-import {
-  View,
-  StyleSheet,
-  PixelRatio
-} from "react-native";
+import React, { useContext, useEffect } from "react";
+import { View, StyleSheet, PixelRatio } from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
-import {useFonts} from 'expo-font'
-import styled from 'styled-components'
-import {ApplicationContext} from '../applicationProvider/applicationProvider'
-import TitleContainer from '../components/global/titleContainer'
+import { useFonts } from "expo-font";
+import styled from "styled-components";
+import { ApplicationContext } from "../applicationProvider/applicationProvider";
+import TitleContainer from "../components/global/titleContainer";
 
 const Condition = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(10)};
   paddingEnd: 2;
-  fontFamily: 'NunitoSans-Regular';
-`
+  fontFamily: "NunitoSans-Regular";
+`;
 
 export default function Conditions({ navigation }) {
-  const {setPageId} = useContext(ApplicationContext)
+  const { setPageId, pageId } = useContext(ApplicationContext);
 
-    setPageId('Conditions');
+  useEffect(() => {
+    navigation.addListener('focus', () => {
+      setPageId("Conditions");
+    });
+  }, [navigation])
+
+  
 
   let [fontsLoaded] = useFonts({
-    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
   });
 
   return (
@@ -46,9 +48,9 @@ export default function Conditions({ navigation }) {
           </View>
         </View>
       </View>
-      <NextBack navigation={navigation} nextPage='FIB4' />
+      <NextBack navigation={navigation} nextPage="FIB4" backPage='Navigate'/>
       <Pearls navigation={navigation} />
-      <Footer navigation={navigation}/>
+      <Footer navigation={navigation} />
     </>
   );
 }

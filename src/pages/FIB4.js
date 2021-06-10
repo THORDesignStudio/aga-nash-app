@@ -26,8 +26,15 @@ const CalcContainer = styled.View`
 `;
 
 export default function Fib4({ navigation }) {
-  const { setPageId, setFib4 } = useContext(ApplicationContext);
-  setPageId("FIB4");
+  const { setPageId, setFib4, pageId } = useContext(ApplicationContext);
+
+
+  useEffect(() => {
+    navigation.addListener('focus', () => {
+      setPageId("FIB4");
+    });
+  }, [navigation])
+  
 
   const [age, setAge] = useState();
   const [alt, setAlt] = useState();
@@ -73,7 +80,7 @@ export default function Fib4({ navigation }) {
           <Input text="PLT" onChangeText={(text) => setPlt(parseInt(text))} placeholder='Required'/>
         </CalcContainer>
       </PageContainer>
-      <NextBack navigation={navigation} nextPage={nextPage} />
+      <NextBack navigation={navigation} nextPage={nextPage} backPage="Conditions"/>
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, use } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import ApplicationProvider from "./applicationProvider/applicationProvider";
 import HomeScreen from "./pages/HomeScreen";

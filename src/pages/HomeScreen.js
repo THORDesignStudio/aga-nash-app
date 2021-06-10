@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext, useEffect} from "react";
 import {
   Text,
   View,
@@ -12,6 +12,7 @@ import Button from "../components/primitives/button";
 import Container from "../components/primitives/container";
 import styled from "styled-components/native";
 import {useFonts} from 'expo-font'
+import { ApplicationContext } from "../applicationProvider/applicationProvider";
 
 /**
  * Homescreen
@@ -30,7 +31,14 @@ const Header = styled.Text`
 `;
 
 export default function HomeScreen({ navigation }) {
-  
+  const {setPageId} = useContext(ApplicationContext)
+
+  useEffect(() => {
+   navigation.addListener('focus', () => {
+      setPageId("HomeScreen");
+    });
+  }, [navigation])
+
   let [fontsLoaded] = useFonts({
     'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
     'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),

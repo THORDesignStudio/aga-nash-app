@@ -2,11 +2,11 @@ import React, {useContext} from "react";
 import PageTitle from "../components/global/pageTitle";
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
 import ScrollableView from '../components/primitives/scrollableContainer'
-import ConditionContent from '../components/content/footnotes/conditions'
 import TitleContainer from '../components/global/titleContainer'
 import BackButton from '../components/global/backButton'
 import Footer from '../components/global/footer'
-
+import ConditionContent from '../components/content/footnotes/conditions'
+import Fib4Content from '../components/content/footnotes/fib4'
 /**
  * Footnotes
  * 
@@ -32,8 +32,7 @@ export default function Footnotes({navigation}) {
       break;
     case 'FIB4':
       content = (
-      <>
-      </>
+      <Fib4Content />
       )
       break;
     case 'RsltLow':

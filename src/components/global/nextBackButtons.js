@@ -23,7 +23,8 @@ export default function NextBack({ nextPage, navigation, marginVertical }) {
   let [fontsLoaded] = useFonts({
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
   });
-
+  
+  
 
   return (
     <>
