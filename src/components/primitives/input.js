@@ -27,7 +27,7 @@ const InputText = styled.Text`
   fontFamily: 'NunitoSans-Regular';
 `;
 
-export default function InputBox({ placeholder, text, onChangeText }) {
+export default function InputBox({ placeholder, text, onChangeText, keyboardType }) {
 
   let [fontsLoaded] = useFonts({
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
@@ -40,6 +40,7 @@ export default function InputBox({ placeholder, text, onChangeText }) {
         placeholder={placeholder}
         onChangeText={onChangeText}
         placeholderTextColor='red'
+        keyboardType={keyboardType}
       />
       <InputText>{text}</InputText>
     </Container>

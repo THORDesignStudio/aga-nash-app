@@ -10,7 +10,7 @@ import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import TitleContainer from "../components/global/titleContainer";
 
 const Condition = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(10)};
+  fontSize: 18;
   paddingEnd: 2;
   fontFamily: "NunitoSans-Regular";
 `;

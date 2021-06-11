@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity, PixelRatio } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity} from "react-native";
 import NavigateIcon from "../../assets/images/NAVIGATE";
 import SourcesIcon from "../../assets/images/SOURCES";
 import AboutIcon from "../../assets/images/ABOUT";
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   iconText: {
     color: "white",
-    fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
+    fontSize: 16,
     textAlign: "center",
     fontFamily: 'NunitoSans-Regular'
   },

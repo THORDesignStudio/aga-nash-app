@@ -13,12 +13,15 @@ export const ApplicationContext = createContext();
 export default function ApplicationProvider({ children }) {
   const [pageId, setPageId] = useState();
   const [fib4, setFib4] = useState();
+  const [alt, setAlt] = useState();
 
   const value = {
     pageId,
     setPageId,
     fib4,
     setFib4,
+    alt,
+    setAlt
   };
 
   return (

@@ -87,6 +87,7 @@ export default function Navigate({ navigation }) {
               textClr="white"
               buttonHeight={60}
               textWidth="75%"
+              fontSize={18}
             />
           </ButtonContainer>
           <ButtonContainer>

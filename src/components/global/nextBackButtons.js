@@ -28,7 +28,7 @@ export default function NextBack({ nextPage, navigation, marginVertical }) {
 
   return (
     <>
-      <Container>
+      <Container marginVertical={marginVertical}>
         <View style={styles.backContainer}>
           <Text style={styles.backText}>Back</Text>
           <TouchableOpacity onPress={() => navigation.goBack()}>

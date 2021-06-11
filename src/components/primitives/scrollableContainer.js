@@ -9,13 +9,13 @@ import styled from "styled-components";
 
 const Container = styled.ScrollView`
   flex: ${(props) => props.flex || 1};
-  display: flex;
-  marginVertical: ${(props) => props.marginVertical || 20};
+  /* marginVertical: ${(props) => props.marginVertical || 20}; */
 `;
 
 const style = {
   wrapper: {
     justifyContent: "flex-start",
+    // flex: '100%',
   },
 };
 

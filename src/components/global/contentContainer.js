@@ -11,7 +11,7 @@ const Content = styled.Text`
   fontSize: 20;
   marginHorizontal: 20;
   fontFamily: 'NunitoSans-Regular';
-  marginBottom: 10;
+  marginBottom: 20;
 `
 
 export default function ContentContainer ({children}){

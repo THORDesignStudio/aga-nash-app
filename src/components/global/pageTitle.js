@@ -1,6 +1,5 @@
 import React from "react";
 import { useFonts } from "expo-font";
-import {PixelRatio} from 'react-native'
 import styled from 'styled-components'
 
 /**
@@ -13,7 +12,7 @@ import styled from 'styled-components'
  */
 
 const Title = styled.Text`
- fontSize: ${ (props) => PixelRatio.getPixelSizeForLayoutSize(props.fontSize) || PixelRatio.getPixelSizeForLayoutSize(10)};
+ fontSize: ${(props) => props.fontSize || 25};
  fontFamily: 'NunitoSans-Bold';
  marginBottom: ${(props) => props.marginBottom || 0}
 `

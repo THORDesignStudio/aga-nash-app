@@ -23,7 +23,7 @@ import { ApplicationContext } from "../applicationProvider/applicationProvider";
  */
 
 const Header = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(13)};
+  fontSize: 25;
   marginHorizontal: 20px;
   fontWeight: 700;
   textAlign: center;
