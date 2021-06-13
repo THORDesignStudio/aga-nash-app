@@ -3,12 +3,11 @@ import styled from "styled-components";
 import Input from "../components/primitives/input";
 import Footer from "../components/global/footer";
 import NextBack from "../components/global/nextBackButtons";
-import {ScrollView} from 'react-native'
+import { ScrollView } from "react-native";
 import PageTitle from "../components/global/pageTitle";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import TitleContainer from "../components/global/titleContainer";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
-
 
 /**
  * FIB4
@@ -23,7 +22,6 @@ const CalcContainer = styled.View`
   flex: 1;
   marginVertical: 20;
   alignItems: center;
-
 `;
 
 export default function Fib4({ navigation }) {
@@ -51,13 +49,13 @@ export default function Fib4({ navigation }) {
     }
 
     if (!disabled) {
-      setNextPage("ResultLow");
+      setNextPage("Results");
     } else setNextPage("");
   }, [age, alt, ast, plt, disabled]);
 
   return (
     <>
-             <ScrollView contentContainerStyle={{justifyContent: "space-evenly"}}>
+      <ScrollView contentContainerStyle={{ justifyContent: "space-evenly" }}>
         <TitleContainer paddingBottom={30}>
           <PageTitle
             pageTitle="Enter the following lab results for Non Invasive Testing (NIT) for fibrosis"
@@ -90,7 +88,6 @@ export default function Fib4({ navigation }) {
             keyboardType="numeric"
           />
         </CalcContainer>
-   
       </ScrollView>
       <NextBack
         navigation={navigation}

@@ -7,6 +7,7 @@ import Footer from "../components/global/footer";
 import BackButton from "../components/global/backButton";
 import ConditionContent from "../components/content/abbreviations/conditions";
 import Fib4Content from "../components/content/abbreviations/fib4";
+import LowRisk from '../components/content/abbreviations/LowRisk'
 
 /**
  * Abbreviation
@@ -22,7 +23,7 @@ import Fib4Content from "../components/content/abbreviations/fib4";
  */
 
 const TitleContainer = styled.View`
-  flex: 0.05;
+  flex: 0.1;
   paddingTop: 50;
   paddingHorizontal: 20;
 `;
@@ -39,8 +40,8 @@ export default function Abbreviations({ navigation }) {
     case "FIB4":
       content = <Fib4Content />;
       break;
-    case "RsltLow":
-      content = <>{/* test */}</>;
+    case "ResultLow":
+      content = <LowRisk />;
       break;
   }
 

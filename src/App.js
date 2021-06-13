@@ -10,9 +10,8 @@ import Navigate from "./pages/Navigate";
 import Footnotes from "./pages/Footnotes";
 import Abbreviations from './pages/Abbreviations';
 import FIB4 from './pages/FIB4';
-import ResultLow from './pages/ResultLow'
-
-
+import Results from './pages/Results'
+import RiskManagement from "./pages/RiskManagement";
 /**
  * This is the central hub of the app....clearly. Essentially all the pages live here and we use 
  * @param {package} reactNavigation - in order to set up nav between pages. Alot of this is using the 
@@ -35,7 +34,8 @@ export default function App() {
           <Stack.Screen name="Footnotes" component={Footnotes} />
           <Stack.Screen name ='Abbreviations' component={Abbreviations} />
           <Stack.Screen name ='FIB4' component={FIB4} />
-          <Stack.Screen name ='ResultLow' component={ResultLow} />
+          <Stack.Screen name ='Results' component={Results} />
+          <Stack.Screen name ='RiskManagement' component={RiskManagement} />
         </Stack.Navigator>
       </NavigationContainer>
     </ApplicationProvider>

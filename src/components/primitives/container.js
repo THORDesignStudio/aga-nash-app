@@ -12,11 +12,12 @@ const Wrapper = styled.View`
   flex: ${(props) => props.flex || 1};
   alignItems: ${(props) => props.alignItems || "center"} ;
   justifyContent: ${(props) => props.justifyContent || "center"};
+  marginTop: ${(props) => props.marginTop || 0};
 `
 
-export default function Container ({children, alignItems, justifyContent, flex}){
+export default function Container ({children, alignItems, justifyContent, flex, marginTop}){
   return(
-    <Wrapper justifyContent={justifyContent} alignItems={alignItems} flex={flex}> 
+    <Wrapper justifyContent={justifyContent} alignItems={alignItems} flex={flex} marginTop={marginTop}> 
       {children}
     </Wrapper>
   )

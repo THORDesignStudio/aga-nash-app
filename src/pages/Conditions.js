@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { View, StyleSheet, PixelRatio } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
