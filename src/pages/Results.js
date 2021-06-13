@@ -37,7 +37,7 @@ export default function Results({ navigation }) {
       <PageContainer justifyContent="flex-start" marginTop={40} flex={1}>
         {resultContent}
       </PageContainer>
-      <NextBack navigation={navigation} nextPage="RiskManagment" marginVertical={10} />
+      <NextBack navigation={navigation} nextPage="RiskManagement" marginVertical={10} />
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>
