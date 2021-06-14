@@ -117,6 +117,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     marginVertical: 10,
     color: "#faa61a",
-    fontFamily: 'NunitoSans-Regular'
+    fontFamily: 'NunitoSans-Regular',
   },
 });

@@ -8,6 +8,7 @@ import Footer from "../components/global/footer";
 import ConditionContent from "../components/content/footnotes/conditions";
 import Fib4Content from "../components/content/footnotes/fib4";
 import LowRisk from "../components/content/footnotes/LowRisk";
+import {useFonts} from 'expo-font'
 
 /**
  * Footnotes
@@ -22,6 +23,11 @@ import LowRisk from "../components/content/footnotes/LowRisk";
 
 export default function Footnotes({ navigation }) {
   const { pageId } = useContext(ApplicationContext);
+
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
+    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+  });
 
   let content;
 

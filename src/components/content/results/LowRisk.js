@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-import { useFonts } from "expo-font";
 import LowRisk from '../../../assets/images/lowRisk'
+import {ApplicationContext} from '../../../applicationProvider/applicationProvider'
 
 const FibText = styled.Text`
   fontFamily: "NunitoSans-Regular";
@@ -22,7 +22,14 @@ const GreenText = styled.Text`
   color: #77c83f;
 `;
 
+const GreaterFourtyText = styled.Text`
+  fontFamily: "NunitoSans-Regular";
+  fontSize: 16;
+`
+
 export default function LowRiskContent({ navigation }) {
+const {alt} = useContext(ApplicationContext);
+
 
 
   return (
@@ -31,7 +38,9 @@ export default function LowRiskContent({ navigation }) {
           FIB-4 {"<"} 1.25 (age {"<"}65)
         </FibText>
         <FibText>and FIB-4 {"<"} 2 (age 65+)</FibText>
-        <AltText>ALT {"<"} 40 U/L</AltText>
+        {alt < 40 && <AltText>ALT {"<"} 40 U/L</AltText>}
+        {alt >= 40 && <AltText>ALT ≥ 40 U/L</AltText>}
+        {alt >= 40 && <GreaterFourtyText>Risks of other forms of liver disease</GreaterFourtyText>}
         <LowRiskDial>
           <LowRisk />
         </LowRiskDial>

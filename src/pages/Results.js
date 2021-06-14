@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import styled from "styled-components";
 import Footer from "../components/global/footer";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import NextBack from "../components/global/nextBackButtons";
@@ -8,8 +7,9 @@ import { useFonts } from "expo-font";
 import LowRiskContent from "../components/content/results/LowRisk";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import { Text } from "react-native";
+
 export default function Results({ navigation }) {
-  const { fib4, setPageId } = useContext(ApplicationContext);
+  const { fib4, setPageId, alt } = useContext(ApplicationContext);
   const [ resultContent, setResultContent] = useState(<></>)
 
   useEffect(() => {

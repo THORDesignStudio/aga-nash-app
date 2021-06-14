@@ -8,6 +8,7 @@ import BackButton from "../components/global/backButton";
 import ConditionContent from "../components/content/abbreviations/conditions";
 import Fib4Content from "../components/content/abbreviations/fib4";
 import LowRisk from '../components/content/abbreviations/LowRisk'
+import {useFonts} from 'expo-font'
 
 /**
  * Abbreviation
@@ -30,6 +31,11 @@ const TitleContainer = styled.View`
 
 export default function Abbreviations({ navigation }) {
   const { pageId } = useContext(ApplicationContext);
+
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
+    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+  });
 
   let content;
 
