@@ -38,7 +38,7 @@ const ButtonContainer = styled.View`
 `;
 
 export default function Navigate({ navigation }) {
-  const {setPageId} = useContext(ApplicationContext)
+  const {setPageId, setFib4} = useContext(ApplicationContext)
   useEffect(() => {
     navigation.addListener('focus', () => {
       setPageId("Navigate");
@@ -49,6 +49,11 @@ export default function Navigate({ navigation }) {
     'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
     'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
   });
+
+  const handleLowRisk = () => {
+    setFib4(1.29);
+    navigation.navigate('RiskManagement')
+  }
 
   return (
     <>
@@ -76,6 +81,7 @@ export default function Navigate({ navigation }) {
               textClr="white"
               buttonHeight={60}
               textWidth="75%"
+              onPress={handleLowRisk}
             />
           </ButtonContainer>
           <ButtonContainer>
@@ -92,7 +98,7 @@ export default function Navigate({ navigation }) {
           </ButtonContainer>
           <ButtonContainer>
             <Button
-              buttonText="HIGHT RISK MANAGEMENT"
+              buttonText="HIGH RISK MANAGEMENT"
               buttonBgClr="#FC1B1F"
               borderRadius={30}
               borderWidth={0.1}
