@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import NextIcon from "../../assets/images/nextIcon";
 import BackIcon from "../../assets/images/backIcon";
 import {useFonts} from 'expo-font'
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 
 /**
  * This component is used to go from one step of the path to the next, or to allow the user to move back to the last step.

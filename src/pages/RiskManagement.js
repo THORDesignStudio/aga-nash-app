@@ -6,7 +6,7 @@ import ScrollableView from "../components/primitives/scrollableContainer";
 import { useFonts } from "expo-font";
 import LowRiskMng from '../components/content/riskManagement/LowRisk'
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
-
+import {Text} from 'react-native'
 
 export default function RiskManagement({ navigation }) {
   const { fib4, setPageId, alt } = useContext(ApplicationContext);
@@ -14,7 +14,7 @@ export default function RiskManagement({ navigation }) {
 
   useEffect(() => {
     navigation.addListener("focus", () => {
-      if (fib4 < 1.3 && alt < 40) {
+      if (fib4 < 1.3) {
         setPageId("LowRiskMng");
         setRiskMng(<LowRiskMng />)
       } else if (1.3 < fib4 < 2.67) {
@@ -37,9 +37,9 @@ export default function RiskManagement({ navigation }) {
       <ScrollableView>
         {riskMng}
       </ScrollableView>
-      <BackNext navigation={navigation} marginVertical={10} />
+      <BackNext navigation={navigation} marginVertical={10} nextPage='HomeScreen'/>
       <AbbreviationsFootnotes />
-      <Footer />
+      <Footer navigation={navigation}/>
     </>
   );
 }

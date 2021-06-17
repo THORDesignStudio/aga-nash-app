@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import Input from "../components/primitives/input";
 import Footer from "../components/global/footer";
 import NextBack from "../components/global/nextBackButtons";

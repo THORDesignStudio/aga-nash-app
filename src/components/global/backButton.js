@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../primitives/button'
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 
 const Container = styled.View`
   marginBottom: 10;

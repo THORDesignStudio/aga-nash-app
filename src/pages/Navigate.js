@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from "react";
 import GoldenTitle from "../components/global/goldenTitle";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import Footer from "../components/global/footer";
 import Button from "../components/primitives/button";
 import Container from "../components/primitives/container";

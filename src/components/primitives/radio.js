@@ -10,6 +10,7 @@ const Container = styled.View`
   marginBottom: 5;
   alignItems: center;
   flexDirection: row;
+  marginHorizontal: ${(props) => props.marginHorizontal || 0};
 `;
 
 const RadioText = styled.Text`
@@ -35,7 +36,7 @@ const SelectedRadio = styled.View`
   backgroundColor: #00ff00;
 `;
 
-export default function Radio({ label, onPress }) {
+export default function Radio({ label, onPress, marginHorizontal }) {
   const [selected, setSelected] = useState(false);
 
   const handleOnPress = () => {
@@ -49,7 +50,7 @@ export default function Radio({ label, onPress }) {
   }, [selected])
 
   return (
-    <Container>
+    <Container marginHorizontal={marginHorizontal}>
       <RadioCircle onPress={handleOnPress}>
         {selected && <SelectedRadio />}
       </RadioCircle>

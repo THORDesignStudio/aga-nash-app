@@ -5,7 +5,7 @@ import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
 import { useFonts } from "expo-font";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import TitleContainer from "../components/global/titleContainer";
 

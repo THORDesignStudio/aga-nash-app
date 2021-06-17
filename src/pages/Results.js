@@ -11,19 +11,35 @@ import { Text } from "react-native";
 export default function Results({ navigation }) {
   const { fib4, setPageId, alt } = useContext(ApplicationContext);
   const [ resultContent, setResultContent] = useState(<></>)
+  const [nextPage, setNextPage] = useState('')
 
   useEffect(() => {
     navigation.addListener("focus", () => {
       if (fib4 < 1.3) {
         setPageId("ResultLow");
         setResultContent(<LowRiskContent />)
+        if(alt >= 40){
+          setNextPage('OtherDiseases')
+        }else {
+          setNextPage('RiskManagement')
+        }
       } else if (1.3 < fib4 < 2.67) {
         setPageId("ResultIndeterminat");
         setResultContent (<Text>Indeterminate</Text>);
+        if(alt >= 40){
+          setNextPage('OtherDiseases')
+        }else {
+          setNextPage('RiskManagement')
+        }
       } else if (fib4 > 2.67) {
         setPageId("ResultHigh");
         setResultContent(<Text>High</Text>);
-      }
+        if(alt >= 40){
+          setNextPage('OtherDiseases')
+        }else {
+          setNextPage('RiskManagement')
+        }
+      } 
     });
   }, [navigation, fib4]);
 
@@ -37,7 +53,7 @@ export default function Results({ navigation }) {
       <PageContainer justifyContent="flex-start" marginTop={40} flex={1}>
         {resultContent}
       </PageContainer>
-      <NextBack navigation={navigation} nextPage="RiskManagement" marginVertical={10} />
+      <NextBack navigation={navigation} nextPage={nextPage} marginVertical={10} />
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>

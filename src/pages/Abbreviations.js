@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import ScrollableView from "../components/primitives/scrollableContainer";
 import PageTitle from "../components/global/pageTitle";
@@ -54,7 +54,7 @@ export default function Abbreviations({ navigation }) {
   return (
     <>
       <TitleContainer>
-        <PageTitle pageTitle="ABBREVIATIONS" />
+        <PageTitle pageTitle="ABBREVIATIONS"/>
       </TitleContainer>
       <ScrollableView>{content}</ScrollableView>
       <BackButton navigation={navigation} />

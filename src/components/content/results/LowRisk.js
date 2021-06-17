@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import LowRisk from '../../../assets/images/lowRisk'
 import {ApplicationContext} from '../../../applicationProvider/applicationProvider'
 

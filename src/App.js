@@ -12,6 +12,9 @@ import Abbreviations from './pages/Abbreviations';
 import FIB4 from './pages/FIB4';
 import Results from './pages/Results'
 import RiskManagement from "./pages/RiskManagement";
+import OtherDiseases from './pages/OtherDiseases'
+import HepRefer from './pages/HepRefer'
+
 /**
  * This is the central hub of the app....clearly. Essentially all the pages live here and we use 
  * @param {package} reactNavigation - in order to set up nav between pages. Alot of this is using the 
@@ -36,6 +39,8 @@ export default function App() {
           <Stack.Screen name ='FIB4' component={FIB4} />
           <Stack.Screen name ='Results' component={Results} />
           <Stack.Screen name ='RiskManagement' component={RiskManagement} />
+          <Stack.Screen name ='OtherDiseases' component={OtherDiseases} />
+          <Stack.Screen name ='HepRefer' component={HepRefer} />
         </Stack.Navigator>
       </NavigationContainer>
     </ApplicationProvider>
