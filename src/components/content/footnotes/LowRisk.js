@@ -1,7 +1,7 @@
 import React from "react";
 import ContentContainer from "../../global/contentContainer";
 
-export default function ConditionsFootnotes() {
+export default function LowRiskFootnotes() {
   return (
     <>
       <ContentContainer>

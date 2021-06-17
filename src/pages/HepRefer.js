@@ -1,7 +1,6 @@
 import React from 'react'
 import PageContainer from '../components/primitives/container'
 import Footer from '../components/global/footer'
-import AbbreviationsFootnotes from '../components/global/abbreviationsFootnotes'
 import NextBack from '../components/global/nextBackButtons'
 import HepReferIcon from '../assets/images/hepReferIcon'
 import styled from 'styled-components/native'
@@ -30,7 +29,6 @@ export default function HepRefer ({navigation}){
         </HepText>
       </PageContainer>
       <NextBack navigation={navigation} marginVertical={10} nextPage='Home'/>
-      <AbbreviationsFootnotes navigation={navigation}/>
       <Footer navigation={navigation}/>
     </>
   )

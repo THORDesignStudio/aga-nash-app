@@ -7,8 +7,10 @@ import BackButton from "../components/global/backButton";
 import Footer from "../components/global/footer";
 import ConditionContent from "../components/content/footnotes/conditions";
 import Fib4Content from "../components/content/footnotes/fib4";
-import LowRisk from "../components/content/footnotes/LowRisk";
-import {useFonts} from 'expo-font'
+import LowRisk from "../components/content/footnotes/lowRisk";
+import OtherDiseases from "../components/content/footnotes/otherDiseases";
+import LowRiskMng from '../components/content/footnotes/lowRiskMng'
+import { useFonts } from "expo-font";
 
 /**
  * Footnotes
@@ -25,8 +27,8 @@ export default function Footnotes({ navigation }) {
   const { pageId } = useContext(ApplicationContext);
 
   let [fontsLoaded] = useFonts({
-    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
-    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
+    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
   });
 
   let content;
@@ -41,6 +43,13 @@ export default function Footnotes({ navigation }) {
     case "ResultLow":
       content = <LowRisk />;
       break;
+    case "OtherDiseases":
+      content = <OtherDiseases />;
+      break;
+    case "LowRiskMng":
+      content = <LowRiskMng />
+      break;
+
   }
 
   return (

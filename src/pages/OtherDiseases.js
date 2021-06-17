@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import PageTitle from "../components/global/pageTitle";
 import Footer from "../components/global/footer";
 import NextBack from "../components/global/nextBackButtons";
@@ -7,6 +7,7 @@ import Radio from "../components/primitives/radio";
 import PageContainer from '../components/primitives/container'
 import styled from 'styled-components/native'
 import {useFonts} from 'expo-font'
+import {ApplicationContext} from '../applicationProvider/applicationProvider'
 
 const ContentText = styled.Text`
   marginHorizontal: 20;
@@ -17,13 +18,22 @@ const ContentText = styled.Text`
 
 export default function OtherForms({ navigation }) {
   const [nextPage, setNextPage] = useState('RiskManagement')
+  const { setPageId} = useContext(ApplicationContext);
+
+  useEffect(() => {
+    navigation.addListener("focus", () => {
+      setPageId('OtherDiseases')
+    });
+  }, [navigation]);
 
   const handleNextPresent = () => {
     setNextPage('HepRefer')
   }
-const handleNextNotPresent = () => {
-  setNextPage('RiskManagement')
-}
+
+// const handleNextNotPresent = () => {
+//   setNextPage('RiskManagement')
+// }
+
   let [fontsLoaded] = useFonts({
     "NunitoSans-SemiBold": require("../assets/fonts/NunitoSans-SemiBold.ttf"),
     "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),

@@ -7,8 +7,10 @@ import Footer from "../components/global/footer";
 import BackButton from "../components/global/backButton";
 import ConditionContent from "../components/content/abbreviations/conditions";
 import Fib4Content from "../components/content/abbreviations/fib4";
-import LowRisk from '../components/content/abbreviations/LowRisk'
-import {useFonts} from 'expo-font'
+import LowRisk from "../components/content/abbreviations/lowRisk";
+import OtherDiseases from "../components/content/abbreviations/otherDiseases";
+import LowRiskMng from "../components/content/abbreviations/lowRiskMng";
+import { useFonts } from "expo-font";
 
 /**
  * Abbreviation
@@ -33,8 +35,8 @@ export default function Abbreviations({ navigation }) {
   const { pageId } = useContext(ApplicationContext);
 
   let [fontsLoaded] = useFonts({
-    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
-    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
+    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
   });
 
   let content;
@@ -49,12 +51,18 @@ export default function Abbreviations({ navigation }) {
     case "ResultLow":
       content = <LowRisk />;
       break;
+    case "OtherDiseases":
+      content = <OtherDiseases />;
+      break;
+    case "LowRiskMng":
+      content = <LowRiskMng />;
+      break;
   }
 
   return (
     <>
       <TitleContainer>
-        <PageTitle pageTitle="ABBREVIATIONS"/>
+        <PageTitle pageTitle="ABBREVIATIONS" />
       </TitleContainer>
       <ScrollableView>{content}</ScrollableView>
       <BackButton navigation={navigation} />
