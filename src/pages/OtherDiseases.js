@@ -16,10 +16,10 @@ const ContentText = styled.Text`
 `
 
 export default function OtherForms({ navigation }) {
-  const [nextPage, setNextPage] = useState('')
+  const [nextPage, setNextPage] = useState('RiskManagement')
 
   const handleNextPresent = () => {
-    setNextPage('')
+    setNextPage('HepRefer')
   }
 const handleNextNotPresent = () => {
   setNextPage('RiskManagement')
@@ -45,7 +45,7 @@ const handleNextNotPresent = () => {
         Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT 
         </ContentText>
         <Radio label='Other forms of liver disease present' marginHorizontal={20} onPress={handleNextPresent} />
-        <Radio label='No other forms of liver disease present' marginHorizontal={20} onPress={handleNextNotPresent}  />
+        {/* <Radio label='No other forms of liver disease present' marginHorizontal={20} onPress={handleNextNotPresent}  /> */}
       </PageContainer>
       <NextBack navigation={navigation} marginVertical={10} nextPage={nextPage}/>
       <AbbreviationsFootnotes navigation={navigation} />

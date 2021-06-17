@@ -13,11 +13,12 @@ const Wrapper = styled.View`
   alignItems: ${(props) => props.alignItems || "center"} ;
   justifyContent: ${(props) => props.justifyContent || "center"};
   marginTop: ${(props) => props.marginTop || 0};
+  backgroundColor: ${(props) => props.backgroundColor || '#F1F6F8'};
 `
 
-export default function Container ({children, alignItems, justifyContent, flex, marginTop}){
+export default function Container ({children, alignItems, justifyContent, flex, marginTop, backgroundColor}){
   return(
-    <Wrapper justifyContent={justifyContent} alignItems={alignItems} flex={flex} marginTop={marginTop}> 
+    <Wrapper justifyContent={justifyContent} alignItems={alignItems} flex={flex} marginTop={marginTop} backgroundColor={backgroundColor}> 
       {children}
     </Wrapper>
   )
