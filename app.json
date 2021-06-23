@@ -7,6 +7,8 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "description": "Completed first low risk path for the aga nash app",
+    "githubUrl": "https://github.com/THORDesignStudio/aga-nash-app"
   }
 }
