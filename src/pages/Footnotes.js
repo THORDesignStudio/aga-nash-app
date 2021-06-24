@@ -7,7 +7,7 @@ import BackButton from "../components/global/backButton";
 import Footer from "../components/global/footer";
 import ConditionContent from "../components/content/footnotes/conditions";
 import Fib4Content from "../components/content/footnotes/fib4";
-import LowRisk from "../components/content/footnotes/lowRisk";
+import LowRisk from "../components/content/footnotes/LowRisk";
 import OtherDiseases from "../components/content/footnotes/otherDiseases";
 import LowRiskMng from '../components/content/footnotes/lowRiskMng'
 import { useFonts } from "expo-font";

@@ -31,7 +31,7 @@ const Title = styled.Text`
 `;
 
 const Paragraph = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};
+  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(4)};
   marginHorizontal: 20;
   marginBottom: 10;
   fontFamily: 'NunitoSans-Regular';

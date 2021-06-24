@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import styled from "styled-components/native";
-import LowRisk from '../../../assets/images/lowRisk'
+import IndeterminateRisk from '../../../assets/images/indeterminateRisk'
 import {ApplicationContext} from '../../../applicationProvider/applicationProvider'
 
 const FibText = styled.Text`
@@ -12,14 +12,14 @@ const AltText = styled.Text`
   fontSize: 20;
   marginVertical: 10;
 `;
-const LowRiskDial = styled.View`
+const IndeterminateRiskDial = styled.View`
   marginVertical: 40;
 `;
 
-const GreenText = styled.Text`
+const YellowText = styled.Text`
   fontFamily: "NunitoSans-Regular";
   fontSize: 20;
-  color: #77c83f;
+  color: #E49917;
 `;
 
 const GreaterFourtyText = styled.Text`
@@ -27,7 +27,7 @@ const GreaterFourtyText = styled.Text`
   fontSize: 16;
 `
 
-export default function LowRiskContent({ navigation }) {
+export default function IndeterminateRiskContent({ navigation }) {
 const {alt} = useContext(ApplicationContext);
 
 
@@ -41,11 +41,11 @@ const {alt} = useContext(ApplicationContext);
         {alt < 40 && <AltText>ALT {"<"} 40 U/L</AltText>}
         {alt >= 40 && <AltText>ALT ≥ 40 U/L</AltText>}
         {alt >= 40 && <GreaterFourtyText>Risks of other forms of liver disease</GreaterFourtyText>}
-        <LowRiskDial>
-          <LowRisk />
-        </LowRiskDial>
+        <IndeterminateRiskDial>
+          <IndeterminateRisk />
+        </IndeterminateRiskDial>
         <FibText>
-          <GreenText>LOW RISK</GreenText> of
+          <YellowText>INDETERMINATE RISK</YellowText> of
         </FibText>
         <FibText>advanced fibrosis related</FibText>
         <FibText>to NAFLD/NASH</FibText>
