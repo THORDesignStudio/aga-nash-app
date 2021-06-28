@@ -7,9 +7,12 @@ import Footer from "../components/global/footer";
 import BackButton from "../components/global/backButton";
 import ConditionContent from "../components/content/abbreviations/conditions";
 import Fib4Content from "../components/content/abbreviations/fib4";
-import LowRisk from "../components/content/abbreviations/LowRisk";
+import LowRiskResult from "../components/content/abbreviations/lowRiskResult";
+import IndeterminateRiskResult from "../components/content/abbreviations/indeterminateRiskResult";
 import OtherDiseases from "../components/content/abbreviations/otherDiseases";
 import LowRiskMng from "../components/content/abbreviations/lowRiskMng";
+import IndeterminateRiskMng from "../components/content/abbreviations/indeterminateRiskMng";
+import LSM from "../components/content/abbreviations/lsm";
 import { useFonts } from "expo-font";
 
 /**
@@ -49,7 +52,7 @@ export default function Abbreviations({ navigation }) {
       content = <Fib4Content />;
       break;
     case "ResultLow":
-      content = <LowRisk />;
+      content = <LowRiskResult />;
       break;
     case "OtherDiseases":
       content = <OtherDiseases />;
@@ -57,6 +60,14 @@ export default function Abbreviations({ navigation }) {
     case "LowRiskMng":
       content = <LowRiskMng />;
       break;
+    case "ResultIndeterminate":
+      content = <IndeterminateRiskResult />;
+      break;
+    case "IndeterminateRiskMng":
+      content = <IndeterminateRiskMng />;
+      break;
+    case "LSM":
+      content = <LSM />;
   }
 
   return (

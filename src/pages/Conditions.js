@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
@@ -48,7 +48,7 @@ export default function Conditions({ navigation }) {
           </View>
         </View>
       </View>
-      <NextBack navigation={navigation} nextPage="FIB4" backPage='Navigate'/>
+      <NextBack navigation={navigation} nextPage="FIB4" backPage='Navigate' marginVertical={10}/>
       <Pearls navigation={navigation} />
       <Footer navigation={navigation} />
     </>
@@ -61,10 +61,10 @@ const styles = StyleSheet.create({
   },
   conditions: {
     flex: 1,
-    justifyContent: "space-evenly",
     marginHorizontal: 20,
   },
   singleCondition: {
     flexDirection: "row",
+    marginVertical: 20,
   },
 });

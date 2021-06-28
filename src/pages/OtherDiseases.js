@@ -8,17 +8,25 @@ import PageContainer from '../components/primitives/container'
 import styled from 'styled-components/native'
 import {useFonts} from 'expo-font'
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
+import TitleContainer from '../components/global/titleContainer'
 
 const ContentText = styled.Text`
   marginHorizontal: 20;
-  marginVertical: 20;
+  marginVertical: 10;
   fontFamily: 'NunitoSans-Regular';
   fontSize: 16;
+`
+const ImportantText = styled.Text`
+  marginHorizontal: 20;
+  marginVertical: 10;
+  fontFamily: 'NunitoSans-Bold';
+  fontSize: 16;
+  color: #FC1B1F;
 `
 
 export default function OtherForms({ navigation }) {
   const [nextPage, setNextPage] = useState('RiskManagement')
-  const { setPageId} = useContext(ApplicationContext);
+  const { setPageId, fib4} = useContext(ApplicationContext);
 
   useEffect(() => {
     navigation.addListener("focus", () => {
@@ -27,24 +35,26 @@ export default function OtherForms({ navigation }) {
   }, [navigation]);
 
   const handleNextPresent = () => {
-    setNextPage('HepRefer')
+    if(fib4 < 1.3){
+      setNextPage('HepRefer')
+    } else if (1.3 < fib4 < 2.67){
+      setNextPage('LSM')
+    }
+      
   }
 
-// const handleNextNotPresent = () => {
-//   setNextPage('RiskManagement')
-// }
-
   let [fontsLoaded] = useFonts({
-    "NunitoSans-SemiBold": require("../assets/fonts/NunitoSans-SemiBold.ttf"),
+    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
     "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
   });
   return (
     <>
-      <PageContainer alignItems='flex-start' >
+      <PageContainer alignItems='flex-start' justifyContent='flex-start'>
+        <TitleContainer>
         <PageTitle
           pageTitle="Evaluate for other forms of liver disease:"
-          marginHorizontal={20}
         />
+        </TitleContainer>
         <ContentText>
         Alcohol intake history (≥ 14 drinks/week for women or ≥ 21 drinks/week for men)
         </ContentText>
@@ -54,8 +64,10 @@ export default function OtherForms({ navigation }) {
         <ContentText>
         Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT 
         </ContentText>
-        <Radio label='Other forms of liver disease present' marginHorizontal={20} onPress={handleNextPresent} />
-        {/* <Radio label='No other forms of liver disease present' marginHorizontal={20} onPress={handleNextNotPresent}  /> */}
+        <ImportantText>
+          *If there are other forms of liver disease present, click on the button below and then hit 'Next'. Otherwise, simply click 'Next'.
+        </ImportantText>
+        <Radio label='Other forms of liver disease present' marginHorizontal={30} onPress={handleNextPresent}/>
       </PageContainer>
       <NextBack navigation={navigation} marginVertical={10} nextPage={nextPage}/>
       <AbbreviationsFootnotes navigation={navigation} />

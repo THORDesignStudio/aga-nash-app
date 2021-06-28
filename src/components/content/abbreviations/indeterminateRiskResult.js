@@ -1,7 +1,7 @@
 import React from "react";
 import ContentContainer from "../../global/contentContainer";
 
-export default function ConditionsAbbreviations() {
+export default function IndeterminateRiskResultAbbreviations() {
   return (
     <>
       <ContentContainer>

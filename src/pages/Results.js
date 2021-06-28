@@ -24,13 +24,13 @@ export default function Results({ navigation }) {
         } else {
           setNextPage("RiskManagement");
         }
-      } else if (1.3 < fib4 < 2.67) {
+      } else if (1.3 <= fib4 <= 2.67) {
         setPageId("ResultIndeterminate");
         setResultContent(<IndeterminateRiskContent />);
         if (alt >= 40) {
           setNextPage("OtherDiseases");
         } else {
-          setNextPage("RiskManagement");
+          setNextPage("LSM");
         }
       } else if (fib4 > 2.67) {
         setPageId("ResultHigh");

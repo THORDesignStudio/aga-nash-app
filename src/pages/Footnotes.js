@@ -7,9 +7,12 @@ import BackButton from "../components/global/backButton";
 import Footer from "../components/global/footer";
 import ConditionContent from "../components/content/footnotes/conditions";
 import Fib4Content from "../components/content/footnotes/fib4";
-import LowRisk from "../components/content/footnotes/LowRisk";
+import LowRiskResult from "../components/content/footnotes/lowRiskResult";
+import IndeterminateRiskResult from '../components/content/footnotes/indeterminateRiskResult'
 import OtherDiseases from "../components/content/footnotes/otherDiseases";
 import LowRiskMng from '../components/content/footnotes/lowRiskMng'
+import IndeterminateRiskMng from '../components/content/footnotes/indeterminateRiskMng'
+import LSM from '../components/content/footnotes/lsm'
 import { useFonts } from "expo-font";
 
 /**
@@ -41,7 +44,7 @@ export default function Footnotes({ navigation }) {
       content = <Fib4Content />;
       break;
     case "ResultLow":
-      content = <LowRisk />;
+      content = <LowRiskResult />;
       break;
     case "OtherDiseases":
       content = <OtherDiseases />;
@@ -49,7 +52,14 @@ export default function Footnotes({ navigation }) {
     case "LowRiskMng":
       content = <LowRiskMng />
       break;
-
+    case "ResultIndeterminate":
+      content = <IndeterminateRiskResult />
+      break;
+    case 'IndeterminateRiskMng':
+      content = <IndeterminateRiskMng />
+      break;
+    case 'LSM':
+      content = <LSM />
   }
 
   return (

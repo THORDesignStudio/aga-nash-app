@@ -40,7 +40,8 @@ export default function Radio({ label, onPress, marginHorizontal }) {
   const [selected, setSelected] = useState(false);
 
   const handleOnPress = () => {
-    setSelected(!selected);
+      setSelected(!selected);
+    
   };
 
   useEffect(() => {

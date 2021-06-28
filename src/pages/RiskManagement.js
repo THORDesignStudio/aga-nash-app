@@ -5,8 +5,9 @@ import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes"
 import ScrollableView from "../components/primitives/scrollableContainer";
 import { useFonts } from "expo-font";
 import LowRiskMng from '../components/content/riskManagement/LowRisk'
+import IndeterminateRiskManagement from "../components/content/riskManagement/IndeterminateRisk";
+import HighRiskManagement from '../components/content/riskManagement/HighRisk'
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
-import {Text} from 'react-native'
 
 export default function RiskManagement({ navigation }) {
   const { fib4, setPageId, alt } = useContext(ApplicationContext);
@@ -17,14 +18,15 @@ export default function RiskManagement({ navigation }) {
       if (fib4 < 1.3) {
         setPageId("LowRiskMng");
         setRiskMng(<LowRiskMng />)
-      } else if (1.3 < fib4 < 2.67) {
-        setPageId("InderterminateRiskMng");
-        setRiskMng (<Text>Indeterminate</Text>);
       } else if (fib4 > 2.67) {
         setPageId("HighRiskMng");
-        setRiskMng(<Text>High</Text>);
-      }
+        setRiskMng(<HighRiskManagement />);
+      }else {
+        setPageId("IndeterminateRiskMng");
+        setRiskMng (<IndeterminateRiskManagement />);
+      } 
     });
+    console.log(fib4)
   }, [navigation, fib4]);
   
   let [fontsLoaded] = useFonts({
@@ -37,7 +39,7 @@ export default function RiskManagement({ navigation }) {
       <ScrollableView>
         {riskMng}
       </ScrollableView>
-      <BackNext navigation={navigation} marginVertical={10} nextPage='Home'/>
+      <BackNext navigation={navigation} marginVertical={10} nextPage='Navigate'/>
       <AbbreviationsFootnotes navigation={navigation}/>
       <Footer navigation={navigation}/>
     </>

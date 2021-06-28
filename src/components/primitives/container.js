@@ -13,7 +13,7 @@ const Wrapper = styled.View`
   alignItems: ${(props) => props.alignItems || "center"} ;
   justifyContent: ${(props) => props.justifyContent || "center"};
   marginTop: ${(props) => props.marginTop || 0};
-  backgroundColor: ${(props) => props.backgroundColor || '#F1F6F8'};
+  backgroundColor: ${(props) => props.backgroundColor || '#F2F2F2'};
 `
 
 export default function Container ({children, alignItems, justifyContent, flex, marginTop, backgroundColor}){

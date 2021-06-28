@@ -55,6 +55,15 @@ export default function Navigate({ navigation }) {
     navigation.navigate('RiskManagement')
   }
 
+  const handleIndeterminateRisk = () => {
+    setFib4(2);
+    navigation.navigate('RiskManagement')
+  }
+
+  const handleHighRisk = () => {
+    setFib4(3);
+    navigation.navigate('RiskManagement')
+  }
   return (
     <>
       <GoldenTitle>
@@ -94,6 +103,7 @@ export default function Navigate({ navigation }) {
               buttonHeight={60}
               textWidth="75%"
               fontSize={18}
+              onPress={handleIndeterminateRisk}
             />
           </ButtonContainer>
           <ButtonContainer>
@@ -105,6 +115,7 @@ export default function Navigate({ navigation }) {
               textClr="white"
               buttonHeight={60}
               textWidth="75%"
+              onPress={handleHighRisk}
             />
           </ButtonContainer>
         </SectionContainer>

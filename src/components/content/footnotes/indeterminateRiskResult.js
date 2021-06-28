@@ -1,16 +1,14 @@
 import React from "react";
 import ContentContainer from "../../global/contentContainer";
 
-export default function LowRiskFootnotes() {
+export default function IndeterminateRiskResultsFootnotes() {
   return (
     <>
       <ContentContainer>
-        1 FIB-4, a simple non-proprietary fibrosis score is used to stratify
-        risk: Age ([yr] x AST [U/L]) / ((PLT [10(9)/L]) x (ALT [U/L])(1/2))
+      1 FIB-4, a simple non-proprietary fibrosis score is used to stratify risk:  Age ([yr] x AST [U/L]) / ((PLT [10(9)/L]) x (ALT [U/L])(1/2))
       </ContentContainer>
       <ContentContainer>
-        2 Low risk cut point: FIB-4 {"<"}1.3 ({"<"}2.0 for patients 65+)
-        excludes advanced fibrosis
+      2 Indeterminate risk cut point:  FIB-4 1.3 to 2.67
       </ContentContainer>
       <ContentContainer>
         3 ALT {">"} 40 indicates risk of other forms of liver disease

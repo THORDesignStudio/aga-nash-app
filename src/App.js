@@ -14,6 +14,7 @@ import Results from './pages/Results'
 import RiskManagement from "./pages/RiskManagement";
 import OtherDiseases from './pages/OtherDiseases'
 import HepRefer from './pages/HepRefer'
+import LSM from './pages/LSM'
 
 /**
  * This is the central hub of the app....clearly. Essentially all the pages live here and we use 
@@ -41,6 +42,7 @@ export default function App() {
           <Stack.Screen name ='RiskManagement' component={RiskManagement} />
           <Stack.Screen name ='OtherDiseases' component={OtherDiseases} />
           <Stack.Screen name ='HepRefer' component={HepRefer} />
+          <Stack.Screen name ='LSM' component={LSM} />
         </Stack.Navigator>
       </NavigationContainer>
     </ApplicationProvider>
