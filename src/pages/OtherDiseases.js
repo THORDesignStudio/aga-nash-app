@@ -37,9 +37,11 @@ export default function OtherForms({ navigation }) {
   const handleNextPresent = () => {
     if(fib4 < 1.3){
       setNextPage('HepRefer')
-    } else if (1.3 < fib4 < 2.67){
+    }else if ( fib4 > 2.67){
+      setNextPage('HepRefer')
+    } else {
       setNextPage('LSM')
-    }
+    } 
       
   }
 

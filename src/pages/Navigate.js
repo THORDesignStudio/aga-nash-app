@@ -132,6 +132,7 @@ export default function Navigate({ navigation }) {
               textClr="white"
               buttonHeight={60}
               textWidth="75%"
+              onPress={() => navigation.navigate('LSM')}
             />
           </ButtonContainer>
         </SectionContainer>

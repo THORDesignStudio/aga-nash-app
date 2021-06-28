@@ -6,6 +6,7 @@ import PageContainer from "../components/primitives/container";
 import { useFonts } from "expo-font";
 import LowRiskContent from "../components/content/results/LowRisk";
 import IndeterminateRiskContent from "../components/content/results/IndeterminateRisk";
+import HighRiskContent from "../components/content/results/HighRisk";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import { Text } from "react-native";
 
@@ -24,7 +25,15 @@ export default function Results({ navigation }) {
         } else {
           setNextPage("RiskManagement");
         }
-      } else if (1.3 <= fib4 <= 2.67) {
+      } else if (fib4 > 2.67) {
+        setPageId("ResultHigh");
+        setResultContent(<HighRiskContent />);
+        if (alt >= 40) {
+          setNextPage("OtherDiseases");
+        } else {
+          setNextPage("RiskManagement");
+        }
+      } else  {
         setPageId("ResultIndeterminate");
         setResultContent(<IndeterminateRiskContent />);
         if (alt >= 40) {
@@ -32,15 +41,7 @@ export default function Results({ navigation }) {
         } else {
           setNextPage("LSM");
         }
-      } else if (fib4 > 2.67) {
-        setPageId("ResultHigh");
-        setResultContent(<Text>High</Text>);
-        if (alt >= 40) {
-          setNextPage("OtherDiseases");
-        } else {
-          setNextPage("RiskManagement");
-        }
-      }
+      } 
     });
   }, [navigation, fib4]);
 

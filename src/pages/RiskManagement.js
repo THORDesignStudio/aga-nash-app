@@ -26,7 +26,6 @@ export default function RiskManagement({ navigation }) {
         setRiskMng (<IndeterminateRiskManagement />);
       } 
     });
-    console.log(fib4)
   }, [navigation, fib4]);
   
   let [fontsLoaded] = useFonts({
