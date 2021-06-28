@@ -9,9 +9,11 @@ import ConditionContent from "../components/content/abbreviations/conditions";
 import Fib4Content from "../components/content/abbreviations/fib4";
 import LowRiskResult from "../components/content/abbreviations/lowRiskResult";
 import IndeterminateRiskResult from "../components/content/abbreviations/indeterminateRiskResult";
+import HighRiskResult from "../components/content/abbreviations/highRiskResult"
 import OtherDiseases from "../components/content/abbreviations/otherDiseases";
 import LowRiskMng from "../components/content/abbreviations/lowRiskMng";
 import IndeterminateRiskMng from "../components/content/abbreviations/indeterminateRiskMng";
+import HighRiskMng from '../components/content/abbreviations/highRiskMng'
 import LSM from "../components/content/abbreviations/lsm";
 import { useFonts } from "expo-font";
 
@@ -68,6 +70,12 @@ export default function Abbreviations({ navigation }) {
       break;
     case "LSM":
       content = <LSM />;
+    case "ResultHigh":
+      content = <HighRiskResult />
+      break;
+    case 'HighRiskMng':
+      content = <HighRiskMng />
+      break;
   }
 
   return (

@@ -9,9 +9,11 @@ import ConditionContent from "../components/content/footnotes/conditions";
 import Fib4Content from "../components/content/footnotes/fib4";
 import LowRiskResult from "../components/content/footnotes/lowRiskResult";
 import IndeterminateRiskResult from '../components/content/footnotes/indeterminateRiskResult'
+import HighRiskResult from '../components/content/footnotes/highRiskResult'
 import OtherDiseases from "../components/content/footnotes/otherDiseases";
 import LowRiskMng from '../components/content/footnotes/lowRiskMng'
 import IndeterminateRiskMng from '../components/content/footnotes/indeterminateRiskMng'
+import HighRiskMng from '../components/content/footnotes/highRiskMng'
 import LSM from '../components/content/footnotes/lsm'
 import { useFonts } from "expo-font";
 
@@ -60,6 +62,12 @@ export default function Footnotes({ navigation }) {
       break;
     case 'LSM':
       content = <LSM />
+    case "ResultHigh":
+      content = <HighRiskResult />
+      break;
+    case 'HighRiskMng':
+      content = <HighRiskMng />
+      break;
   }
 
   return (
