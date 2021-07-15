@@ -8,6 +8,7 @@ import PageTitle from "../components/global/pageTitle";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import TitleContainer from "../components/global/titleContainer";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
+import {useFonts} from 'expo-font'
 
 /**
  * FIB4
@@ -23,6 +24,14 @@ const CalcContainer = styled.View`
   marginVertical: 20;
   alignItems: center;
 `;
+
+const ImportantText = styled.Text`
+  marginHorizontal: 20;
+  marginVertical: 10;
+  fontFamily: 'NunitoSans-Bold';
+  fontSize: 16;
+  color: #FC1B1F;
+`
 
 export default function Fib4({ navigation }) {
   const { setPageId, setFib4, alt, setAlt, age, setAge } =
@@ -53,6 +62,11 @@ export default function Fib4({ navigation }) {
     } else setNextPage("");
   }, [age, alt, ast, plt, disabled]);
   
+  let [fontsLoaded] = useFonts({
+    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
+    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
+  });
+
 
 
   return (
@@ -67,6 +81,9 @@ export default function Fib4({ navigation }) {
             fontSize={20}
           />
         </TitleContainer>
+        <ImportantText>
+          *Note: Do NOT mix up AST and ALT!
+        </ImportantText>
         <CalcContainer>
           <Input
             text="Age"
@@ -89,7 +106,7 @@ export default function Fib4({ navigation }) {
           <Input
             text="PLT"
             onChangeText={(text) => setPlt(parseInt(text))}
-            placeholder="Required"
+            placeholder="Required  (10^9/L)"
             keyboardType="numeric"
           />
         </CalcContainer>
