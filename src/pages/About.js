@@ -3,7 +3,6 @@ import styled from "styled-components/native";
 import GoldenTitle from "../components/global/goldenTitle";
 import Footer from "../components/global/footer";
 import ScrollableView from '../components/primitives/scrollableContainer'
-import { PixelRatio } from "react-native";
 import {useFonts} from 'expo-font'
 import BackButton from '../components/global/backButton'
 
@@ -25,13 +24,13 @@ const HeaderTextContainer = styled.View`
 
 
 const Title = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(16)};
+  fontSize: 32;
   textAlign: center;
-  fontFamily: 'NunitoSans-Bold';
+  fontFamily: 'NunitoSans-SemiBold';
 `;
 
 const Paragraph = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(10)};
+  fontSize: 16;
   marginHorizontal: 20;
   marginBottom: 10;
   fontFamily: 'NunitoSans-Regular';
@@ -40,7 +39,7 @@ const Paragraph = styled.Text`
 export default function About({ navigation }) {
 
   let [fontsLoaded] = useFonts({
-    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
+    'NunitoSans-SemiBold': require('../assets/fonts/NunitoSans-SemiBold.ttf'),
     'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
   });
 

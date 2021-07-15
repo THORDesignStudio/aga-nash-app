@@ -14,6 +14,7 @@ export default function ApplicationProvider({ children }) {
   const [pageId, setPageId] = useState();
   const [fib4, setFib4] = useState();
   const [alt, setAlt] = useState();
+  const [age, setAge] = useState();
 
   const value = {
     pageId,
@@ -21,7 +22,9 @@ export default function ApplicationProvider({ children }) {
     fib4,
     setFib4,
     alt,
-    setAlt
+    setAlt,
+    age,
+    setAge,
   };
 
   return (

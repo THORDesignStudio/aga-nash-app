@@ -25,7 +25,8 @@ const CalcContainer = styled.View`
 `;
 
 export default function Fib4({ navigation }) {
-  const { setPageId, setFib4, alt, setAlt } = useContext(ApplicationContext);
+  const { setPageId, setFib4, alt, setAlt, age, setAge } =
+    useContext(ApplicationContext);
 
   useEffect(() => {
     navigation.addListener("focus", () => {
@@ -33,7 +34,6 @@ export default function Fib4({ navigation }) {
     });
   }, [navigation]);
 
-  const [age, setAge] = useState();
   const [ast, setAst] = useState();
   const [plt, setPlt] = useState();
   const [disabled, setDisabled] = useState(true);
@@ -52,10 +52,15 @@ export default function Fib4({ navigation }) {
       setNextPage("Results");
     } else setNextPage("");
   }, [age, alt, ast, plt, disabled]);
+  
+
 
   return (
     <>
-      <ScrollView contentContainerStyle={{ justifyContent: "space-evenly" }}>
+      <ScrollView
+        contentContainerStyle={{ justifyContent: "space-evenly" }}
+        persistentScrollbar={true}
+      >
         <TitleContainer paddingBottom={30}>
           <PageTitle
             pageTitle="Enter the following lab results for Non Invasive Testing (NIT) for fibrosis"

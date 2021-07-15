@@ -36,7 +36,7 @@ const SelectedRadio = styled.View`
   backgroundColor: #00ff00;
 `;
 
-export default function Radio({ label, onPress, marginHorizontal }) {
+export default function Radio({ label, onPressSelected, marginHorizontal, onPressUnselected }) {
   const [selected, setSelected] = useState(false);
 
   const handleOnPress = () => {
@@ -45,10 +45,13 @@ export default function Radio({ label, onPress, marginHorizontal }) {
   };
 
   useEffect(() => {
-    if (selected) {
-      onPress();
-    };
-  }, [selected])
+      if (selected) {
+        onPressSelected();
+      } else if(!selected){
+        onPressUnselected()
+      }
+    }, [selected]);
+
 
   return (
     <Container marginHorizontal={marginHorizontal}>

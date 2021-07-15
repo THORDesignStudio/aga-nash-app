@@ -8,23 +8,38 @@ import LowRiskContent from "../components/content/results/LowRisk";
 import IndeterminateRiskContent from "../components/content/results/IndeterminateRisk";
 import HighRiskContent from "../components/content/results/HighRisk";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
-import { Text } from "react-native";
 
 export default function Results({ navigation }) {
-  const { fib4, setPageId, alt } = useContext(ApplicationContext);
+  const { fib4, setPageId, alt, age } = useContext(ApplicationContext);
   const [resultContent, setResultContent] = useState(<></>);
   const [nextPage, setNextPage] = useState("");
 
+  function LowResult() {
+    setPageId("ResultLow");
+    setResultContent(<LowRiskContent />);
+    if (alt >= 40) {
+      setNextPage("OtherDiseases");
+    } else {
+      setNextPage("RiskManagement");
+    }
+  }
+
+  function IndeterminateResult() {
+    setPageId("ResultIndeterminate");
+    setResultContent(<IndeterminateRiskContent />);
+    if (alt >= 40) {
+      setNextPage("OtherDiseases");
+    } else {
+      setNextPage("LSM");
+    }
+  }
+
   useEffect(() => {
     navigation.addListener("focus", () => {
-      if (fib4 < 1.3) {
-        setPageId("ResultLow");
-        setResultContent(<LowRiskContent />);
-        if (alt >= 40) {
-          setNextPage("OtherDiseases");
-        } else {
-          setNextPage("RiskManagement");
-        }
+      if (fib4 < 1.3 && age < 65) {
+        LowResult();
+      } else if (fib4 < 2 && age >= 65) {
+        LowResult();
       } else if (fib4 > 2.67) {
         setPageId("ResultHigh");
         setResultContent(<HighRiskContent />);
@@ -33,15 +48,11 @@ export default function Results({ navigation }) {
         } else {
           setNextPage("RiskManagement");
         }
-      } else  {
-        setPageId("ResultIndeterminate");
-        setResultContent(<IndeterminateRiskContent />);
-        if (alt >= 40) {
-          setNextPage("OtherDiseases");
-        } else {
-          setNextPage("LSM");
-        }
-      } 
+      } else if (age < 65 && 1.3 < fib4 < 2.67) {
+        IndeterminateResult();
+      } else if (age > 65 && 2 < fib4 < 2.67) {
+        IndeterminateResult();
+      }
     });
   }, [navigation, fib4]);
 

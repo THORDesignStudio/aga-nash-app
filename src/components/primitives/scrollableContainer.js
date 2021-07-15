@@ -25,6 +25,7 @@ export default function ScrollableView({ children, marginVertical, flex }) {
       contentContainerStyle={style.wrapper}
       marginVertical={marginVertical}
       flex={flex}
+      persistentScrollbar={true}
     >
       {children}
     </Container>

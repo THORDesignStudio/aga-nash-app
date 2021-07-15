@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components/native";
 import GoldenTitle from "../components/global/goldenTitle";
 import Footer from "../components/global/footer";
-import { PixelRatio } from "react-native";
 import BackButton from '../components/global/backButton'
+import {useFonts} from 'expo-font'
 
 /**
  * Sources
@@ -33,20 +33,19 @@ const style = {
 };
 
 const Title = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(16)};
+  fontSize: 32;
   textAlign: center;
+  fontFamily: 'NunitoSans-SemiBold';
 `;
 
-const Paragraph = styled.Text`
-  marginHorizontal: 20;
-  marginBottom: 10;
-`;
-
-const BackContainer = styled.View`
-  justifyContent: flex-end;
-`
 
 export default function About({ navigation }) {
+
+  let [fontsLoaded] = useFonts({
+    'NunitoSans-SemiBold': require('../assets/fonts/NunitoSans-SemiBold.ttf'),
+    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
+  });
+
   return (
     <>
       <GoldenTitle>
@@ -54,7 +53,7 @@ export default function About({ navigation }) {
           <Title>SOURCES</Title>
         </HeaderTextContainer>
       </GoldenTitle>
-      <Container contentContainerStyle={style.wrapper}>
+      <Container contentContainerStyle={style.wrapper}  persistentScrollbar={true}>
       </Container>
       <BackButton navigation={navigation}/>
       <Footer navigation={navigation} />

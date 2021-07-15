@@ -27,22 +27,23 @@ const ImportantText = styled.Text`
 export default function OtherForms({ navigation }) {
   const [nextPage, setNextPage] = useState('RiskManagement')
   const { setPageId, fib4} = useContext(ApplicationContext);
-
+  
   useEffect(() => {
     navigation.addListener("focus", () => {
       setPageId('OtherDiseases')
     });
   }, [navigation]);
 
-  const handleNextPresent = () => {
-    if(fib4 < 1.3){
-      setNextPage('HepRefer')
-    }else if ( fib4 > 2.67){
-      setNextPage('HepRefer')
-    } else {
-      setNextPage('LSM')
-    } 
-      
+  const handleNextPresentSelected = () => {
+      if(fib4 < 1.3 || fib4 > 2.67){
+        setNextPage('HepRefer')
+      } else {
+        setNextPage('LSM')
+      } 
+  }
+
+  const handleNextPresentUnselected = () => {
+    setNextPage('RiskManagement')
   }
 
   let [fontsLoaded] = useFonts({
@@ -69,7 +70,7 @@ export default function OtherForms({ navigation }) {
         <ImportantText>
           *If there are other forms of liver disease present, click on the button below and then hit 'Next'. Otherwise, simply click 'Next'.
         </ImportantText>
-        <Radio label='Other forms of liver disease present' marginHorizontal={30} onPress={handleNextPresent}/>
+        <Radio label='Other forms of liver disease present' marginHorizontal={30} onPressSelected={handleNextPresentSelected} onPressUnselected={handleNextPresentUnselected}/>
       </PageContainer>
       <NextBack navigation={navigation} marginVertical={10} nextPage={nextPage}/>
       <AbbreviationsFootnotes navigation={navigation} />
