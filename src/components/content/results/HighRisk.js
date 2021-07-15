@@ -23,16 +23,15 @@ const YellowText = styled.Text`
 `;
 
 export default function HighRiskContent({ navigation }) {
-const {alt} = useContext(ApplicationContext);
+const {alt, fib4} = useContext(ApplicationContext);
 
 
 
   return (
     <>
         <FibText>
-        FIB-4 {'>'} 2.67
+        {fib4.toFixed(2)}
         </FibText>
-        {alt < 40 && <AltText>ALT {"<"} 40 U/L</AltText>}
         {alt >= 40 && <AltText>ALT ≥ 40 U/L</AltText>}
         <HighRiskDial>
           <HighRisk />
@@ -40,8 +39,6 @@ const {alt} = useContext(ApplicationContext);
         <FibText>
           <YellowText>High RISK</YellowText> of
         </FibText>
-        <FibText>advanced fibrosis related</FibText>
-        <FibText>to NAFLD/NASH</FibText>
     </>
   );
 }

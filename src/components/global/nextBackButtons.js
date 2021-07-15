@@ -16,9 +16,11 @@ const Container = styled.View`
   flexDirection: row;
   justifyContent: center;
   marginVertical: ${(props) => props.marginVertical || 50};
+  backgroundColor: ${(props) => props.backgroundColor || '#F2F2F2'};
+  paddingVertical: ${(props) => props.paddingVertical || 0};
 `
 
-export default function NextBack({ nextPage, navigation, marginVertical }) {
+export default function NextBack({ nextPage, navigation, marginVertical, backgroundColor, paddingVertical }) {
 
   let [fontsLoaded] = useFonts({
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
@@ -28,7 +30,7 @@ export default function NextBack({ nextPage, navigation, marginVertical }) {
 
   return (
     <>
-      <Container marginVertical={marginVertical}>
+      <Container marginVertical={marginVertical} backgroundColor={backgroundColor} paddingVertical={paddingVertical}>
         <View style={styles.backContainer}>
           <Text style={styles.backText}>Back</Text>
           <TouchableOpacity onPress={() => navigation.goBack()}>

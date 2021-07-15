@@ -63,7 +63,7 @@ export default function Results({ navigation }) {
 
   return (
     <>
-      <PageContainer justifyContent="flex-start" marginTop={40} flex={1}>
+      <PageContainer justifyContent="center" marginTop={40} flex={1}>
         {resultContent}
       </PageContainer>
       <NextBack

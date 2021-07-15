@@ -28,7 +28,7 @@ export default function HepRefer ({navigation}){
           Refer to hepatologist or treat
         </HepText>
       </PageContainer>
-      <NextBack navigation={navigation} marginVertical={10} nextPage='Home'/>
+      <NextBack navigation={navigation} marginVertical={0.1} nextPage='Home' backgroundColor='#FC1B1F' paddingVertical={10}/>
       <Footer navigation={navigation}/>
     </>
   )

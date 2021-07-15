@@ -28,27 +28,22 @@ const GreaterFourtyText = styled.Text`
 `
 
 export default function IndeterminateRiskContent({ navigation }) {
-const {alt} = useContext(ApplicationContext);
+const {alt, fib4} = useContext(ApplicationContext);
 
 
 
   return (
     <>
         <FibText>
-          FIB-4 {"<"} 1.3 (age {"<"}65)
+        FIB4 = {fib4.toFixed(2)}
         </FibText>
-        <FibText>and FIB-4 {"<"} 2 (age 65+)</FibText>
-        {alt < 40 && <AltText>ALT {"<"} 40 U/L</AltText>}
         {alt >= 40 && <AltText>ALT ≥ 40 U/L</AltText>}
-        {alt >= 40 && <GreaterFourtyText>Risks of other forms of liver disease</GreaterFourtyText>}
         <IndeterminateRiskDial>
           <IndeterminateRisk />
         </IndeterminateRiskDial>
         <FibText>
           <YellowText>INDETERMINATE RISK</YellowText> of
         </FibText>
-        <FibText>advanced fibrosis related</FibText>
-        <FibText>to NAFLD/NASH</FibText>
     </>
   );
 }
