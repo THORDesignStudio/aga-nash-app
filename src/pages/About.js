@@ -86,8 +86,8 @@ export default function About({ navigation }) {
           from Intercept Pharmaceuticals, Inc., Pfizer Inc., Allergan and
           Genfit.
         </Paragraph>
-        </ScrollableView>
         <BackButton navigation={navigation}/>
+        </ScrollableView>
       <Footer navigation={navigation} />
     </>
   );

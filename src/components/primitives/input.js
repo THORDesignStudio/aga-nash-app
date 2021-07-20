@@ -18,7 +18,8 @@ const Input = styled.TextInput`
   borderWidth: 1;
   borderRadius: 20;
   fontFamily: 'NunitoSans-Regular';
-  textAlign: center;
+  textAlign: left;
+  paddingHorizontal: 2;
 `;
 const InputText = styled.Text`
   fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};

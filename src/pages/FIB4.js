@@ -81,9 +81,7 @@ export default function Fib4({ navigation }) {
             fontSize={20}
           />
         </TitleContainer>
-        <ImportantText>
-          *Note: Do NOT mix up AST and ALT!
-        </ImportantText>
+
         <CalcContainer>
           <Input
             text="Age"
@@ -110,13 +108,16 @@ export default function Fib4({ navigation }) {
             keyboardType="numeric"
           />
         </CalcContainer>
-      </ScrollView>
-      <NextBack
+        <ImportantText>
+          *AST and ALT can easily be confused. Please confirm your entries before proceeding.
+        </ImportantText>
+        <NextBack
         navigation={navigation}
         nextPage={nextPage}
         backPage="Conditions"
         marginVertical={10}
       />
+      </ScrollView>
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>
