@@ -5,9 +5,9 @@ export default function ConditionsAbbreviations() {
   return (
     <>
       <ContentContainer>
-        NAFLD Nonalcoholic fatty liver disease
+        NAFLD: Nonalcoholic fatty liver disease
       </ContentContainer>
-      <ContentContainer>NASH Nonalcoholic steatohepatitis</ContentContainer>
+      <ContentContainer>NASH: Nonalcoholic steatohepatitis</ContentContainer>
     </>
   );
 }

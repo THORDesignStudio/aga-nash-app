@@ -5,11 +5,11 @@ export default function IndeterminateRiskResultAbbreviations() {
   return (
     <>
       <ContentContainer>
-        FIB-4 Fibrosis 4 score PLT Platelets ALT Alanine aminotransferase
+        FIB-4: Fibrosis 4 
       </ContentContainer>
-      <ContentContainer>AST Aspartate aminotransferase</ContentContainer>
-      <ContentContainer>PLT Platelets</ContentContainer>
-      <ContentContainer>ALT Alanine aminotransferase</ContentContainer>
+      <ContentContainer>AST: Aspartate aminotransferase</ContentContainer>
+      <ContentContainer>PLT: Platelets</ContentContainer>
+      <ContentContainer>ALT: Alanine aminotransferase</ContentContainer>
     </>
   );
 }
