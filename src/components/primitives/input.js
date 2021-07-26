@@ -19,10 +19,10 @@ const Input = styled.TextInput`
   borderRadius: 20;
   fontFamily: 'NunitoSans-Regular';
   textAlign: left;
-  paddingHorizontal: 2;
+  paddingHorizontal: 10;
 `;
 const InputText = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(8)};
+  fontSize: 16;
   fontWeight: 700;
   marginStart: 10;
   fontFamily: 'NunitoSans-Regular';
@@ -40,7 +40,7 @@ export default function InputBox({ placeholder, text, onChangeText, keyboardType
       <Input
         placeholder={placeholder}
         onChangeText={onChangeText}
-        placeholderTextColor='red'
+        placeholderTextColor='grey'
         keyboardType={keyboardType}
       />
       <InputText>{text}</InputText>
