@@ -28,9 +28,9 @@ const CalcContainer = styled.View`
 const ImportantText = styled.Text`
   marginHorizontal: 20;
   marginVertical: 10;
-  fontFamily: 'NunitoSans-Bold';
+  fontFamily: 'NunitoSans-Regular';
   fontSize: 16;
-  color: #FC1B1F;
+  color: black;
 `
 
 export default function Fib4({ navigation }) {
