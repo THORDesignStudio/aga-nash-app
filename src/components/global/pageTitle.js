@@ -16,14 +16,15 @@ const Title = styled.Text`
  fontFamily: 'NunitoSans-Bold';
  marginBottom: ${(props) => props.marginBottom || 0};
  marginHorizontal: ${(props) => props.marginHorizontal || 0};
+ color: ${(props) => props.color || 'black'}
 `
 
-export default function PageTitle({ pageTitle, fontSize, marginBottom, marginHorizontal }) {
+export default function PageTitle({ pageTitle, fontSize, marginBottom, marginHorizontal, color }) {
   let [fontsLoaded] = useFonts({
     'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
   });
 
-  return <Title fontSize={fontSize} marginBottom={marginBottom} marginHorizontal={marginHorizontal} >{pageTitle}</Title>;
+  return <Title fontSize={fontSize} marginBottom={marginBottom} marginHorizontal={marginHorizontal} color={color}>{pageTitle}</Title>;
 }
 
 

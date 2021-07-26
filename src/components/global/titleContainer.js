@@ -12,14 +12,15 @@ const Title = styled.View`
   paddingTop: 50;
   paddingHorizontal: 20;
   paddingBottom: ${(props) => props.paddingBottom || 0};
+  marginBottom: ${(props) => props.marginBottom || 0}
 `
 
 
-export default function TitleContainer({children, paddingBottom}) {
+export default function TitleContainer({children, paddingBottom, marginBottom}) {
 
 
   return (
-    <Title paddingBottom={paddingBottom}>
+    <Title paddingBottom={paddingBottom} marginBottom={marginBottom}>
       {children}
     </Title>
   );

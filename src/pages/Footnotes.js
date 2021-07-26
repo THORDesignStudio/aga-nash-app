@@ -72,8 +72,8 @@ export default function Footnotes({ navigation }) {
 
   return (
     <>
-      <TitleContainer>
-        <PageTitle pageTitle="FOOTNOTES" />
+      <TitleContainer marginBottom={20}>
+        <PageTitle pageTitle="FOOTNOTES" color='#122033'/>
       </TitleContainer>
       <ScrollableView>{content}</ScrollableView>
       <BackButton navigation={navigation} />

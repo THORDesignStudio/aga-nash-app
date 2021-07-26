@@ -34,6 +34,7 @@ const TitleContainer = styled.View`
   flex: 0.1;
   paddingTop: 50;
   paddingHorizontal: 20;
+  marginBottom: 20;
 `;
 
 export default function Abbreviations({ navigation }) {
@@ -80,8 +81,8 @@ export default function Abbreviations({ navigation }) {
 
   return (
     <>
-      <TitleContainer>
-        <PageTitle pageTitle="ABBREVIATIONS" />
+      <TitleContainer >
+        <PageTitle pageTitle="ABBREVIATIONS" color={'#122033'} />
       </TitleContainer>
       <ScrollableView>{content}</ScrollableView>
       <BackButton navigation={navigation} />
