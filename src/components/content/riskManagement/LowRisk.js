@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
 
-
 const RiskMngHeader = styled.View`
   height: 250;
   backgroundColor: #77c83f;
@@ -19,7 +18,7 @@ const MngHeaderBox = styled.View`
 const MainHeaderBox = styled.View`
   borderBottomWidth: 1px;
   borderBottomColor: #d8d8d8;
-  marginHorizontal: 20;
+  marginHorizontal: 20px;
   width: 80%;
   justifyContent: center;
   alignItems: center;
@@ -27,10 +26,10 @@ const MainHeaderBox = styled.View`
 
 const MainHeaderText = styled.Text`
   fontFamily: "NunitoSans-SemiBold";
-  fontSize: 20;
+  fontSize: 20px;
   width: 120px;
   textAlign: center;
-  marginBottom: 10;
+  marginBottom: 10px;
 `;
 
 const SecondaryHeaderBox = styled.View`
@@ -48,21 +47,21 @@ const SecondaryHeaderText = styled.Text`
 const MainContent = styled.View`
   borderBottomWidth: 1px;
   borderBottomColor: #D8D8D8;
-  marginHorizontal: 20;
-  marginVertical: 20;
-  paddingBottom: 20;
+  marginHorizontal: 20px;
+  marginVertical: 10px;
+  paddingBottom: 20px;
 `;
 
 const MainText = styled.Text`
   fontFamily: "NunitoSans-Regular";
-  fontSize: 16;
-  marginVertical: 20;
+  fontSize: 16px;
+  marginVertical: 6px;
   textAlign: left;
 `;
 
 const BottomContent = styled.View`
-  marginHorizontal: 20;
-  marginVertical: 20;
+  marginHorizontal: 20px;
+  marginVertical: 20px;
 `;
 
 const BottomText = styled.Text`
@@ -72,39 +71,43 @@ const BottomText = styled.Text`
 `;
 
 export default function LowRiskManagement() {
-  
 
   return (
     <>
-        <RiskMngHeader>
-          <MngHeaderBox>
-            <MainHeaderBox>
-              <MainHeaderText>Low Risk Management</MainHeaderText>
-            </MainHeaderBox>
-            <SecondaryHeaderBox>
-              <SecondaryHeaderText>FIB-4 {"<"} 1.3 or</SecondaryHeaderText>
-              <SecondaryHeaderText>LSM {"<"} 8 kPa or</SecondaryHeaderText>
-              <SecondaryHeaderText>liver biopsy F0-F1</SecondaryHeaderText>
-            </SecondaryHeaderBox>
-          </MngHeaderBox>
-        </RiskMngHeader>
-        <MainContent>
-          <MainText>
-            Management by PCP, dietician, endocrinologist, cardiologist, others
-          </MainText>
-          <MainText>Lifestyle intervention</MainText>
-          <MainText>
-            May benefit from structured weight loss programs, anti-obesity
-            medications, bariatric surgery
-          </MainText>
-          <MainText>CVD risk reduction2</MainText>
-          <MainText>Diabetes care</MainText>
-        </MainContent>
-        <BottomContent>
-          <BottomText>
-          Repeat NIT in 2-3 years unless clinical circumstances change
-          </BottomText>
-        </BottomContent>
+      <RiskMngHeader>
+        <MngHeaderBox>
+          <MainHeaderBox>
+            <MainHeaderText>Low Risk Management</MainHeaderText>
+          </MainHeaderBox>
+          <SecondaryHeaderBox>
+            <SecondaryHeaderText>FIB-4 {"<"} 1.3 or</SecondaryHeaderText>
+            <SecondaryHeaderText>LSM {"<"} 8 kPa or</SecondaryHeaderText>
+            <SecondaryHeaderText>liver biopsy F0-F1</SecondaryHeaderText>
+          </SecondaryHeaderBox>
+        </MngHeaderBox>
+      </RiskMngHeader>
+      <MainContent>
+        <MainText>
+         {`\u2022 Management by PCP, dietician, endocrinologist, cardiologist, others`}
+        </MainText>
+        <MainText>
+          {`\u2022 Lifestyle intervention`}
+        </MainText>
+        <MainText>
+          {`\u2022 May benefit from structured weight loss programs, anti-obesity medications, bariatric surgery`}
+        </MainText>
+        <MainText>
+          {`\u2022 CVD risk reduction`}
+        </MainText>
+        <MainText>
+          {`\u2022 Diabetes care`}
+        </MainText>
+      </MainContent>
+      <BottomContent>
+        <BottomText>
+        Repeat NIT in 2-3 years unless clinical circumstances change
+        </BottomText>
+      </BottomContent>
     </>
   );
 }
