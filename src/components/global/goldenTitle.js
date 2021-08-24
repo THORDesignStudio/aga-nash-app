@@ -24,7 +24,7 @@ const Background = styled.ImageBackground`
 export default function GoldenTitle({ children, flex }) {
   return (
     <Header flex={flex}>
-      <Background source={require("../../assets/images/NASH_bkgd.png")}>
+      <Background source={require("../../assets/images/NASH_bkgd_banner.png")}>
         {children}
       </Background>
     </Header>
