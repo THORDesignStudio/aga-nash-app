@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import {useFonts} from 'expo-font'
+import { useFonts } from 'expo-font'
 
 /**
  * @param buttonHeight - height of the button
@@ -43,14 +43,14 @@ const TextContianer = styled.View`
 `
 
 const ButtonText = styled.Text`
-  fontSize: ${(props) => props.fontSize || 20};
-  fontWeight: 500;
-  color: ${(props) => props.textClr || 'black'};
-  textAlign: center;
-  justifyContent: center;
   alignItems: center;
-  fontFamily: 'NunitoSans-Regular'
-`;
+  color: ${(props) => props.textClr || 'black'};
+  fontFamily: 'NunitoSans-Bold';
+  fontSize: ${(props) => props.fontSize || '18px' };
+  fontWeight: bold;
+  justifyContent: center;
+  textAlign: center;
+`
 
 export default function HomeScreen({
   onPress,
