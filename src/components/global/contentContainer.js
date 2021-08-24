@@ -8,10 +8,10 @@ import {useFonts} from 'expo-font'
  */
 
 const Content = styled.Text`
-  fontSize: 20;
-  marginHorizontal: 20;
+  fontSize: 16px;
+  marginHorizontal: 20px;
   fontFamily: 'NunitoSans-Regular';
-  marginBottom: 20;
+  marginBottom: 20px;
 `
 
 export default function ContentContainer ({children}){
