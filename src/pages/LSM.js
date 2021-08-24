@@ -79,10 +79,15 @@ export default function LSM({navigation}){
   const LowRiskText = (
     <ButtonView>
       <ButtonText>
-        LOW RISK
+        LOW RISK {"\n"} LSM {'<'} 8 kPa
       </ButtonText>
+    </ButtonView>
+  )
+
+  const IndeterminateRiskText = (
+    <ButtonView>
       <ButtonText>
-        LSM {'<'} 8 kPa
+        INDETERMINATE RISK LSM 8 to 12 kPa
       </ButtonText>
     </ButtonView>
   )
@@ -90,10 +95,7 @@ export default function LSM({navigation}){
   const HighRiskText = (
     <ButtonView>
       <ButtonText>
-        HIGH RISK 
-      </ButtonText>
-      <ButtonText>
-        LSM {'>'} 12 kPa
+        HIGH RISK {"\n"} LSM {'>'} 12 kPa
       </ButtonText>
     </ButtonView>
   )
@@ -115,21 +117,21 @@ export default function LSM({navigation}){
                 borderRadius={30}
                 borderWidth={0.1}
                 textClr="white"
-                buttonHeight={60}
-                textWidth="75%"
+                buttonHeight={65}
+                textWidth="80%"
                 fontSize={18}
                 onPress={handleLowRisk}
               />
             </ButtonContainer>
             <ButtonContainer>
               <Button
-                buttonText='INDETERMINATE RISK LSM 8 to 12 kPa'
+                buttonText={IndeterminateRiskText}
                 buttonBgClr="#E49917"
                 borderRadius={30}
                 borderWidth={0.1}
                 textClr="white"
-                buttonHeight={60}
-                textWidth="75%"
+                buttonHeight={65}
+                textWidth="80%"
                 fontSize={18}
                 onPress={handleIndeterminateRisk}
               />
@@ -141,8 +143,8 @@ export default function LSM({navigation}){
                 borderRadius={30}
                 borderWidth={0.1}
                 textClr="white"
-                buttonHeight={60}
-                textWidth="100%"
+                buttonHeight={65}
+                textWidth="80%"
                 fontSize={18}
                 onPress={handleHighRisk}
               />
