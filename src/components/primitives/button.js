@@ -36,7 +36,7 @@ const ButtonOpacity = styled.TouchableOpacity`
   alignItems: center;
 `;
 
-const TextContianer = styled.View`
+const TextContainer = styled.View`
   width: ${(props) => props.width || '100%'};
   justifyContent: center;
   alignItems: center;
@@ -68,15 +68,22 @@ export default function HomeScreen({
 
   let [fontsLoaded] = useFonts({
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
+    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
   });
 
   return (
     <>
       <ButtonView buttonHeight={buttonHeight} marginTop={marginTop}>
-        <ButtonOpacity buttonBgClr={buttonBgClr} onPress={onPress} borderRadius={borderRadius} borderWidth={borderWidth} borderStyle={borderStyle}>
-          <TextContianer width={textWidth} >
-          <ButtonText textClr={textClr} fontSize={fontSize}>{buttonText}</ButtonText>
-          </TextContianer>
+        <ButtonOpacity 
+          buttonBgClr={buttonBgClr} 
+          onPress={onPress} 
+          borderRadius={borderRadius} 
+          borderWidth={borderWidth} 
+          borderStyle={borderStyle}
+        >
+          <TextContainer width={textWidth} >
+            <ButtonText textClr={textClr} fontSize={fontSize}>{buttonText}</ButtonText>
+          </TextContainer>
         </ButtonOpacity>
       </ButtonView>
     </>
