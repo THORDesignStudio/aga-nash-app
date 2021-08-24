@@ -3,13 +3,13 @@ import styled from "styled-components/native";
 
 
 const RiskMngHeader = styled.View`
-  height: 250;
+  height: 320px;
   backgroundColor: #FC1B1F;
   justifyContent: center;
   alignItems: center;
 `;
 const MngHeaderBox = styled.View`
-  height: 180;
+  height: 180px;
   width: 80%;
   backgroundColor: #ffffff;
   justifyContent: center;
@@ -41,33 +41,33 @@ const SecondaryHeaderBox = styled.View`
 `;
 
 const SecondaryHeaderText = styled.Text`
-  fontSize: 16;
+  fontSize: 16px;
   fontFamily: "NunitoSans-Regular";
   textAlign: center;
 `;
 const MainContent = styled.View`
   borderBottomWidth: 1px;
   borderBottomColor: #D8D8D8;
-  marginHorizontal: 20;
-  marginVertical: 20;
-  paddingBottom: 20;
+  marginHorizontal: 20px;
+  marginVertical: 20px;
+  paddingBottom: 20px;
 `;
 
 const MainText = styled.Text`
   fontFamily: "NunitoSans-Regular";
-  fontSize: 16;
-  marginVertical: 20;
+  fontSize: 16px;
+  marginVertical: 6px;
   textAlign: left;
 `;
 
 const BottomContent = styled.View`
-  marginHorizontal: 20;
-  marginVertical: 20;
+  marginHorizontal: 20px;
+  marginVertical: 20px;
 `;
 
 const BottomText = styled.Text`
   fontFamily: "NunitoSans-Regular";
-  fontSize: 16;
+  fontSize: 16px;
   textAlign: left;
 `;
 
@@ -90,20 +90,27 @@ export default function HighRiskManagement() {
         </RiskMngHeader>
         <MainContent>
           <MainText>
-          Management by hepatologist with multidisciplinary team (PCP, dietician, endocrinologist, cardiologist, others)
+            {`\u2022 Management by hepatologist with multidisciplinary team (PCP, dietician, endocrinologist, cardiologist, others)`}
           </MainText>
-          <MainText>Lifestyle intervention</MainText>
           <MainText>
-          Strong need for structured weight loss programs, 
-anti-obesity medications, bariatric surgery 
+            {`\u2022 Lifestyle intervention `}
           </MainText>
-          <MainText>Pharmacotherapy for NASH</MainText>
-          <MainText>CVD risk reduction</MainText>
-          <MainText>Diabetes care - Prefer medications with efficacy in NASH (pioglitazone, GLP-1RA)</MainText>
+          <MainText>
+            {`\u2022 Strong need for structured weight loss programs, anti-obesity medications, bariatric surgery `}
+          </MainText>
+          <MainText>
+            {`\u2022 Pharmacotherapy for NASH `}
+          </MainText>
+          <MainText>
+          {`\u2022 CVD risk reduction `}
+          </MainText>
+          <MainText>
+            {`\u2022 Diabetes care - Prefer medications with efficacy in NASH (pioglitazone, GLP-1RA)  `}
+          </MainText>
         </MainContent>
         <BottomContent>
           <BottomText>
-          Refer to Hepatologist 
+            Refer to Hepatologist 
           </BottomText>
         </BottomContent>
     </>

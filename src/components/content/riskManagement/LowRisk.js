@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components/native";
 
 const RiskMngHeader = styled.View`
-  height: 250;
+  height: 320px;
   backgroundColor: #77c83f;
   justifyContent: center;
   alignItems: center;
 `;
 const MngHeaderBox = styled.View`
-  height: 180;
+  height: 180px;
   width: 80%;
   backgroundColor: #ffffff;
   justifyContent: center;
