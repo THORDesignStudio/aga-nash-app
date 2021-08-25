@@ -21,15 +21,15 @@ import {useFonts} from 'expo-font'
 
 const CalcContainer = styled.View`
   flex: 1;
-  marginVertical: 20;
+  marginVertical: 20px;
   alignItems: center;
 `;
 
 const ImportantText = styled.Text`
-  marginHorizontal: 20;
-  marginVertical: 10;
+  marginHorizontal: 20px;
+  marginVertical: 10px;
   fontFamily: 'NunitoSans-Regular';
-  fontSize: 16;
+  fontSize: 16px;
   color: black;
 `
 
@@ -67,15 +67,13 @@ export default function Fib4({ navigation }) {
     "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
   });
 
-
-
   return (
     <>
       <ScrollView
         contentContainerStyle={{ justifyContent: "space-evenly" }}
         persistentScrollbar={true}
       >
-        <TitleContainer paddingBottom={30}>
+        <TitleContainer paddingBottom={0}>
           <PageTitle
             pageTitle="Enter the following lab results for Non Invasive Testing (NIT) for fibrosis"
             fontSize={20}
@@ -84,39 +82,47 @@ export default function Fib4({ navigation }) {
 
         <CalcContainer>
           <Input
-            text="Age"
+            text="*Age"
             onChangeText={(text) => setAge(parseInt(text))}
-            placeholder="Required"
+            placeholder=""
             keyboardType="numeric"
+            hasUnit={ true }
+            unit="Years"
           />
           <Input
-            text="ALT"
+            text="*ALT"
             onChangeText={(text) => setAlt(parseInt(text))}
-            placeholder="Required"
+            placeholder="(Norm: 1-35)"
             keyboardType="numeric"
+            hasUnit={ true }
+            unit="U/L"
           />
           <Input
-            text="AST"
+            text="*AST"
             onChangeText={(text) => setAst(parseInt(text))}
-            placeholder="Required"
+            placeholder="(Norm: 15-41)"
             keyboardType="numeric"
+            hasUnit={ true }
+            unit="U/L"
           />
           <Input
-            text="PLT"
+            text="*PLT"
             onChangeText={(text) => setPlt(parseInt(text))}
-            placeholder="Required  (10^9/L)"
+            placeholder="(Norm: 150-350)"
             keyboardType="numeric"
+            hasUnit={ true }
+            unit="10^9/L"
           />
         </CalcContainer>
         <ImportantText>
-          *AST and ALT can easily be confused. Please confirm your entries before proceeding.
+          Note: AST and ALT can easily be confused. Please confirm your entries before proceeding.
         </ImportantText>
         <NextBack
-        navigation={navigation}
-        nextPage={nextPage}
-        backPage="Conditions"
-        marginVertical={10}
-      />
+          navigation={navigation}
+          nextPage={nextPage}
+          backPage="Conditions"
+          marginVertical={10}
+        />
       </ScrollView>
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />

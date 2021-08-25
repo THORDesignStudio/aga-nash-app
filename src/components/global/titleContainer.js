@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React from "react";
 import styled from 'styled-components/native'
 
 
@@ -9,19 +9,18 @@ import styled from 'styled-components/native'
  */
 
 const Title = styled.View`
-  paddingTop: 50;
-  paddingHorizontal: 20;
+  paddingTop: 50px;
+  paddingHorizontal: 20px;
   paddingBottom: ${(props) => props.paddingBottom || 0};
   marginBottom: ${(props) => props.marginBottom || 0}
 `
 
-
 export default function TitleContainer({children, paddingBottom, marginBottom}) {
-
 
   return (
     <Title paddingBottom={paddingBottom} marginBottom={marginBottom}>
       {children}
     </Title>
   );
+
 }
