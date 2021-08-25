@@ -8,7 +8,7 @@ import PageTitle from "../components/global/pageTitle";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import TitleContainer from "../components/global/titleContainer";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
-import {useFonts} from 'expo-font'
+import { useFonts } from 'expo-font'
 
 /**
  * FIB4
@@ -27,7 +27,7 @@ const CalcContainer = styled.View`
 
 const ImportantText = styled.Text`
   marginHorizontal: 20px;
-  marginVertical: 10px;
+  marginVertical: 0px 10px;
   fontFamily: 'NunitoSans-Regular';
   fontSize: 16px;
   color: black;
