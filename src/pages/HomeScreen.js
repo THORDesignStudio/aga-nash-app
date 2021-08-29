@@ -57,8 +57,7 @@ export default function HomeScreen({ navigation }) {
             </View>
             <View style={styles.criticalCareContainer}>
               <Text style={styles.criticalCareText}>
-                Critical Care Pathway for Risk Stratification and Patient
-                Management
+                Clinical Care Pathway for Risk Stratification and Patient Management
               </Text>
             </View>
             <Text style={styles.splashText}>
