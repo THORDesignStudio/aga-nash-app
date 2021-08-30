@@ -4,12 +4,12 @@
   "expo": {
     "name": "aga-nash-app",
     "slug": "aga-nash-app",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "ios": "./src/assets/icon.png",
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "Completed NASH app, including low, indeterminate and high risk paths. Also has all footnotes and abbreviations and about page.",
+    "description": "AGA NASH Clinical Care Pathway Mobile App",
     "githubUrl": "https://github.com/THORDesignStudio/aga-nash-app",
     "privacy": "unlisted",
     "ios":{
