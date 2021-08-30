@@ -1,17 +1,16 @@
 {
   "name": "aga-nash-app",
-  "displayName": "aga-nash-app",
+  "displayName": "AGA NASH App",
   "expo": {
-    "name": "aga-nash-app",
+    "name": "AGA NASH App",
     "slug": "aga-nash-app",
+    "description": "The AGA’s Call-to-Action initiative and mobile app are part of a multidisciplinary effort to align gastroenterologists, hepatologists, endocrinologists, and primary care providers to improve diagnosis and management of NAFLD/NASH.",
+    "githubUrl": "https://github.com/THORDesignStudio/aga-nash-app",
+    "privacy": "public",
     "version": "1.2.0",
-    "ios": "./src/assets/icon.png",
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "AGA NASH Clinical Care Pathway Mobile App",
-    "githubUrl": "https://github.com/THORDesignStudio/aga-nash-app",
-    "privacy": "unlisted",
     "ios":{
       "bundleIdentifier": "com.aga.nash"
     }
