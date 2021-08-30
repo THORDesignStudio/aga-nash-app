@@ -8,11 +8,11 @@ import {useFonts} from 'expo-font'
 
 const HepText = styled.Text`
   fontFamily: 'NunitoSans-Light';
-  fontSize: 30;
+  fontSize: 30px;
   width: 180px;
   color: white;
   textAlign: center;
-  marginTop: 10;
+  marginTop: 10px;
 `
 
 export default function HepRefer ({navigation}){
@@ -28,7 +28,13 @@ export default function HepRefer ({navigation}){
           Refer to hepatologist or treat
         </HepText>
       </PageContainer>
-      <NextBack navigation={navigation} marginVertical={0.1} nextPage='Home' backgroundColor='#FC1B1F' paddingVertical={10}/>
+      <NextBack 
+        navigation={navigation} 
+        marginVertical={0.1} 
+        nextPage='Home' 
+        backgroundColor='#FC1B1F' 
+        paddingVertical={10}
+      />
       <Footer navigation={navigation}/>
     </>
   )

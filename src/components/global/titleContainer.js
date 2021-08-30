@@ -9,10 +9,10 @@ import styled from 'styled-components/native'
  */
 
 const Title = styled.View`
+  marginBottom: ${(props) => props.marginBottom || 0};
   paddingTop: 50px;
   paddingHorizontal: 20px;
   paddingBottom: ${(props) => props.paddingBottom || 0};
-  marginBottom: ${(props) => props.marginBottom || 0}
 `
 
 export default function TitleContainer({children, paddingBottom, marginBottom}) {

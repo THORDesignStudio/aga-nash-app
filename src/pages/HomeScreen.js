@@ -52,7 +52,7 @@ export default function HomeScreen({ navigation }) {
           </View>
           <Button
             buttonText="START"
-            onPress={() => navigation.navigate("Navigate")}
+            onPress={() => navigation.navigate("Conditions")}
             textClr="#faa61a"
             marginTop="20"
             borderStyle="solid"

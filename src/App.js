@@ -1,7 +1,9 @@
 import React from "react";
-import { NavigationContainer, use } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+
 import ApplicationProvider from "./applicationProvider/applicationProvider";
+
 import HomeScreen from "./pages/HomeScreen";
 import Conditions from "./pages/Conditions";
 import About from "./pages/About";
@@ -18,7 +20,7 @@ import LSM from './pages/LSM'
 
 /**
  * This is the central hub of the app....clearly. Essentially all the pages live here and we use 
- * @param {package} reactNavigation - in order to set up nav between pages. Alot of this is using the 
+ * @param {package} reactNavigation - in order to set up nav between pages. A lot of this is using the 
  * @param {prop} navigation - to navigate between pages. You'll see this prop everywhere, so you'll get familiar real quick.
  */
 
@@ -29,20 +31,20 @@ export default function App() {
   return (
     <ApplicationProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false,}}>
+        <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Conditions" component={Conditions} />
           <Stack.Screen name="About" component={About} />
           <Stack.Screen name="Sources" component={Sources} />
           <Stack.Screen name="Navigate" component={Navigate} />
           <Stack.Screen name="Footnotes" component={Footnotes} />
-          <Stack.Screen name ='Abbreviations' component={Abbreviations} />
-          <Stack.Screen name ='FIB4' component={FIB4} />
-          <Stack.Screen name ='Results' component={Results} />
-          <Stack.Screen name ='RiskManagement' component={RiskManagement} />
-          <Stack.Screen name ='OtherDiseases' component={OtherDiseases} />
-          <Stack.Screen name ='HepRefer' component={HepRefer} />
-          <Stack.Screen name ='LSM' component={LSM} />
+          <Stack.Screen name='Abbreviations' component={Abbreviations} />
+          <Stack.Screen name='FIB4' component={FIB4} />
+          <Stack.Screen name='Results' component={Results} />
+          <Stack.Screen name='RiskManagement' component={RiskManagement} />
+          <Stack.Screen name='OtherDiseases' component={OtherDiseases} />
+          <Stack.Screen name='HepRefer' component={HepRefer} />
+          <Stack.Screen name='LSM' component={LSM} />
         </Stack.Navigator>
       </NavigationContainer>
     </ApplicationProvider>

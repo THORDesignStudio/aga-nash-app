@@ -18,21 +18,21 @@ const HeaderTextContainer = styled.View`
   flex: 0.4;
   width: 75%;
   backgroundColor: rgba(255, 255, 255, 0.8);
-  marginHorizontal: 50;
+  marginHorizontal: 50px;
   justifyContent: space-evenly;
 `;
 
 
 const Title = styled.Text`
-  fontSize: 32;
+  fontSize: 32px;
   textAlign: center;
   fontFamily: 'NunitoSans-SemiBold';
 `;
 
 const Paragraph = styled.Text`
-  fontSize: 16;
-  marginHorizontal: 20;
-  marginBottom: 10;
+  fontSize: 16px;
+  marginHorizontal: 20px;
+  marginBottom: 10px;
   fontFamily: 'NunitoSans-Regular';
 `;
 

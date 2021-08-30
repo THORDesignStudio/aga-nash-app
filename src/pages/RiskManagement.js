@@ -7,7 +7,7 @@ import { useFonts } from "expo-font";
 import LowRiskMng from '../components/content/riskManagement/LowRisk'
 import IndeterminateRiskManagement from "../components/content/riskManagement/IndeterminateRisk";
 import HighRiskManagement from '../components/content/riskManagement/HighRisk'
-import {ApplicationContext} from '../applicationProvider/applicationProvider'
+import { ApplicationContext } from '../applicationProvider/applicationProvider'
 
 export default function RiskManagement({ navigation }) {
   const { fib4, setPageId, alt } = useContext(ApplicationContext);

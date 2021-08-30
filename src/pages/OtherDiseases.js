@@ -59,20 +59,29 @@ export default function OtherForms({ navigation }) {
         />
         </TitleContainer>
         <ContentText>
-        Alcohol intake history (≥ 14 drinks/week for women or ≥ 21 drinks/week for men)
+          Alcohol intake history (≥ 14 drinks/week for women or ≥ 21 drinks/week for men)
         </ContentText>
         <ContentText>
-        HCV antibody with reflex testing of HCV RNA
+          HCV antibody with reflex testing of HCV RNA
         </ContentText>
         <ContentText>
-        Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT 
+          Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT 
         </ContentText>
         <ImportantText>
-          *If there are other forms of liver disease present, click on the button below and then hit 'Next'. Otherwise, simply click 'Next'.
+          *If there are other forms of liver disease, click on the button below and then hit 'Next'. Otherwise, simply click 'Next'.
         </ImportantText>
-        <Radio label='Other forms of liver disease present' marginHorizontal={30} onPressSelected={handleNextPresentSelected} onPressUnselected={handleNextPresentUnselected}/>
+        <Radio 
+          label='Other forms of liver disease present' 
+          marginHorizontal={30} 
+          onPressSelected={handleNextPresentSelected} 
+          onPressUnselected={handleNextPresentUnselected}
+        />
       </PageContainer>
-      <NextBack navigation={navigation} marginVertical={10} nextPage={nextPage}/>
+      <NextBack 
+        navigation={navigation} 
+        marginVertical={10} 
+        nextPage={nextPage}
+      />
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>

@@ -72,7 +72,7 @@ export default function Navigate({ navigation }) {
           textClr="#FAA719"
           textWidth="75%"
           buttonHeight={60}
-          borderStyle="solid"
+          border="none"
           onPress={() => navigation.navigate("Conditions")}
         />
       </GoldenTitle>
