@@ -15,7 +15,7 @@ import TextBasic from "../components/global/textBasic";
  * Navigate
  * 
  * This is kind of the like the central nervous system of the entire thing. It helps the user,
- * like the title of the page says, navigate between various areas of the app. Nothing super specail going on here.
+ * like the title of the page says, navigate between various areas of the app. Nothing super special going on here.
  */
 
 const SectionContainer = styled.View`
@@ -41,11 +41,6 @@ export default function Navigate({ navigation }) {
       setPageId("Navigate");
     });
   }, [navigation])
-
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
-    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
-  });
 
   const handleLowRisk = () => {
     setFib4(1.29);
