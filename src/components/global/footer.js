@@ -21,19 +21,28 @@ export default function NashFooter({ navigation }) {
     <>
       <View style={styles.iconContainer}>
         <View style={styles.sectionView}>
-          <TouchableOpacity onPress={() => navigation.navigate("Navigate")}>
+          <TouchableOpacity 
+            onPress={() => navigation.navigate("Navigate")}
+            style={styles.icon}
+          >
             <NavigateIcon />
           </TouchableOpacity>
           <Text style={styles.iconText}>Navigate</Text>
         </View>
-        <View style={styles.onlineView}>
-          <TouchableOpacity onPress={() => navigation.navigate("Sources")} >
+        <View style={styles.sectionView}>
+          <TouchableOpacity 
+            onPress={() => navigation.navigate("Sources")} 
+            style={styles.icon}
+          >
             <SourcesIcon />
           </TouchableOpacity>
           <Text style={styles.iconText}>Sources</Text>
         </View>
-        <View style={styles.shareView}>
-          <TouchableOpacity onPress={() => navigation.navigate("About")}>
+        <View style={styles.sectionView}>
+          <TouchableOpacity 
+            onPress={() => navigation.navigate("About")}
+            style={styles.icon}
+          >
             <AboutIcon />
           </TouchableOpacity>
           <Text style={styles.iconText}>About</Text>
@@ -45,27 +54,20 @@ export default function NashFooter({ navigation }) {
 
 const styles = StyleSheet.create({
   iconContainer: {
-    backgroundColor: "#122033",
-    height: 100,
-    justifyContent: "space-between",
     alignContent: "center",
+    backgroundColor: "#122033",
     flexDirection: "row",
+    justifyContent: "space-around",
+    height: 110,
+  },
+  icon: {
+    marginTop: 10,
+    marginBottom: 5
   },
   iconText: {
     color: "white",
-    fontSize: 16,
-    textAlign: "center",
-    fontFamily: 'NunitoSans-Regular'
-  },
-  sectionView: {
-    justifyContent: "center",
-    marginStart: 20,
-  },
-  onlineView: {
-    justifyContent: "center",
-  },
-  shareView: {
-    justifyContent: "center",
-    marginEnd: 20,
+    fontSize: 14,
+    fontFamily: 'NunitoSans-Regular',
+    textAlign: "center"
   },
 });
