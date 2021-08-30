@@ -96,7 +96,7 @@ export default function IndeterminateRiskManagement() {
           {`\u2022 Lifestyle intervention `}
         </MainText>
         <MainText>
-          {`\u2022 Greater need for structured weight loss programs, ati-obesity medications, bariatric surgery `}
+          {`\u2022 Greater need for structured weight loss programs, anti-obesity medications, bariatric surgery `}
         </MainText>
         <MainText>
           {`\u2022 Pharmacotherapy for NASH `}
