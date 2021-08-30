@@ -42,7 +42,7 @@ const {alt, fib4} = useContext(ApplicationContext);
           <IndeterminateRisk />
         </IndeterminateRiskDial>
         <FibText>
-          <YellowText>INDETERMINATE RISK</YellowText> of
+          <YellowText>INDETERMINATE RISK</YellowText>
         </FibText>
     </>
   );
