@@ -1,13 +1,15 @@
-import React, {useContext, useEffect} from "react";
-import GoldenTitle from "../components/global/goldenTitle";
+import React, { useContext, useEffect } from "react";
+import { PixelRatio } from "react-native";
+import {useFonts} from 'expo-font'
 import styled from "styled-components/native";
+
+import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
+import GoldenTitle from "../components/global/goldenTitle";
 import Footer from "../components/global/footer";
 import Button from "../components/primitives/button";
 import Container from "../components/primitives/container";
-import { PixelRatio } from "react-native";
-import {useFonts} from 'expo-font'
-import { ApplicationContext } from "../applicationProvider/applicationProvider";
-
+import TextBasic from "../components/global/textBasic";
 
 /**
  * Navigate
@@ -23,18 +25,13 @@ const SectionContainer = styled.View`
   textAlign: center;
 `;
 const TextContainer = styled.View`
-  marginTop: 10;
+  marginTop: 10px;
   textAlign: center;
-`;
-
-const SectionText = styled.Text`
-  fontSize: ${PixelRatio.getPixelSizeForLayoutSize(10)};
-  fontFamily: 'NunitoSans-Bold';
 `;
 const ButtonContainer = styled.View`
   alignItems: center;
-  marginVertical: 10;
-  width: 100;
+  marginVertical: 10px;
+  width: 100px;
 `;
 
 export default function Navigate({ navigation }) {
@@ -79,7 +76,12 @@ export default function Navigate({ navigation }) {
       <Container justifyContent="space-evenly">
         <SectionContainer>
           <TextContainer>
-            <SectionText>EXPLORE:</SectionText>
+            <TextBasic 
+              fontSize={ 20 }
+              fontWeight="bold"
+            >
+              EXPLORE:
+            </TextBasic>
           </TextContainer>
           <ButtonContainer>
             <Button
@@ -121,7 +123,12 @@ export default function Navigate({ navigation }) {
         </SectionContainer>
         <SectionContainer>
           <TextContainer>
-            <SectionText>JUMP TO:</SectionText>
+            <TextBasic 
+              fontSize={ 20 }
+              fontWeight="bold"
+            >
+              JUMP TO:
+            </TextBasic>
           </TextContainer>
           <ButtonContainer>
             <Button
