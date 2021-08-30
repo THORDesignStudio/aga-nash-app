@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
+import { View, Text, PixelRatio, StyleSheet, ActivityIndicator } from "react-native";
 import { useFonts } from 'expo-font'
 
 /**
@@ -35,17 +35,17 @@ export default function TextBasic({
     )
   } 
 
-  else if( fontWeight.toLowercase().trim() === 'bold' ) {
+  else if( fontWeight === 'bold' ) {
     return (
-      <Text style={ [ styles.textBold, { fontSize: fontSize } ] }>
+      <Text style={ [ styles.textBold, { fontSize: fontSize / PixelRatio.getFontScale() } ] }>
         { children }
       </Text>
     );
   }
 
-  else if( fontWeight.toLowercase().trim() === 'light' ) {
+  else if( fontWeight === 'light' ) {
     return (
-      <Text style={ [ styles.textLight, { fontSize: fontSize } ]}>
+      <Text style={ [ styles.textLight, { fontSize: fontSize / PixelRatio.getFontScale() } ]}>
         { children }
       </Text>
     );
@@ -53,7 +53,7 @@ export default function TextBasic({
 
   else {
     return (
-      <Text style={ [ styles.text, { fontSize: fontSize } ] }>
+      <Text style={ [ styles.text, { fontSize: fontSize / PixelRatio.getFontScale() } ] }>
         { children }
       </Text>
     );
