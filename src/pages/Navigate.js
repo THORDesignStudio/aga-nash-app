@@ -1,6 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import { PixelRatio } from "react-native";
-import {useFonts} from 'expo-font'
 import styled from "styled-components/native";
 
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
