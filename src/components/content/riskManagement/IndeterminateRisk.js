@@ -110,7 +110,7 @@ export default function IndeterminateRiskManagement() {
       </MainContent>
       <BottomContent>
         <BottomText>
-        Refer to hepatologist for liver biopsy or MR elastography or monitoring with re-eval or risk in 2 - 3 years
+        Refer to hepatologist for liver biopsy or MR elastography or monitoring with re-evaluation of risk in 2-3 years
         </BottomText>
       </BottomContent>
     </>
