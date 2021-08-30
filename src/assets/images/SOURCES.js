@@ -4,7 +4,7 @@ import { SvgXml } from "react-native-svg";
 export default function SourcesIcon(props) {
   const SourcesIconSVG = `
   <?xml version="1.0" encoding="UTF-8"?>
-  <svg width="53px" height="67px" viewBox="0 0 53 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
           <filter color-interpolation-filters="auto" id="filter-1">
               <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 0.999066 0 0 0 0 0.999066 0 0 0 1.000000 0"></feColorMatrix>
