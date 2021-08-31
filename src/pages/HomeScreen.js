@@ -62,7 +62,7 @@ export default function HomeScreen({ navigation }) {
             buttonText="START"
             onPress={() => navigation.navigate("Conditions")}
             textClr="#faa61a"
-            marginTop="20"
+            marginTop="20px"
             borderStyle="solid"
           />
         </ImageBackground>
