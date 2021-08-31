@@ -10,8 +10,8 @@ import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import TitleContainer from "../components/global/titleContainer";
 
 const Condition = styled.Text`
-  fontSize: 18;
-  paddingEnd: 2;
+  fontSize: 18px;
+  paddingEnd: 2px;
   fontFamily: "NunitoSans-Regular";
 `;
 

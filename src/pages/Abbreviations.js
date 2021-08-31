@@ -32,9 +32,9 @@ import { useFonts } from "expo-font";
 
 const TitleContainer = styled.View`
   flex: 0.1;
-  paddingTop: 50;
-  paddingHorizontal: 20;
-  marginBottom: 20;
+  paddingTop: 50px;
+  paddingHorizontal: 20px;
+  marginBottom: 20px;
 `;
 
 export default function Abbreviations({ navigation }) {

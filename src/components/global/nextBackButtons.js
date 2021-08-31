@@ -15,9 +15,9 @@ import styled from 'styled-components/native'
 const Container = styled.View`
   flexDirection: row;
   justifyContent: center;
-  marginVertical: ${(props) => props.marginVertical || 50};
+  marginVertical: ${(props) => props.marginVertical || '50px'};
   backgroundColor: ${(props) => props.backgroundColor || '#F2F2F2'};
-  paddingVertical: ${(props) => props.paddingVertical || 0};
+  paddingVertical: ${(props) => props.paddingVertical || '0px'};
 `
 
 export default function NextBack({ nextPage, navigation, marginVertical, backgroundColor, paddingVertical }) {

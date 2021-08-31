@@ -27,7 +27,7 @@ const CalcContainer = styled.View`
 
 const ImportantText = styled.Text`
   marginHorizontal: 20px;
-  marginVertical: 0px 10px;
+  marginVertical: 10px;
   fontFamily: 'NunitoSans-Regular';
   fontSize: 16px;
   color: black;

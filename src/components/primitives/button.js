@@ -20,8 +20,8 @@ import { useFonts } from 'expo-font'
 const ButtonView = styled.View`
   alignItems: center;
   justifyContent: center;
-  height: ${(props) => props.buttonHeight || 60};
-  marginTop: ${(props) => props.marginTop || 0};
+  height: ${(props) => props.buttonHeight || '60px'};
+  marginTop: ${(props) => props.marginTop || '0px'};
 `;
 
 const ButtonOpacity = styled.TouchableOpacity`
@@ -30,8 +30,8 @@ const ButtonOpacity = styled.TouchableOpacity`
   width: 250;
   borderStyle: ${(props) => props.borderStyle || 'solid'};
   borderColor: black;
-  borderWidth: ${(props) => props.borderWidth || 1 };
-  borderRadius: ${(props) => props.borderRadius || 20};
+  borderWidth: ${(props) => props.borderWidth || '1px' };
+  borderRadius: ${(props) => props.borderRadius || '20px'};
   justifyContent: center;
   alignItems: center;
 `;

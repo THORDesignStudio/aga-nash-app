@@ -12,10 +12,10 @@ import styled from 'styled-components/native'
  */
 
 const Title = styled.Text`
- fontSize: ${(props) => props.fontSize || 25};
+ fontSize: ${(props) => props.fontSize || '25px'};
  fontFamily: 'NunitoSans-Bold';
- marginBottom: ${(props) => props.marginBottom || 0};
- marginHorizontal: ${(props) => props.marginHorizontal || 0};
+ marginBottom: ${(props) => props.marginBottom || '0px'};
+ marginHorizontal: ${(props) => props.marginHorizontal || '0px'};
  color: ${(props) => props.color || 'black'}
 `
 

@@ -11,16 +11,16 @@ import {ApplicationContext} from '../applicationProvider/applicationProvider'
 import TitleContainer from '../components/global/titleContainer'
 
 const ContentText = styled.Text`
-  marginHorizontal: 20;
-  marginVertical: 10;
+  marginHorizontal: 20px;
+  marginVertical: 10px;
   fontFamily: 'NunitoSans-Regular';
-  fontSize: 16;
+  fontSize: 16px;
 `
 const ImportantText = styled.Text`
-  marginHorizontal: 20;
-  marginVertical: 10;
+  marginHorizontal: 20px;
+  marginVertical: 10px;
   fontFamily: 'NunitoSans-Bold';
-  fontSize: 16;
+  fontSize: 16px;
   color: #FC1B1F;
 `
 

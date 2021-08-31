@@ -36,11 +36,11 @@ const SecondaryHeaderBox = styled.View`
   justifyContent: center;
   alignItems: center;
   textAlign: center;
-  marginTop: 10;
+  marginTop: 10px;
 `;
 
 const SecondaryHeaderText = styled.Text`
-  fontSize: 16;
+  fontSize: 16px;
   fontFamily: "NunitoSans-Regular";
   textAlign: center;
 `;
@@ -66,7 +66,7 @@ const BottomContent = styled.View`
 
 const BottomText = styled.Text`
   fontFamily: "NunitoSans-Regular";
-  fontSize: 16;
+  fontSize: 16px;
   textAlign: left;
 `;
 

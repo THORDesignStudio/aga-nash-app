@@ -7,31 +7,31 @@ import styled from "styled-components/native";
  */
 
 const Container = styled.View`
-  marginBottom: 5;
+  marginBottom: 5px;
   alignItems: center;
   flexDirection: row;
-  marginHorizontal: ${(props) => props.marginHorizontal || 0};
+  marginHorizontal: ${(props) => props.marginHorizontal || '0px'};
 `;
 
 const RadioText = styled.Text`
-  marginLeft: 5;
-  fontSize: 16;
+  marginLeft: 5px;
+  fontSize: 16px;
   color: black;
 `;
 
 const RadioCircle = styled.TouchableOpacity`
-  width: 30;
-  height: 30;
+  width: 30px;
+  height: 30px;
   borderRadius: 100;
-  borderWidth: 0.5;
+  borderWidth: 0.5px;
   borderColor: black;
   alignItems: center;
   justifyContent: center;
 `;
 
 const SelectedRadio = styled.View`
-  width: 20;
-  height: 20;
+  width: 20px;
+  height: 20px;
   borderRadius: 50;
   backgroundColor: #00ff00;
 `;
