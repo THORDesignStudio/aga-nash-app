@@ -1,15 +1,20 @@
 import React, { useContext, useEffect } from "react";
+import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
 import { View, StyleSheet } from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
 import TextBasic from "../components/global/textBasic";
-import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import TitleContainer from "../components/global/titleContainer";
 
-
-
+/**
+ * <Conditions>
+ * 
+ * @param { object } navigation - gives app prev/next page assignments
+ * @returns 
+ */
 export default function Conditions({ navigation }) {
   const { setPageId, pageId } = useContext(ApplicationContext);
 
@@ -18,8 +23,6 @@ export default function Conditions({ navigation }) {
       setPageId("Conditions");
     });
   }, [navigation])
-
-  
 
   return (
     <>
