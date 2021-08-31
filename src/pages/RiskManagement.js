@@ -3,7 +3,6 @@ import Footer from "../components/global/footer";
 import BackNext from "../components/global/nextBackButtons";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import ScrollableView from "../components/primitives/scrollableContainer";
-import { useFonts } from "expo-font";
 import LowRiskMng from '../components/content/riskManagement/LowRisk'
 import IndeterminateRiskManagement from "../components/content/riskManagement/IndeterminateRisk";
 import HighRiskManagement from '../components/content/riskManagement/HighRisk'
@@ -28,10 +27,7 @@ export default function RiskManagement({ navigation }) {
     });
   }, [navigation, fib4]);
   
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-SemiBold": require("../assets/fonts/NunitoSans-SemiBold.ttf"),
-    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
-  });
+
 
   return (
     <>

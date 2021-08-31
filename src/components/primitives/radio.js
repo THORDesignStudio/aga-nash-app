@@ -22,7 +22,7 @@ const RadioTextContainer = styled.View`
 const RadioCircle = styled.TouchableOpacity`
   width: 30px;
   height: 30px;
-  borderRadius: 100;
+  borderRadius: 100px;
   borderWidth: 0.5px;
   borderColor: black;
   alignItems: center;
@@ -32,7 +32,7 @@ const RadioCircle = styled.TouchableOpacity`
 const SelectedRadio = styled.View`
   width: 20px;
   height: 20px;
-  borderRadius: 50;
+  borderRadius: 50px;
   backgroundColor: #00ff00;
 `;
 

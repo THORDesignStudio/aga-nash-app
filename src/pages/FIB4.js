@@ -112,13 +112,13 @@ export default function Fib4({ navigation }) {
           Note: AST and ALT can easily be confused. Please confirm your entries before proceeding.
         </TextBasic>
         </TextContainer>
-        <NextBack
+      </ScrollView>
+      <NextBack
           navigation={navigation}
           nextPage={nextPage}
           backPage="Conditions"
-          marginVertical={10}
+          marginVertical={'10px'}
         />
-      </ScrollView>
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>

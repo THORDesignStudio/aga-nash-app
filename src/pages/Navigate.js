@@ -61,7 +61,7 @@ export default function Navigate({ navigation }) {
           buttonText="START FROM BEGINNING"
           textClr="#FAA719"
           textWidth="75%"
-          buttonHeight={60}
+          buttonHeight={'60px'}
           border="none"
           onPress={() => navigation.navigate("Conditions")}
         />
@@ -80,10 +80,10 @@ export default function Navigate({ navigation }) {
             <Button
               buttonText="LOW RISK MANAGEMENT"
               buttonBgClr="#77C83F"
-              borderRadius={30}
-              borderWidth={0.1}
+              borderRadius={'30px'}
+              borderWidth={'0.1px'}
               textClr="white"
-              buttonHeight={60}
+              buttonHeight={'60px'}
               textWidth="75%"
               onPress={handleLowRisk}
             />
@@ -92,10 +92,10 @@ export default function Navigate({ navigation }) {
             <Button
               buttonText="INDETERMINATE RISK MANAGEMENT"
               buttonBgClr="#E49917"
-              borderRadius={30}
-              borderWidth={0.1}
+              borderRadius={'30px'}
+              borderWidth={'0.1px'}
               textClr="white"
-              buttonHeight={60}
+              buttonHeight={'60px'}
               textWidth="75%"
               fontSize={18}
               onPress={handleIndeterminateRisk}
@@ -105,10 +105,10 @@ export default function Navigate({ navigation }) {
             <Button
               buttonText="HIGH RISK MANAGEMENT"
               buttonBgClr="#FC1B1F"
-              borderRadius={30}
-              borderWidth={0.1}
+              borderRadius={'30px'}
+              borderWidth={'0.1px'}
               textClr="white"
-              buttonHeight={60}
+              buttonHeight={'60px'}
               textWidth="75%"
               onPress={handleHighRisk}
             />
@@ -117,7 +117,7 @@ export default function Navigate({ navigation }) {
         <SectionContainer>
           <TextContainer>
             <TextBasic 
-              fontSize={ 20 }
+              fontSize={ '20px' }
               fontWeight="bold"
             >
               JUMP TO:
@@ -127,10 +127,10 @@ export default function Navigate({ navigation }) {
             <Button
               buttonText="LSM TEST"
               buttonBgClr="#112034"
-              borderRadius={30}
-              borderWidth={0.1}
+              borderRadius={'30px'}
+              borderWidth={'0.1px'}
               textClr="white"
-              buttonHeight={60}
+              buttonHeight={'60px'}
               textWidth="75%"
               onPress={() => navigation.navigate('LSM')}
             />

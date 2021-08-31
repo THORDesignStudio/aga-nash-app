@@ -94,12 +94,12 @@ export default function LSM({navigation}){
               <Button
                 buttonText={LowRiskText}
                 buttonBgClr="#77C83F"
-                borderRadius={30}
-                borderWidth={0.1}
+                borderRadius={'30px'}
+                borderWidth={'0.1px'}
                 textClr="white"
-                buttonHeight={65}
+                buttonHeight={'65px'}
                 textWidth="80%"
-                fontSize={18}
+                fontSize={'18px'}
                 onPress={handleLowRisk}
               />
             </ButtonContainer>
@@ -107,12 +107,12 @@ export default function LSM({navigation}){
               <Button
                 buttonText={IndeterminateRiskText}
                 buttonBgClr="#E49917"
-                borderRadius={30}
-                borderWidth={0.1}
+                borderRadius={'30px'}
+                borderWidth={'0.1px'}
                 textClr="white"
-                buttonHeight={65}
+                buttonHeight={'65px'}
                 textWidth="80%"
-                fontSize={18}
+                fontSize={'18px'}
                 onPress={handleIndeterminateRisk}
               />
             </ButtonContainer>
@@ -120,12 +120,12 @@ export default function LSM({navigation}){
               <Button
                 buttonText={HighRiskText}
                 buttonBgClr="#FC1B1F"
-                borderRadius={30}
-                borderWidth={0.1}
+                borderRadius={'30px'}
+                borderWidth={'0.1px'}
                 textClr="white"
-                buttonHeight={65}
+                buttonHeight={'65px'}
                 textWidth="80%"
-                fontSize={18}
+                fontSize={'18px'}
                 onPress={handleHighRisk}
               />
             </ButtonContainer>
