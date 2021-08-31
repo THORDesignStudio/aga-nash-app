@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components/native";
+import TextBasic from '../global/textBasic'
 
 /**
  * @param label - label of the radio button
@@ -7,32 +8,31 @@ import styled from "styled-components/native";
  */
 
 const Container = styled.View`
-  marginBottom: 5;
+  marginBottom: 5px;
   alignItems: center;
   flexDirection: row;
-  marginHorizontal: ${(props) => props.marginHorizontal || 0};
+  marginHorizontal: ${(props) => props.marginHorizontal || '0px'};
 `;
 
-const RadioText = styled.Text`
-  marginLeft: 5;
-  fontSize: 16;
-  color: black;
-`;
+const RadioTextContainer = styled.View`
+  marginLeft: 5px;
+`
+
 
 const RadioCircle = styled.TouchableOpacity`
-  width: 30;
-  height: 30;
-  borderRadius: 100;
-  borderWidth: 0.5;
+  width: 30px;
+  height: 30px;
+  borderRadius: 100px;
+  borderWidth: 0.5px;
   borderColor: black;
   alignItems: center;
   justifyContent: center;
 `;
 
 const SelectedRadio = styled.View`
-  width: 20;
-  height: 20;
-  borderRadius: 50;
+  width: 20px;
+  height: 20px;
+  borderRadius: 50px;
   backgroundColor: #00ff00;
 `;
 
@@ -58,7 +58,9 @@ export default function Radio({ label, onPressSelected, marginHorizontal, onPres
       <RadioCircle onPress={handleOnPress}>
         {selected && <SelectedRadio />}
       </RadioCircle>
-      <RadioText>{label}</RadioText>
+      <RadioTextContainer>
+        <TextBasic fontSize='16'>{label}</TextBasic>
+      </RadioTextContainer>
     </Container>
   );
 }

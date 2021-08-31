@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react'
+import React, { useContext, useEffect} from 'react'
 import Footer from '../components/global/footer'
 import AbbreviationsFootnotes from '../components/global/abbreviationsFootnotes'
 import Button from '../components/primitives/button'
@@ -6,26 +6,18 @@ import PageContainer from '../components/primitives/container'
 import TitleContainer from '../components/global/titleContainer'
 import PageTitle from '../components/global/pageTitle'
 import styled from 'styled-components'
-import {useFonts} from 'expo-font'
+import TextBasic from '../components/global/textBasic'
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
-import {Text} from 'react-native'
+
 
 const SectionContainer = styled.View`
   flexDirection: column;
   alignItems: center;
   justifyContent: flex-start;
   textAlign: center;
-`;
-const TextContainer = styled.View`
-  marginTop: 10px;
-  textAlign: center;
+  marginVertical: 20px;
 `;
 
-const SectionText = styled.Text`
-  fontSize: 16px;
-  fontFamily: 'NunitoSans-Bold';
-  marginVertical: 20px;
-`
 
 const ButtonContainer = styled.View`
   alignItems: center;
@@ -37,12 +29,6 @@ const ButtonView = styled.View`
   display: flex;
   flexDirection: column;
 `
-const ButtonText = styled.Text`
-  color: white;
-  fontSize: 18px;
-  fontFamily: 'NunitoSans-Bold';
-  textAlign: center;
-`
 
 
 export default function LSM({navigation}){
@@ -53,12 +39,6 @@ export default function LSM({navigation}){
       setPageId('LSM')
     });
   }, [navigation]);
-
-
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
-    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
-  });
 
 
   const handleLowRisk = () => {
@@ -78,25 +58,25 @@ export default function LSM({navigation}){
 
   const LowRiskText = (
     <ButtonView>
-      <ButtonText>
+      <TextBasic fontWeigh='bold' fontColor='white'>
         LOW RISK {"\n"} LSM {'<'} 8 kPa
-      </ButtonText>
+      </TextBasic>
     </ButtonView>
   )
 
   const IndeterminateRiskText = (
     <ButtonView>
-      <ButtonText>
-        INDETERMINATE RISK LSM 8 to 12 kPa
-      </ButtonText>
+      <TextBasic fontWeigh='bold' fontColor='white'>
+        INDETERMINATE RISK {"\n"} LSM 8 to 12 kPa
+      </TextBasic>
     </ButtonView>
   )
 
   const HighRiskText = (
     <ButtonView>
-      <ButtonText>
+      <TextBasic fontWeigh='bold' fontColor='white'>
         HIGH RISK {"\n"} LSM {'>'} 12 kPa
-      </ButtonText>
+      </TextBasic>
     </ButtonView>
   )
 
@@ -107,17 +87,17 @@ export default function LSM({navigation}){
           <PageTitle pageTitle='Order VCTE (FibroScan®) for liver stiffness measurement (LSM)' />
         </TitleContainer>
         <SectionContainer>
-          <SectionText>
+          <TextBasic fontWeight='bold' fontSize={16} >
             Pick one based on LSM results:
-          </SectionText>
+          </TextBasic >
             <ButtonContainer>
               <Button
                 buttonText={LowRiskText}
                 buttonBgClr="#77C83F"
-                borderRadius={30}
-                borderWidth={0.1}
+                borderRadius={'30px'}
+                borderWidth={'0.1px'}
                 textClr="white"
-                buttonHeight={65}
+                buttonHeight={'65px'}
                 textWidth="80%"
                 fontSize={18}
                 onPress={handleLowRisk}
@@ -127,10 +107,10 @@ export default function LSM({navigation}){
               <Button
                 buttonText={IndeterminateRiskText}
                 buttonBgClr="#E49917"
-                borderRadius={30}
-                borderWidth={0.1}
+                borderRadius={'30px'}
+                borderWidth={'0.1px'}
                 textClr="white"
-                buttonHeight={65}
+                buttonHeight={'65px'}
                 textWidth="80%"
                 fontSize={18}
                 onPress={handleIndeterminateRisk}
@@ -140,10 +120,10 @@ export default function LSM({navigation}){
               <Button
                 buttonText={HighRiskText}
                 buttonBgClr="#FC1B1F"
-                borderRadius={30}
-                borderWidth={0.1}
+                borderRadius={'30px'}
+                borderWidth={'0.1px'}
                 textClr="white"
-                buttonHeight={65}
+                buttonHeight={'65px'}
                 textWidth="80%"
                 fontSize={18}
                 onPress={handleHighRisk}

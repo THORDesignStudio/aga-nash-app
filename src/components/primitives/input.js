@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import {PixelRatio} from 'react-native'
+import {View, ActivityIndicator, StyleSheet} from 'react-native'
 import {useFonts} from 'expo-font'
 
 const Container = styled.View`
@@ -56,6 +56,14 @@ export default function InputBox({
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
   });
 
+
+  if (!fontsLoaded) {
+    return (
+      <View style={ [styles.container, styles.horizontal] }>
+        <ActivityIndicator size="large" color="#122033" />
+      </View>
+    )
+  } else{
   return (
     <Container>
       { hasUnit !== false ? (
@@ -85,4 +93,17 @@ export default function InputBox({
       </InputText>
     </Container>
   );
+      }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  horizontal: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    padding: 10
+  }
+});

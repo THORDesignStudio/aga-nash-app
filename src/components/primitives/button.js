@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { useFonts } from 'expo-font'
+import TextBasic from '../global/textBasic'
 
 /**
  * @param buttonHeight - height of the button
@@ -20,8 +20,8 @@ import { useFonts } from 'expo-font'
 const ButtonView = styled.View`
   alignItems: center;
   justifyContent: center;
-  height: ${(props) => props.buttonHeight || 60};
-  marginTop: ${(props) => props.marginTop || 0};
+  height: ${(props) => props.buttonHeight || '60px'};
+  marginTop: ${(props) => props.marginTop || '0px'};
 `;
 
 const ButtonOpacity = styled.TouchableOpacity`
@@ -30,8 +30,8 @@ const ButtonOpacity = styled.TouchableOpacity`
   width: 250;
   borderStyle: ${(props) => props.borderStyle || 'solid'};
   borderColor: black;
-  borderWidth: ${(props) => props.borderWidth || 1 };
-  borderRadius: ${(props) => props.borderRadius || 20};
+  borderWidth: ${(props) => props.borderWidth || '1px' };
+  borderRadius: ${(props) => props.borderRadius || '20px'};
   justifyContent: center;
   alignItems: center;
 `;
@@ -40,16 +40,6 @@ const TextContainer = styled.View`
   width: ${(props) => props.width || '100%'};
   justifyContent: center;
   alignItems: center;
-`
-
-const ButtonText = styled.Text`
-  alignItems: center;
-  color: ${(props) => props.textClr || 'black'};
-  fontFamily: 'NunitoSans-Bold';
-  fontSize: ${(props) => props.fontSize || '18px' };
-  fontWeight: bold;
-  justifyContent: center;
-  textAlign: center;
 `
 
 export default function HomeScreen({
@@ -66,11 +56,6 @@ export default function HomeScreen({
   borderStyle
 }) {
 
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
-    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
-  });
-
   return (
     <>
       <ButtonView buttonHeight={buttonHeight} marginTop={marginTop}>
@@ -82,7 +67,7 @@ export default function HomeScreen({
           borderStyle={borderStyle}
         >
           <TextContainer width={textWidth} >
-            <ButtonText textClr={textClr} fontSize={fontSize}>{buttonText}</ButtonText>
+            <TextBasic fontWeight='bold' fontColor={textClr} fontSize={fontSize}>{buttonText}</TextBasic>
           </TextContainer>
         </ButtonOpacity>
       </ButtonView>

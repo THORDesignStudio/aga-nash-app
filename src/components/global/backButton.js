@@ -3,7 +3,7 @@ import Button from '../primitives/button'
 import styled from 'styled-components/native'
 
 const Container = styled.View`
-  marginBottom: 10;
+  marginBottom: 10px;
 `
 
 export default function BackButton ({navigation}) {

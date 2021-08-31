@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, TouchableOpacity} from "react-native";
 import NavigateIcon from "../../assets/images/NAVIGATE";
 import SourcesIcon from "../../assets/images/SOURCES";
 import AboutIcon from "../../assets/images/ABOUT";
-import {useFonts} from 'expo-font'
+import TextBasic from "./textBasic";
 
 /**
  * This footer is static. It's seen throughout the entire app to allow the user to quickly get to a few key pages.
@@ -12,10 +12,6 @@ import {useFonts} from 'expo-font'
 
 export default function NashFooter({ navigation }) {
 
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
-    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
-  });
 
   return (
     <>
@@ -27,7 +23,7 @@ export default function NashFooter({ navigation }) {
           >
             <NavigateIcon />
           </TouchableOpacity>
-          <Text style={styles.iconText}>Navigate</Text>
+          <TextBasic fontColor='white' fontSize='14'>Navigate</TextBasic>
         </View>
         <View style={styles.sectionView}>
           <TouchableOpacity 
@@ -36,7 +32,7 @@ export default function NashFooter({ navigation }) {
           >
             <SourcesIcon />
           </TouchableOpacity>
-          <Text style={styles.iconText}>Sources</Text>
+          <TextBasic fontColor='white' fontSize='14'>Sources</TextBasic>
         </View>
         <View style={styles.sectionView}>
           <TouchableOpacity 
@@ -45,7 +41,7 @@ export default function NashFooter({ navigation }) {
           >
             <AboutIcon />
           </TouchableOpacity>
-          <Text style={styles.iconText}>About</Text>
+          <TextBasic fontColor='white' fontSize='14'>About</TextBasic>
         </View>
       </View>
     </>
@@ -63,11 +59,5 @@ const styles = StyleSheet.create({
   icon: {
     marginTop: 10,
     marginBottom: 5
-  },
-  iconText: {
-    color: "white",
-    fontSize: 14,
-    fontFamily: 'NunitoSans-Regular',
-    textAlign: "center"
   },
 });

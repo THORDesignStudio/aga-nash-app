@@ -1,47 +1,39 @@
 import React from 'react'
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
-import {useFonts} from 'expo-font'
+import {TouchableOpacity} from 'react-native'
+import styled from 'styled-components/native'
+import TextBasic from './textBasic'
+
 
 /**
  * This is the gray bar at the bottom of most pages that allows users to go to the associated abbreviations and footnotes of a page.
  * This is static, the logic happens in the context that wraps the entire app and in the Footnotes and Abbreviations pages.
  */
 
+const Container = styled.View`
+  backgroundColor: #676767;
+  flexDirection: row;
+  justifyContent: space-evenly;
+  height: 50px;
+  alignItems: center;
+`
+
 export default function AbbreviationsFootnotes ({navigation}){
 
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
-  });
-
   return(
-    <View style={styles.container}>
+    <Container>
       <TouchableOpacity onPress={() => navigation.navigate("Abbreviations")}>
-      <Text style={styles.text}>
+      <TextBasic fontColor="white">
         ABBREVIATIONS
-      </Text>
+      </TextBasic>
       </TouchableOpacity>
-      <Text style={styles.text}>
+      <TextBasic fontColor="white">
         |
-      </Text>
+      </TextBasic>
       <TouchableOpacity onPress={() => navigation.navigate("Footnotes")} > 
-      <Text style={styles.text}>
+      < TextBasic fontColor="white">
         FOOTNOTES
-      </Text>
+      </TextBasic>
       </TouchableOpacity>
-    </View>
+    </Container>
   )
 }
-
-const styles = StyleSheet.create({
-  container:{
-    backgroundColor: '#676767',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    height: 50,
-    alignItems: 'center',
-  },
-  text:{
-    color: "white",
-    fontFamily: 'NunitoSans-Regular',
-  }
-})

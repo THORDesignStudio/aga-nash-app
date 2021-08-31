@@ -19,7 +19,7 @@ const MngHeaderBox = styled.View`
 const MainHeaderBox = styled.View`
   borderBottomWidth: 1px;
   borderBottomColor: #d8d8d8;
-  marginHorizontal: 20;
+  marginHorizontal: 20px;
   width: 80%;
   justifyContent: center;
   alignItems: center;
@@ -27,17 +27,17 @@ const MainHeaderBox = styled.View`
 
 const MainHeaderText = styled.Text`
   fontFamily: "NunitoSans-SemiBold";
-  fontSize: 20;
+  fontSize: 20px;
   width: 120px;
   textAlign: center;
-  marginBottom: 10;
+  marginBottom: 10px;
 `;
 
 const SecondaryHeaderBox = styled.View`
   justifyContent: center;
   alignItems: center;
   textAlign: center;
-  marginTop: 10;
+  marginTop: 10px;
 `;
 
 const SecondaryHeaderText = styled.Text`

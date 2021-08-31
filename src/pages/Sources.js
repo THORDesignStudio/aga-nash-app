@@ -14,14 +14,14 @@ import {useFonts} from 'expo-font'
 const Container = styled.ScrollView`
   flex: 1;
   display: flex;
-  marginVertical: 20;
+  marginVertical: 20px;
 `;
 
 const HeaderTextContainer = styled.View`
   flex: 0.6;
   width: 75%;
   backgroundColor: rgba(255, 255, 255, 0.8);
-  marginHorizontal: 50;
+  marginHorizontal: 50px;
   justifyContent: space-evenly;
 `;
 
@@ -33,7 +33,7 @@ const style = {
 };
 
 const Title = styled.Text`
-  fontSize: 32;
+  fontSize: 32px;
   textAlign: center;
   fontFamily: 'NunitoSans-SemiBold';
 `;

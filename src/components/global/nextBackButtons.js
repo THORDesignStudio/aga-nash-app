@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Text, ActivityIndicator } from "react-native";
 import NextIcon from "../../assets/images/nextIcon";
 import BackIcon from "../../assets/images/backIcon";
 import {useFonts} from 'expo-font'
@@ -15,9 +15,9 @@ import styled from 'styled-components/native'
 const Container = styled.View`
   flexDirection: row;
   justifyContent: center;
-  marginVertical: ${(props) => props.marginVertical || 50};
+  marginVertical: ${(props) => props.marginVertical || '50px'};
   backgroundColor: ${(props) => props.backgroundColor || '#F2F2F2'};
-  paddingVertical: ${(props) => props.paddingVertical || 0};
+  paddingVertical: ${(props) => props.paddingVertical || '0px'};
 `
 
 export default function NextBack({ nextPage, navigation, marginVertical, backgroundColor, paddingVertical }) {
@@ -26,8 +26,13 @@ export default function NextBack({ nextPage, navigation, marginVertical, backgro
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
   });
   
-  
-
+  if (!fontsLoaded) {
+    return (
+      <View style={ [styles.container, styles.horizontal] }>
+        <ActivityIndicator size="large" color="#122033" />
+      </View>
+    )
+  } else {
   return (
     <>
       <Container marginVertical={marginVertical} backgroundColor={backgroundColor} paddingVertical={paddingVertical}>
@@ -46,6 +51,7 @@ export default function NextBack({ nextPage, navigation, marginVertical, backgro
         </Container>
     </>
   );
+  }
 }
 
 const styles = StyleSheet.create({

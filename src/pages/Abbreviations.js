@@ -15,7 +15,6 @@ import LowRiskMng from "../components/content/abbreviations/lowRiskMng";
 import IndeterminateRiskMng from "../components/content/abbreviations/indeterminateRiskMng";
 import HighRiskMng from '../components/content/abbreviations/highRiskMng'
 import LSM from "../components/content/abbreviations/lsm";
-import { useFonts } from "expo-font";
 
 /**
  * Abbreviation
@@ -32,18 +31,14 @@ import { useFonts } from "expo-font";
 
 const TitleContainer = styled.View`
   flex: 0.1;
-  paddingTop: 50;
-  paddingHorizontal: 20;
-  marginBottom: 20;
+  paddingTop: 50px;
+  paddingHorizontal: 20px;
+  marginBottom: 20px;
 `;
 
 export default function Abbreviations({ navigation }) {
   const { pageId } = useContext(ApplicationContext);
 
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
-    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
-  });
 
   let content;
 

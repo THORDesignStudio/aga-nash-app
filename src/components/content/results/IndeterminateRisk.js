@@ -5,26 +5,26 @@ import {ApplicationContext} from '../../../applicationProvider/applicationProvid
 
 const FibText = styled.Text`
   fontFamily: "NunitoSans-Regular";
-  fontSize: 20;
+  fontSize: 20px;
 `;
 const AltText = styled.Text`
   fontFamily: "NunitoSans-Regular";
-  fontSize: 20;
-  marginVertical: 10;
+  fontSize: 20px;
+  marginVertical: 10px;
 `;
 const IndeterminateRiskDial = styled.View`
-  marginVertical: 40;
+  marginVertical: 40px;
 `;
 
 const YellowText = styled.Text`
   fontFamily: "NunitoSans-Regular";
-  fontSize: 20;
+  fontSize: 20px;
   color: #E49917;
 `;
 
 const GreaterFourtyText = styled.Text`
   fontFamily: "NunitoSans-Regular";
-  fontSize: 16;
+  fontSize: 16px;
 `
 
 export default function IndeterminateRiskContent({ navigation }) {

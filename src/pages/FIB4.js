@@ -8,7 +8,7 @@ import PageTitle from "../components/global/pageTitle";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import TitleContainer from "../components/global/titleContainer";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
-import { useFonts } from 'expo-font'
+import TextBasic from "../components/global/textBasic";
 
 /**
  * FIB4
@@ -25,12 +25,9 @@ const CalcContainer = styled.View`
   alignItems: center;
 `;
 
-const ImportantText = styled.Text`
-  marginHorizontal: 20px;
-  marginVertical: 0px 10px;
-  fontFamily: 'NunitoSans-Regular';
-  fontSize: 16px;
-  color: black;
+const TextContainer = styled.View`
+    marginHorizontal: 20px;
+  marginVertical: 10px;
 `
 
 export default function Fib4({ navigation }) {
@@ -62,10 +59,6 @@ export default function Fib4({ navigation }) {
     } else setNextPage("");
   }, [age, alt, ast, plt, disabled]);
   
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
-    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
-  });
 
   return (
     <>
@@ -114,16 +107,18 @@ export default function Fib4({ navigation }) {
             unit="10^9/L"
           />
         </CalcContainer>
-        <ImportantText>
+        <TextContainer>
+        <TextBasic fontSize={16} textAlign='left'>
           Note: AST and ALT can easily be confused. Please confirm your entries before proceeding.
-        </ImportantText>
-        <NextBack
+        </TextBasic>
+        </TextContainer>
+      </ScrollView>
+      <NextBack
           navigation={navigation}
           nextPage={nextPage}
           backPage="Conditions"
-          marginVertical={10}
+          marginVertical={'10px'}
         />
-      </ScrollView>
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>
