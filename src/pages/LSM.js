@@ -99,7 +99,7 @@ export default function LSM({navigation}){
                 textClr="white"
                 buttonHeight={'65px'}
                 textWidth="80%"
-                fontSize={'18px'}
+                fontSize={18}
                 onPress={handleLowRisk}
               />
             </ButtonContainer>
@@ -112,7 +112,7 @@ export default function LSM({navigation}){
                 textClr="white"
                 buttonHeight={'65px'}
                 textWidth="80%"
-                fontSize={'18px'}
+                fontSize={18}
                 onPress={handleIndeterminateRisk}
               />
             </ButtonContainer>
@@ -125,7 +125,7 @@ export default function LSM({navigation}){
                 textClr="white"
                 buttonHeight={'65px'}
                 textWidth="80%"
-                fontSize={'18px'}
+                fontSize={18}
                 onPress={handleHighRisk}
               />
             </ButtonContainer>

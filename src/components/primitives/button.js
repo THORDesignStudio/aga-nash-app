@@ -42,8 +42,6 @@ const TextContainer = styled.View`
   alignItems: center;
 `
 
-
-
 export default function HomeScreen({
   onPress,
   buttonText,

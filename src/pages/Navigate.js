@@ -97,7 +97,6 @@ export default function Navigate({ navigation }) {
               textClr="white"
               buttonHeight={'60px'}
               textWidth="75%"
-              fontSize={18}
               onPress={handleIndeterminateRisk}
             />
           </ButtonContainer>
@@ -117,7 +116,7 @@ export default function Navigate({ navigation }) {
         <SectionContainer>
           <TextContainer>
             <TextBasic 
-              fontSize={ '20px' }
+              fontSize={20 }
               fontWeight="bold"
             >
               JUMP TO:
