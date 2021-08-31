@@ -11,11 +11,8 @@ import TextBasic from '../global/textBasic'
  * @param borderRadius - border radius
  * @param fontSize - size of the text
  * @param width - width of the container that holds the text within the button
- * @param textClr - color of the text
- * 
+ * @param textClr - color of the text 
  */
-
-
 
 const ButtonView = styled.View`
   alignItems: center;
