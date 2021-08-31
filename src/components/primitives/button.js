@@ -27,7 +27,7 @@ const ButtonView = styled.View`
 const ButtonOpacity = styled.TouchableOpacity`
   flex: 1;
   backgroundColor: ${(props) => props.buttonBgClr || 'white'};
-  width: 250;
+  width: 250px;
   borderStyle: ${(props) => props.borderStyle || 'solid'};
   borderColor: black;
   borderWidth: ${(props) => props.borderWidth || '1px' };
