@@ -25,7 +25,9 @@ export default function Conditions({ navigation }) {
     <>
       <View style={styles.container}>
         <TitleContainer>
-          <PageTitle pageTitle="Patients with these conditions are at greatest risk of advanced fibrosis related to NAFLD/NASH:" />
+          <PageTitle 
+            pageTitle="Patients with these conditions are at greatest risk of advanced fibrosis related to NAFLD/NASH:" 
+          />
         </TitleContainer>
         <View style={styles.conditions}>
           <View style={styles.singleCondition}>
@@ -39,7 +41,12 @@ export default function Conditions({ navigation }) {
           </View>
         </View>
       </View>
-      <NextBack navigation={navigation} nextPage="FIB4" backPage='Navigate' marginVertical={10}/>
+      <NextBack 
+        navigation={navigation} 
+        nextPage="FIB4" 
+        backPage='Navigate' 
+        marginVertical="10px"
+      />
       <Pearls navigation={navigation} />
       <Footer navigation={navigation} />
     </>
