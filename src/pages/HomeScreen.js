@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, ActivityIndicator } from "react-native";
 import { useFonts } from 'expo-font'
 
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
@@ -28,6 +28,14 @@ export default function HomeScreen({ navigation }) {
     'NunitoSans-Bold': require('../assets/fonts/NunitoSans-Bold.ttf'),
     'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
   });
+
+  if (!fontsLoaded) {
+    return (
+      <View style={ [styles.container, styles.horizontal] }>
+        <ActivityIndicator size="large" color="#122033" />
+      </View>
+    )
+  } else{
 
   return (
     <>
@@ -63,6 +71,7 @@ export default function HomeScreen({ navigation }) {
       <Footer navigation={navigation} />
     </>
   );
+  }
 }
 
 const styles = StyleSheet.create({

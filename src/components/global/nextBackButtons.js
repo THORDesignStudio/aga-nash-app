@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Text, ActivityIndicator } from "react-native";
 import NextIcon from "../../assets/images/nextIcon";
 import BackIcon from "../../assets/images/backIcon";
 import {useFonts} from 'expo-font'
@@ -26,8 +26,13 @@ export default function NextBack({ nextPage, navigation, marginVertical, backgro
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
   });
   
-  
-
+  if (!fontsLoaded) {
+    return (
+      <View style={ [styles.container, styles.horizontal] }>
+        <ActivityIndicator size="large" color="#122033" />
+      </View>
+    )
+  } else {
   return (
     <>
       <Container marginVertical={marginVertical} backgroundColor={backgroundColor} paddingVertical={paddingVertical}>
@@ -46,6 +51,7 @@ export default function NextBack({ nextPage, navigation, marginVertical, backgro
         </Container>
     </>
   );
+  }
 }
 
 const styles = StyleSheet.create({

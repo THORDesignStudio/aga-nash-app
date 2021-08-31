@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components/native";
+import TextBasic from '../global/textBasic'
 
 /**
  * @param label - label of the radio button
@@ -13,11 +14,10 @@ const Container = styled.View`
   marginHorizontal: ${(props) => props.marginHorizontal || '0px'};
 `;
 
-const RadioText = styled.Text`
+const RadioTextContainer = styled.View`
   marginLeft: 5px;
-  fontSize: 16px;
-  color: black;
-`;
+`
+
 
 const RadioCircle = styled.TouchableOpacity`
   width: 30px;
@@ -58,7 +58,9 @@ export default function Radio({ label, onPressSelected, marginHorizontal, onPres
       <RadioCircle onPress={handleOnPress}>
         {selected && <SelectedRadio />}
       </RadioCircle>
-      <RadioText>{label}</RadioText>
+      <RadioTextContainer>
+        <TextBasic fontSize='16'>{label}</TextBasic>
+      </RadioTextContainer>
     </Container>
   );
 }

@@ -1,19 +1,14 @@
 import React, { useContext, useEffect } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
 import NextBack from "../components/global/nextBackButtons";
-import { useFonts } from "expo-font";
-import styled from "styled-components/native";
+import TextBasic from "../components/global/textBasic";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
 import TitleContainer from "../components/global/titleContainer";
 
-const Condition = styled.Text`
-  fontSize: 18px;
-  paddingEnd: 2px;
-  fontFamily: "NunitoSans-Regular";
-`;
+
 
 export default function Conditions({ navigation }) {
   const { setPageId, pageId } = useContext(ApplicationContext);
@@ -26,10 +21,6 @@ export default function Conditions({ navigation }) {
 
   
 
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
-  });
-
   return (
     <>
       <View style={styles.container}>
@@ -38,13 +29,13 @@ export default function Conditions({ navigation }) {
         </TitleContainer>
         <View style={styles.conditions}>
           <View style={styles.singleCondition}>
-            <Condition>Two or more metabollic risk factors</Condition>
+            <TextBasic>Two or more metabollic risk factors</TextBasic>
           </View>
           <View style={styles.singleCondition}>
-            <Condition>Type 2 diabetes</Condition>
+            <TextBasic>Type 2 diabetes</TextBasic>
           </View>
           <View style={styles.singleCondition}>
-            <Condition>Steatosis on any imaging modality</Condition>
+            <TextBasic>Steatosis on any imaging modality</TextBasic>
           </View>
         </View>
       </View>

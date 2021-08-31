@@ -4,15 +4,11 @@ import Footer from '../components/global/footer'
 import NextBack from '../components/global/nextBackButtons'
 import HepReferIcon from '../assets/images/hepReferIcon'
 import styled from 'styled-components/native'
-import {useFonts} from 'expo-font'
+import TextBasic from '../components/global/textBasic'
 
-const HepText = styled.Text`
-  fontFamily: 'NunitoSans-Light';
-  fontSize: 30px;
-  width: 180px;
-  color: white;
-  textAlign: center;
-  marginTop: 10px;
+const HepTextContainer = styled.View`
+width: 180px;
+marginTop: 10px;
 `
 
 export default function HepRefer ({navigation}){
@@ -24,9 +20,11 @@ export default function HepRefer ({navigation}){
     <>
       <PageContainer backgroundColor={'#FC1B1F'}>
         <HepReferIcon />
-        <HepText>
+        <HepTextContainer>
+        <TextBasic fontWeight='light' fontSize={30} fontColor='white'>
           Refer to hepatologist or treat
-        </HepText>
+        </TextBasic>
+        </HepTextContainer>
       </PageContainer>
       <NextBack 
         navigation={navigation} 

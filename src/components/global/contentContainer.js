@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/native'
-import {useFonts} from 'expo-font'
 
 /**
  * This container is used only to wrap around the content for Abbreviations and Footnotes. It formats the

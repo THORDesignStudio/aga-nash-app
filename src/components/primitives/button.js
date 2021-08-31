@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { useFonts } from 'expo-font'
+import TextBasic from '../global/textBasic'
 
 /**
  * @param buttonHeight - height of the button
@@ -42,15 +42,7 @@ const TextContainer = styled.View`
   alignItems: center;
 `
 
-const ButtonText = styled.Text`
-  alignItems: center;
-  color: ${(props) => props.textClr || 'black'};
-  fontFamily: 'NunitoSans-Bold';
-  fontSize: ${(props) => props.fontSize || '18px' };
-  fontWeight: bold;
-  justifyContent: center;
-  textAlign: center;
-`
+
 
 export default function HomeScreen({
   onPress,
@@ -66,11 +58,6 @@ export default function HomeScreen({
   borderStyle
 }) {
 
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
-    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
-  });
-
   return (
     <>
       <ButtonView buttonHeight={buttonHeight} marginTop={marginTop}>
@@ -82,7 +69,7 @@ export default function HomeScreen({
           borderStyle={borderStyle}
         >
           <TextContainer width={textWidth} >
-            <ButtonText textClr={textClr} fontSize={fontSize}>{buttonText}</ButtonText>
+            <TextBasic fontWeight='bold' fontColor={textClr} fontSize={fontSize}>{buttonText}</TextBasic>
           </TextContainer>
         </ButtonOpacity>
       </ButtonView>

@@ -6,22 +6,17 @@ import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes"
 import Radio from "../components/primitives/radio";
 import PageContainer from '../components/primitives/container'
 import styled from 'styled-components/native'
-import {useFonts} from 'expo-font'
+import TextBasic from "../components/global/textBasic";
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
 import TitleContainer from '../components/global/titleContainer'
 
-const ContentText = styled.Text`
+const ContentTextContainer = styled.View`
   marginHorizontal: 20px;
   marginVertical: 10px;
-  fontFamily: 'NunitoSans-Regular';
-  fontSize: 16px;
 `
-const ImportantText = styled.Text`
+const ImportantTextContainer = styled.Text`
   marginHorizontal: 20px;
   marginVertical: 10px;
-  fontFamily: 'NunitoSans-Bold';
-  fontSize: 16px;
-  color: #FC1B1F;
 `
 
 export default function OtherForms({ navigation }) {
@@ -46,10 +41,7 @@ export default function OtherForms({ navigation }) {
     setNextPage('RiskManagement')
   }
 
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
-    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
-  });
+
   return (
     <>
       <PageContainer alignItems='flex-start' justifyContent='flex-start'>
@@ -58,18 +50,26 @@ export default function OtherForms({ navigation }) {
           pageTitle="Evaluate for other forms of liver disease:"
         />
         </TitleContainer>
-        <ContentText>
+        <ContentTextContainer>
+        <TextBasic fontSize={16}>
           Alcohol intake history (≥ 14 drinks/week for women or ≥ 21 drinks/week for men)
-        </ContentText>
-        <ContentText>
+        </TextBasic>
+        </ContentTextContainer>
+        <ContentTextContainer>
+        <TextBasic fontSize={16}>
           HCV antibody with reflex testing of HCV RNA
-        </ContentText>
-        <ContentText>
+        </TextBasic>
+        </ContentTextContainer>
+        <ContentTextContainer>
+        <TextBasic fontSize={16}>
           Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT 
-        </ContentText>
-        <ImportantText>
+        </TextBasic>
+        </ContentTextContainer>
+        <ImportantTextContainer>
+        <TextBasic fontSize={16} fontWeight='bold' fontColor='#FC1B1F'>
           *If there are other forms of liver disease, click on the button below and then hit 'Next'. Otherwise, simply click 'Next'.
-        </ImportantText>
+        </TextBasic>
+        </ImportantTextContainer>
         <Radio 
           label='Other forms of liver disease present' 
           marginHorizontal={30} 

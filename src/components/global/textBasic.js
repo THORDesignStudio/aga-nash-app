@@ -14,13 +14,15 @@ import { useFonts } from 'expo-font'
  * @param { number } fontSize - how big should the font be? (default 18)
  * @param { string } fontWeight - way to indicate how heavy of a font we want
  * @param { string } fontColor - way to choose the color of the text. Defaults to black.
+ * @param { string } textAlign - align text in the container. Defaults to center.
  */
 
 export default function TextBasic({ 
   children,
   fontSize = 18,
   fontWeight,
-  fontColor
+  fontColor,
+  textAlign
  }) {
 
   let [fontsLoaded] = useFonts({
@@ -39,7 +41,7 @@ export default function TextBasic({
 
   else if( fontWeight === 'bold' ) {
     return (
-      <Text style={ [ styles.textBold, { fontSize: fontSize / PixelRatio.getFontScale(), color: fontColor } ] }>
+      <Text style={ [ styles.textBold, { fontSize: fontSize / PixelRatio.getFontScale(), color: fontColor, textAlign: textAlign || 'center' } ] }>
         { children }
       </Text>
     );
@@ -47,7 +49,7 @@ export default function TextBasic({
 
   else if( fontWeight === 'light' ) {
     return (
-      <Text style={ [ styles.textLight, { fontSize: fontSize / PixelRatio.getFontScale(), color: fontColor } ]}>
+      <Text style={ [ styles.textLight, { fontSize: fontSize / PixelRatio.getFontScale(), color: fontColor, textAlign: textAlign || 'center' } ]}>
         { children }
       </Text>
     );
@@ -55,7 +57,7 @@ export default function TextBasic({
 
   else {
     return (
-      <Text style={ [ styles.text, { fontSize: fontSize / PixelRatio.getFontScale(), color: fontColor || 'black'} ] }>
+      <Text style={ [ styles.text, { fontSize: fontSize / PixelRatio.getFontScale(), color: fontColor || 'black', textAlign: textAlign || 'center'} ] }>
         { children }
       </Text>
     );

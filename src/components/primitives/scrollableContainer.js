@@ -9,7 +9,7 @@ import styled from "styled-components/native";
 
 const Container = styled.ScrollView`
   flex: ${(props) => props.flex || '1px'};
-  /* marginVertical: ${(props) => props.marginVertical || 20}; */
+  marginVertical: ${(props) => props.marginVertical || 0};
 `;
 
 const style = {

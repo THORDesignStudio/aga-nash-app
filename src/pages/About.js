@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 import GoldenTitle from "../components/global/goldenTitle";
 import Footer from "../components/global/footer";
 import ScrollableView from '../components/primitives/scrollableContainer'
-import {useFonts} from 'expo-font'
+import TextBasic from "../components/global/textBasic";
 import BackButton from '../components/global/backButton'
 
 /**
@@ -15,47 +15,42 @@ import BackButton from '../components/global/backButton'
 
 
 const HeaderTextContainer = styled.View`
-  flex: 0.4;
+  flex: 0.6;
   width: 75%;
   backgroundColor: rgba(255, 255, 255, 0.8);
   marginHorizontal: 50px;
   justifyContent: space-evenly;
 `;
 
-
-const Title = styled.Text`
-  fontSize: 32px;
-  textAlign: center;
-  fontFamily: 'NunitoSans-SemiBold';
-`;
-
-const Paragraph = styled.Text`
-  fontSize: 16px;
+const TextContainer = styled.View`
   marginHorizontal: 20px;
-  marginBottom: 10px;
-  fontFamily: 'NunitoSans-Regular';
-`;
+`
+
+const ParagraphContainer = styled.View`
+  marginVertical: 5px;
+`
+
 
 export default function About({ navigation }) {
 
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-SemiBold': require('../assets/fonts/NunitoSans-SemiBold.ttf'),
-    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
-  });
 
   return (
     <>
       <GoldenTitle>
         <HeaderTextContainer>
-          <Title>ABOUT</Title>
+          <TextBasic fontSize={32} fontWeight='bold'>ABOUT</TextBasic>
         </HeaderTextContainer>
       </GoldenTitle>
-      <ScrollableView>
-        <Paragraph >
+      <ScrollableView >
+        <TextContainer>
+          <ParagraphContainer>
+        <TextBasic textAlign='left' fontSize={16} >
           Non-alcoholic fatty liver disease (NAFLD) currently affects
           approximately 37% of U.S. adults.
-        </Paragraph>
-        <Paragraph>
+        </TextBasic>
+        </ParagraphContainer>
+        <ParagraphContainer>
+        <TextBasic textAlign='left' fontSize={16} >
           NAFLD is most often managed in primary care or endocrine clinics,
           where clinicians must determine which patients may benefit from
           secondary care to address hepatic manifestations, comorbid metabolic
@@ -64,8 +59,10 @@ export default function About({ navigation }) {
           on accurate staging of fibrosis risk, screening at the primary care
           level is critical, together with consistent, timely, evidence-based,
           widely accessible as well as testable management processes.
-        </Paragraph>
-        <Paragraph>
+        </TextBasic>
+        </ParagraphContainer>
+        <ParagraphContainer>
+        <TextBasic textAlign='left' fontSize={16} >
           To achieve these goals, the American Gastroenterological Association
           assembled a multidisciplinary panel of experts to develop a clinical
           care pathway providing explicit guidance on the screening, diagnosis,
@@ -73,19 +70,25 @@ export default function About({ navigation }) {
           any setting where care for patients with NAFLD is provided, including
           primary care, endocrine, obesity medicine and gastroenterology
           practices.
-        </Paragraph>
-        <Paragraph>
+        </TextBasic>
+        </ParagraphContainer>
+        <ParagraphContainer>
+        <TextBasic textAlign='left' fontSize={16} >
           This clinical tool is based on the recently published Clinical Care
           Pathway for the Risk Stratification and Management of Patients with
           Nonalcoholic Fatty Liver Disease [Kanwal et al. 2021] (LINK TO
           PUBLICATION) For more information on NAFLD/NASH please visit
           NASH.gastro.org.
-        </Paragraph>
-        <Paragraph>
+        </TextBasic>
+        </ParagraphContainer>
+        <ParagraphContainer>
+        <TextBasic textAlign='left' fontSize={16} >
           This initiative is supported by independent medical education grants
           from Intercept Pharmaceuticals, Inc., Pfizer Inc., Allergan and
           Genfit.
-        </Paragraph>
+        </TextBasic>
+        </ParagraphContainer>
+        </TextContainer>
         <BackButton navigation={navigation}/>
         </ScrollableView>
       <Footer navigation={navigation} />
