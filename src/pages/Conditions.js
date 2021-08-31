@@ -12,8 +12,9 @@ import TitleContainer from "../components/global/titleContainer";
 /**
  * <Conditions>
  * 
+ * 2nd step in the NASH pathway, gives a high level overview of the condition
+ * 
  * @param { object } navigation - gives app prev/next page assignments
- * @returns 
  */
 export default function Conditions({ navigation }) {
   const { setPageId, pageId } = useContext(ApplicationContext);
