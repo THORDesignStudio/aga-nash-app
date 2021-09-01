@@ -22,7 +22,7 @@ export default function BackButton ({
             () => navigation.navigate(destination)
         } 
         textClr='white' 
-        borderWidth={.05}  
+        borderWidth="0px" 
       />
     </Container>
   )
