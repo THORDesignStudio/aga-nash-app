@@ -16,9 +16,23 @@ const Wrapper = styled.View`
   backgroundColor: ${(props) => props.backgroundColor || '#F2F2F2'};
 `
 
-export default function Container ({children, alignItems, justifyContent, flex, marginTop, backgroundColor}){
+export default function Container ({
+  children, 
+  alignItems, 
+  justifyContent, 
+  flex, 
+  marginTop, 
+  backgroundColor
+}){
+
   return(
-    <Wrapper justifyContent={justifyContent} alignItems={alignItems} flex={flex} marginTop={marginTop} backgroundColor={backgroundColor}> 
+    <Wrapper 
+      alignItems={alignItems} 
+      backgroundColor={backgroundColor}
+      flex={flex} 
+      justifyContent={justifyContent} 
+      marginTop={marginTop} 
+    > 
       {children}
     </Wrapper>
   )

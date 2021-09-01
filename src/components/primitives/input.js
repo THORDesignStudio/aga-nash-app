@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components/native";
-import {View, ActivityIndicator, StyleSheet} from 'react-native'
-import {useFonts} from 'expo-font'
+import { View, ActivityIndicator, StyleSheet } from 'react-native'
+import { useFonts } from 'expo-font'
 
-const Container = styled.View`
+const Container = styled.ScrollView`
+  marginVertical: 10px;
+`;
+
+const InputContainer = styled.View`
   alignItems: center;
   flexDirection: row;
   justifyContent: center;
-  marginVertical: 10px;
-`;
+`
 
 const InnerContainer = styled.View`
   borderStyle: solid;
@@ -56,44 +59,47 @@ export default function InputBox({
     'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
   });
 
-
   if (!fontsLoaded) {
     return (
       <View style={ [styles.container, styles.horizontal] }>
         <ActivityIndicator size="large" color="#122033" />
       </View>
     )
-  } else{
-  return (
-    <Container>
-      { hasUnit !== false ? (
-        <InnerContainer>
-          <Input
-            hasUnit={hasUnit}
-            placeholder={placeholder}
-            onChangeText={onChangeText}
-            placeholderTextColor='grey'
-            keyboardType={keyboardType}
-          />
-          <InputUnit>
-            { unit }
-          </InputUnit>
-        </InnerContainer>
-      ) : (
-        <Input
-          hasUnit={hasUnit}
-          placeholder={placeholder}
-          onChangeText={onChangeText}
-          placeholderTextColor='grey'
-          keyboardType={keyboardType}
-        />
-      )}
-      <InputText>
-        {text}
-      </InputText>
-    </Container>
-  );
-      }
+  } 
+
+  else {
+    return (
+      <Container keyboardShouldPersistTaps='handled'>
+        <InputContainer>
+          { hasUnit !== false ? (
+            <InnerContainer>
+              <Input
+                hasUnit={hasUnit}
+                placeholder={placeholder}
+                onChangeText={onChangeText}
+                placeholderTextColor='grey'
+                keyboardType={keyboardType}
+              />
+              <InputUnit>
+                { unit }
+              </InputUnit>
+            </InnerContainer>
+          ) : (
+            <Input
+              hasUnit={hasUnit}
+              placeholder={placeholder}
+              onChangeText={onChangeText}
+              placeholderTextColor='grey'
+              keyboardType={keyboardType}
+            />
+          )}
+          <InputText>
+            {text}
+          </InputText>
+        </InputContainer>
+      </Container>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
