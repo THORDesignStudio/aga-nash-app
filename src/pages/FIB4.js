@@ -26,7 +26,7 @@ const CalcContainer = styled.View`
 `;
 
 const TextContainer = styled.View`
-    marginHorizontal: 20px;
+  marginHorizontal: 20px;
   marginVertical: 10px;
 `
 
@@ -57,6 +57,7 @@ export default function Fib4({ navigation }) {
     if (!disabled) {
       setNextPage("Results");
     } else setNextPage("");
+
   }, [age, alt, ast, plt, disabled]);
   
 
@@ -69,7 +70,7 @@ export default function Fib4({ navigation }) {
         <TitleContainer paddingBottom={0}>
           <PageTitle
             pageTitle="Enter the following lab results for Non Invasive Testing (NIT) for fibrosis"
-            fontSize={20}
+            fontSize="20px"
           />
         </TitleContainer>
 
@@ -78,7 +79,7 @@ export default function Fib4({ navigation }) {
             text="*Age"
             onChangeText={(text) => setAge(parseInt(text))}
             placeholder=""
-            keyboardType="numeric"
+            keyboardType="decimal-pad"
             hasUnit={ true }
             unit="Years"
           />
@@ -86,7 +87,7 @@ export default function Fib4({ navigation }) {
             text="*ALT"
             onChangeText={(text) => setAlt(parseInt(text))}
             placeholder="(Norm: 1-35)"
-            keyboardType="numeric"
+            keyboardType="decimal-pad"
             hasUnit={ true }
             unit="U/L"
           />
@@ -94,7 +95,7 @@ export default function Fib4({ navigation }) {
             text="*AST"
             onChangeText={(text) => setAst(parseInt(text))}
             placeholder="(Norm: 15-41)"
-            keyboardType="numeric"
+            keyboardType="decimal-pad"
             hasUnit={ true }
             unit="U/L"
           />
@@ -102,7 +103,7 @@ export default function Fib4({ navigation }) {
             text="*PLT"
             onChangeText={(text) => setPlt(parseInt(text))}
             placeholder="(Norm: 150-350)"
-            keyboardType="numeric"
+            keyboardType="decimal-pad"
             hasUnit={ true }
             unit="10^9/L"
           />
@@ -114,11 +115,11 @@ export default function Fib4({ navigation }) {
         </TextContainer>
       </ScrollView>
       <NextBack
-          navigation={navigation}
-          nextPage={nextPage}
-          backPage="Conditions"
-          marginVertical={'10px'}
-        />
+        navigation={navigation}
+        nextPage={nextPage}
+        backPage="Conditions"
+        marginVertical='10px'
+      />
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>
