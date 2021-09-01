@@ -26,7 +26,7 @@ export default function NextBack({
   nextPage, 
   navigation, 
   marginVertical, 
-  backgroundColor, 
+  backgroundColor = "#F1F6F8", 
   paddingVertical 
 }) {
 
@@ -46,7 +46,11 @@ export default function NextBack({
   else {
     return (
       <>
-        <Container marginVertical={marginVertical} backgroundColor={backgroundColor} paddingVertical={paddingVertical}>
+        <Container 
+          marginVertical={marginVertical} 
+          backgroundColor={backgroundColor} 
+          paddingVertical={paddingVertical}
+        >
           <View style={ styles.backContainer }>
             <Text style={ styles.backText }>
               Back
