@@ -109,7 +109,7 @@ export default function Fib4({ navigation }) {
           />
         </CalcContainer>
         <TextContainer>
-        <TextBasic fontSize={16} textAlign='left'>
+        <TextBasic fontSize={18} textAlign='left'>
           Note: AST and ALT can easily be confused. Please confirm your entries before proceeding.
         </TextBasic>
         </TextContainer>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
 
 import { View, StyleSheet } from "react-native";
+
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
 import PageTitle from "../components/global/pageTitle";
@@ -35,7 +36,7 @@ export default function Conditions({ navigation }) {
         </TitleContainer>
         <View style={styles.conditions}>
           <View style={styles.singleCondition}>
-            <TextBasic>Two or more metabollic risk factors</TextBasic>
+            <TextBasic>Two or more metabolic risk factors</TextBasic>
           </View>
           <View style={styles.singleCondition}>
             <TextBasic>Type 2 diabetes</TextBasic>

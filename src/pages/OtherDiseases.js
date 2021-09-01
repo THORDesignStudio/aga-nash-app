@@ -51,22 +51,22 @@ export default function OtherForms({ navigation }) {
         />
         </TitleContainer>
         <ContentTextContainer>
-        <TextBasic fontSize={16}>
+        <TextBasic fontSize={18}>
           Alcohol intake history (≥ 14 drinks/week for women or ≥ 21 drinks/week for men)
         </TextBasic>
         </ContentTextContainer>
         <ContentTextContainer>
-        <TextBasic fontSize={16}>
+        <TextBasic fontSize={18}>
           HCV antibody with reflex testing of HCV RNA
         </TextBasic>
         </ContentTextContainer>
         <ContentTextContainer>
-        <TextBasic fontSize={16}>
+        <TextBasic fontSize={18}>
           Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT 
         </TextBasic>
         </ContentTextContainer>
         <ImportantTextContainer>
-        <TextBasic fontSize={16} fontWeight='bold' fontColor='#FC1B1F'>
+        <TextBasic fontSize={18} fontWeight='bold' fontColor='#FC1B1F'>
           *If there are other forms of liver disease, click on the button below and then hit 'Next'. Otherwise, simply click 'Next'.
         </TextBasic>
         </ImportantTextContainer>
