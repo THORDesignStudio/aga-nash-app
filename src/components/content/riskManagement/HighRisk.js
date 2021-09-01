@@ -26,7 +26,7 @@ const MainHeaderBox = styled.View`
 `;
 
 const MainHeaderText = styled.Text`
-  fontFamily: "NunitoSans-SemiBold";
+  fontFamily: "NunitoSans-Bold";
   fontSize: 20px;
   width: 120px;
   textAlign: center;
