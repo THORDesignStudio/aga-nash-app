@@ -87,7 +87,7 @@ export default function LSM({navigation}){
           <PageTitle pageTitle='Order VCTE (FibroScan®) for liver stiffness measurement (LSM)' />
         </TitleContainer>
         <SectionContainer>
-          <TextBasic fontWeight='bold' fontSize={16} >
+          <TextBasic fontWeight='bold' fontSize={18} >
             Pick one based on LSM results:
           </TextBasic >
             <ButtonContainer>
