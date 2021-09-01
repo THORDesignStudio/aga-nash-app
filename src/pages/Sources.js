@@ -46,7 +46,10 @@ export default function Sources({ navigation }) {
           </ParagraphContainer>
         </TextContainer>
       </ScrollableView>
-      <BackButton navigation={navigation}/>
+      <BackButton 
+        destination="Navigate"
+        navigation={navigation}
+      />
       <Footer navigation={navigation} />
     </>
   );

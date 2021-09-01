@@ -85,7 +85,10 @@ export default function About({ navigation }) {
             </TextBasic>
           </ParagraphContainer>
         </TextContainer>
-        <BackButton navigation={navigation}/>
+        <BackButton 
+          destination="Navigate"
+          navigation={navigation}
+        />
       </ScrollableView>
       <Footer navigation={navigation} />
     </>
