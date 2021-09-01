@@ -11,8 +11,11 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios":{
+    "ios": {
       "bundleIdentifier": "com.aga.nash"
+    },
+    "android": {
+      "package": "com.aga.nash"
     }
   }
 }

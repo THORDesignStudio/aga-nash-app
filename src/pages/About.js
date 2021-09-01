@@ -32,7 +32,7 @@ const ParagraphContainer = styled.View`
 export default function About({ navigation }) {
   return (
     <>
-      <GoldenTitle flex="0.6">
+      <GoldenTitle flex={0.6}>
         <HeaderTextContainer>
           <TextBasic fontSize={32} fontWeight='bold'>ABOUT</TextBasic>
         </HeaderTextContainer>
