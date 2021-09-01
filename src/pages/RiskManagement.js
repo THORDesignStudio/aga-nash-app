@@ -34,7 +34,13 @@ export default function RiskManagement({ navigation }) {
       <ScrollableView>
         {riskMng}
       </ScrollableView>
-      <BackNext navigation={navigation} marginVertical={10} nextPage='Navigate'/>
+      <BackNext 
+        navigation={navigation} 
+        marginVertical="0px"
+        paddingVertical="20px"
+        nextPage='Navigate'
+        backgroundColor="#F1F6F8"
+      />
       <AbbreviationsFootnotes navigation={navigation}/>
       <Footer navigation={navigation}/>
     </>

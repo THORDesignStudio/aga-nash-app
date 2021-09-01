@@ -24,10 +24,10 @@ export default function HepRefer ({navigation}) {
       </Container>
       <NextBack 
         navigation={navigation} 
-        marginVertical={0.1} 
         nextPage='Home' 
         backgroundColor='#F1F6F8' 
-        paddingVertical={10}
+        marginVertical="0px"
+        paddingVertical="20px"
       />
       <Footer navigation={navigation}/>
     </>

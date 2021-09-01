@@ -50,7 +50,9 @@ export default function Conditions({ navigation }) {
         navigation={navigation} 
         nextPage="FIB4" 
         backPage='Navigate' 
-        marginVertical="10px"
+        marginVertical="0px"
+        paddingVertical="20px"
+        backgroundColor="#F1F6F8"
       />
       <Pearls navigation={navigation} />
       <Footer navigation={navigation} />

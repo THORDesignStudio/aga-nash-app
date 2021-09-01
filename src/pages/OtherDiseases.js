@@ -87,8 +87,10 @@ export default function OtherForms({ navigation }) {
       </Container>
       <NextBack 
         navigation={navigation} 
-        marginVertical={10} 
+        marginVertical="0px"
+        paddingVertical="20px"
         nextPage={nextPage}
+        backgroundColor="#F1F6F8"
       />
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />

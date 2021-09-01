@@ -69,7 +69,9 @@ export default function Results({ navigation }) {
       <NextBack
         navigation={navigation}
         nextPage={nextPage}
-        marginVertical={10}
+        marginVertical="0px"
+        paddingVertical="20px"
+        backgroundColor="#F1F6F8"
       />
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />

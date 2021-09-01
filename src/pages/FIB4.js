@@ -118,7 +118,9 @@ export default function Fib4({ navigation }) {
         navigation={navigation}
         nextPage={nextPage}
         backPage="Conditions"
-        marginVertical='10px'
+        marginVertical="0px"
+        paddingVertical="20px"
+        backgroundColor="#F1F6F8"
       />
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
