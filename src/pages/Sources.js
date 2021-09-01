@@ -1,29 +1,56 @@
 import React from "react";
 import styled from "styled-components/native";
+
 import GoldenTitle from "../components/global/goldenTitle";
 import Footer from "../components/global/footer";
-import BackButton from '../components/global/backButton'
-import {useFonts} from 'expo-font'
-
-/**
- * Sources
- *
- * Currently there is no content. Waiting to hear from Colby about what's going to end up here.
- */
-
-const Container = styled.ScrollView`
-  flex: 1;
-  display: flex;
-  marginVertical: 20px;
-`;
+import ScrollableView from '../components/primitives/scrollableContainer'
+import TextBasic from "../components/global/textBasic";
+import BackButton from '../components/global/backButton';
 
 const HeaderTextContainer = styled.View`
-  flex: 0.6;
-  width: 75%;
   backgroundColor: rgba(255, 255, 255, 0.8);
+  flex: 0.5;
+  width: 75%;
   marginHorizontal: 50px;
   justifyContent: space-evenly;
 `;
+
+const TextContainer = styled.View`
+  marginHorizontal: 20px;
+  marginVertical: 20px;
+`
+
+const ParagraphContainer = styled.View`
+  marginVertical: 10px;
+`
+
+/**
+ * <Sources>
+ *
+ * Currently there is no content. Waiting to hear from Colby about what's going to end up here.
+ */
+export default function Sources({ navigation }) {
+  return (
+    <>
+      <GoldenTitle flex="0.6">
+        <HeaderTextContainer>
+          <TextBasic fontSize={32} fontWeight='bold'>SOURCES</TextBasic>
+        </HeaderTextContainer>
+      </GoldenTitle>
+      <ScrollableView>
+        <TextContainer>
+          <ParagraphContainer>
+            <TextBasic textAlign='left' fontSize={18} >
+              Kanwal F, Shubrook J, Adams L, Pfotenhauer K, Wong V, Wright E, Abdelmalek M, Harrison S, Loomba R, Mantzoros C, Bugianesi E, Eckel R, Kaplan L, El-Serag H, Cusi K: Clinical Care Pathway for the Risk Stratification and Management of Patients with Nonalcoholic Fatty Liver Disease. Gastroenterology 2021; in press. 
+            </TextBasic>
+          </ParagraphContainer>
+        </TextContainer>
+      </ScrollableView>
+      <BackButton navigation={navigation}/>
+      <Footer navigation={navigation} />
+    </>
+  );
+}
 
 const style = {
   wrapper: {
@@ -31,32 +58,3 @@ const style = {
     alignItems: "center",
   },
 };
-
-const Title = styled.Text`
-  fontSize: 32px;
-  textAlign: center;
-  fontFamily: 'NunitoSans-SemiBold';
-`;
-
-
-export default function About({ navigation }) {
-
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-SemiBold': require('../assets/fonts/NunitoSans-SemiBold.ttf'),
-    'NunitoSans-Regular': require('../assets/fonts/NunitoSans-Regular.ttf'),
-  });
-
-  return (
-    <>
-      <GoldenTitle>
-        <HeaderTextContainer>
-          <Title>SOURCES</Title>
-        </HeaderTextContainer>
-      </GoldenTitle>
-      <Container contentContainerStyle={style.wrapper}  persistentScrollbar={true}>
-      </Container>
-      <BackButton navigation={navigation}/>
-      <Footer navigation={navigation} />
-    </>
-  );
-}
