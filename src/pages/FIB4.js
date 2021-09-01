@@ -105,7 +105,7 @@ export default function Fib4({ navigation }) {
             placeholder="(Norm: 150-350)"
             keyboardType="decimal-pad"
             hasUnit={ true }
-            unit="10^9/L"
+            unit={ `10\u2079/L` }
           />
         </CalcContainer>
         <TextContainer>
