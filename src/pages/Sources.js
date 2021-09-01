@@ -32,7 +32,7 @@ const ParagraphContainer = styled.View`
 export default function Sources({ navigation }) {
   return (
     <>
-      <GoldenTitle flex="0.6">
+      <GoldenTitle flex={0.6}>
         <HeaderTextContainer>
           <TextBasic fontSize={32} fontWeight='bold'>SOURCES</TextBasic>
         </HeaderTextContainer>
