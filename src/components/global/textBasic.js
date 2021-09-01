@@ -23,9 +23,10 @@ export default function TextBasic({
   fontSize = 18,
   fontWeight,
   fontColor,
-  letterSpacing = 0,
   marginHorizontal = 0,
-  textAlign
+  marginVertical = 0,
+  textAlign,
+  width
  }) {
 
   let [fontsLoaded] = useFonts({
@@ -49,8 +50,10 @@ export default function TextBasic({
         { 
           color: fontColor, 
           fontSize: fontSize / PixelRatio.getFontScale(), 
+          marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
-          textAlign: textAlign || 'center' 
+          textAlign: textAlign || 'center',
+          width: width
         }
       ]}>
         { children }
@@ -60,7 +63,17 @@ export default function TextBasic({
 
   else if( fontWeight === 'light' ) {
     return (
-      <Text style={ [ styles.textLight, { fontSize: fontSize / PixelRatio.getFontScale(), color: fontColor, textAlign: textAlign || 'center' } ]}>
+      <Text style={ [ 
+        styles.textLight, 
+        { 
+          color: fontColor, 
+          fontSize: fontSize / PixelRatio.getFontScale(), 
+          marginVertical: marginVertical, 
+          paddingHorizontal: marginHorizontal, 
+          textAlign: textAlign || 'center',
+          width: width
+        }
+      ]}>
         { children }
       </Text>
     );
@@ -68,7 +81,16 @@ export default function TextBasic({
 
   else {
     return (
-      <Text style={ [ styles.text, { fontSize: fontSize / PixelRatio.getFontScale(), color: fontColor || 'black', textAlign: textAlign || 'center'} ] }>
+      <Text style={ [ styles.text, 
+        { 
+          color: fontColor, 
+          fontSize: fontSize / PixelRatio.getFontScale(), 
+          marginVertical: marginVertical, 
+          paddingHorizontal: marginHorizontal, 
+          textAlign: textAlign || 'center',
+          width: width
+        }
+      ]}>
         { children }
       </Text>
     );
