@@ -1,23 +1,15 @@
 import React, {useContext} from "react";
 import styled from "styled-components/native";
+import { ApplicationContext } from '../../../applicationProvider/applicationProvider'
 import LowRisk from '../../../assets/images/lowRisk'
-import {ApplicationContext} from '../../../applicationProvider/applicationProvider'
 
-const FibText = styled.Text`
-  fontFamily: "NunitoSans-Regular";
-  fontSize: 20px;
-`;
-const AltText = styled.Text`
-  fontFamily: "NunitoSans-Regular";
-  fontSize: 20px;
-  marginVertical: 10px;
-`;
+import TextBasic from "../../global/textBasic"
+
 const LowRiskDial = styled.View`
   marginVertical: 40px;
 `;
 
 const GreenText = styled.Text`
-  fontFamily: "NunitoSans-Regular";
   fontSize: 20px;
   color: #77c83f;
 `;
@@ -30,20 +22,42 @@ const GreaterFourtyText = styled.Text`
 export default function LowRiskContent({ navigation }) {
 const {alt, fib4} = useContext(ApplicationContext);
 
-
-
   return (
     <>
-        <FibText>
+        <TextBasic fontSize={24}>
           FIB4 = {fib4.toFixed(2)}
-        </FibText>
-        {alt >= 40 && <AltText>ALT ≥ 40 U/L</AltText>}
+        </TextBasic>
+        { 
+          alt >= 40 && (
+            <>
+              <TextBasic 
+                fontSize={24}
+                marginVertical={5}
+              >
+                { `ALT \u2265 40 U/L` }
+              </TextBasic>
+              <TextBasic fontSize={14}>
+                Risk of other forms of liver disease
+              </TextBasic>
+            </>
+          ) 
+        }
+        {
+          alt < 40 && 
+            <TextBasic 
+              fontSize={24}
+              marginVertical={5}
+            >
+              { `ALT \u003c 40 U/L` }
+            </TextBasic>
+        }
+
         <LowRiskDial>
           <LowRisk />
         </LowRiskDial>
-        <FibText>
-          <GreenText>LOW RISK</GreenText>
-        </FibText>
+        <TextBasic fontSize={ 20 } marginHorizontal={ 50 }>
+          <GreenText>LOW RISK</GreenText> of advanced fibrosis related to NAFLD/NASH
+        </TextBasic>
     </>
   );
 }
