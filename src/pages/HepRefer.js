@@ -7,15 +7,11 @@ import styled from 'styled-components/native'
 import TextBasic from '../components/global/textBasic'
 
 const HepTextContainer = styled.View`
-width: 180px;
-marginTop: 10px;
+  width: 180px;
+  marginTop: 10px;
 `
 
-export default function HepRefer ({navigation}){
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-Light": require("../assets/fonts/NunitoSans-Light.ttf"),
-  });
-
+export default function HepRefer ({navigation}) {
   return (
     <>
       <PageContainer backgroundColor={'#FC1B1F'}>
