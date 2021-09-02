@@ -3,7 +3,6 @@ import Footer from "../components/global/footer";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import NextBack from "../components/global/nextBackButtons";
 import PageContainer from "../components/primitives/container";
-import { useFonts } from "expo-font";
 import LowRiskContent from "../components/content/results/LowRisk";
 import IndeterminateRiskContent from "../components/content/results/IndeterminateRisk";
 import HighRiskContent from "../components/content/results/HighRisk";
@@ -56,10 +55,6 @@ export default function Results({ navigation }) {
     });
   }, [navigation, fib4]);
 
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
-    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
-  });
 
   return (
     <>

@@ -9,21 +9,21 @@ import HighRiskManagement from '../components/content/riskManagement/HighRisk'
 import { ApplicationContext } from '../applicationProvider/applicationProvider'
 
 export default function RiskManagement({ navigation }) {
-  const { fib4, setPageId, alt } = useContext(ApplicationContext);
+  const { fib4, setPageId, age } = useContext(ApplicationContext);
   const [ riskMng, setRiskMng] = useState(<></>)
 
   useEffect(() => {
     navigation.addListener("focus", () => {
-      if (fib4 < 1.3) {
+      if (fib4 < 1.3 && age < 65 || fib4 < 2 && age >= 65) {
         setPageId("LowRiskMng");
         setRiskMng(<LowRiskMng />)
+      } else if(age < 65 && 1.3 < fib4 < 2.67 || age > 65 && 2 < fib4 < 2.67 ) {
+        setPageId("IndeterminateRiskMng");
+        setRiskMng (<IndeterminateRiskManagement />);
       } else if (fib4 > 2.67) {
         setPageId("HighRiskMng");
         setRiskMng(<HighRiskManagement />);
-      }else {
-        setPageId("IndeterminateRiskMng");
-        setRiskMng (<IndeterminateRiskManagement />);
-      } 
+      }
     });
   }, [navigation, fib4]);
   
