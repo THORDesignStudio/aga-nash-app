@@ -5,7 +5,7 @@ import Button from '../components/primitives/button'
 import PageContainer from '../components/primitives/container'
 import TitleContainer from '../components/global/titleContainer'
 import PageTitle from '../components/global/pageTitle'
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 import TextBasic from '../components/global/textBasic'
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
 
