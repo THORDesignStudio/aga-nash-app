@@ -1,6 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { registerRootComponent } from 'expo';
 
 import ApplicationProvider from "./applicationProvider/applicationProvider";
 
@@ -26,7 +27,7 @@ import LSM from './pages/LSM'
 
 const Stack = createStackNavigator();
 
-export default function App() {
+export function App() {
 
   return (
     <ApplicationProvider>
@@ -50,3 +51,6 @@ export default function App() {
     </ApplicationProvider>
   );
 }
+
+// bootstraps app
+registerRootComponent(App);
