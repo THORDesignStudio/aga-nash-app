@@ -22,7 +22,7 @@ export default function Footer({ navigation }) {
           >
             <NavigateIcon />
           </TouchableOpacity>
-          <TextBasic fontColor='white' fontSize='14'>Navigate</TextBasic>
+          <TextBasic fontColor='#fff' fontSize={14}>Navigate</TextBasic>
         </View>
         <View style={styles.sectionView}>
           <TouchableOpacity 
@@ -31,7 +31,7 @@ export default function Footer({ navigation }) {
           >
             <SourcesIcon />
           </TouchableOpacity>
-          <TextBasic fontColor='white' fontSize='14'>Sources</TextBasic>
+          <TextBasic fontColor='#fff' fontSize={14}>Sources</TextBasic>
         </View>
         <View style={styles.sectionView}>
           <TouchableOpacity 
@@ -40,7 +40,7 @@ export default function Footer({ navigation }) {
           >
             <AboutIcon />
           </TouchableOpacity>
-          <TextBasic fontColor='white' fontSize='14'>About</TextBasic>
+          <TextBasic fontColor='#fff' fontSize={14}>About</TextBasic>
         </View>
       </View>
     </>

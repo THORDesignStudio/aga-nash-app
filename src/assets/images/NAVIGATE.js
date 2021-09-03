@@ -1,8 +1,7 @@
 import * as React from "react";
 import { SvgXml } from "react-native-svg";
 
-export default function NavigateIcon(props) {
-  const NavigateIconSVG = `
+const NavigateIconSVG = `
   <svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
           <filter color-interpolation-filters="auto" id="filter-1">
@@ -34,6 +33,4 @@ export default function NavigateIcon(props) {
   </svg>
 `;
 
-  const NavigateSVG = () => <SvgXml xml={NavigateIconSVG} />;
-  return <NavigateSVG />;
-}
+export default () => <SvgXml xml={ NavigateIconSVG } />
