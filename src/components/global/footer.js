@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity} from "react-native";
+import { View, StyleSheet, TouchableOpacity} from "react-native";
 import NavigateIcon from "../../assets/images/NAVIGATE";
 import SourcesIcon from "../../assets/images/SOURCES";
 import AboutIcon from "../../assets/images/ABOUT";
@@ -10,8 +10,7 @@ import TextBasic from "./textBasic";
  *
  */
 
-export default function NashFooter({ navigation }) {
-
+export default function Footer({ navigation }) {
 
   return (
     <>
