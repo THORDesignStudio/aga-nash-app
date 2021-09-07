@@ -18,7 +18,7 @@ import TitleContainer from "../components/global/titleContainer";
  * @param { object } navigation - gives app prev/next page assignments
  */
 export default function Conditions({ navigation }) {
-  const { setPageId, pageId } = useContext(ApplicationContext);
+  const { setPageId } = useContext(ApplicationContext);
 
   useEffect(() => {
     navigation.addListener('focus', () => {
@@ -62,6 +62,7 @@ export default function Conditions({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#fff",
     flex: 1,
   },
   conditions: {
