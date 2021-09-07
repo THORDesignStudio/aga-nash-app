@@ -34,6 +34,11 @@ export default function Results({ navigation }) {
   }
 
   useEffect(() => {
+    /**
+     * NOTE: React native seems to compile if else statments strangely. In this case, you must have the Low Risk case and High Risk cases first (the two extremes).
+     *       This can then be followed by the catch all case. Not sure why it acts this way. When you don't have it in this format, when you hit the High Risk Management handler, it'll render
+     *       the page meant for Indeterminate Risk.
+     * */
     navigation.addListener("focus", () => {
       if (fib4 < 1.3 && age <= 65) {
         LowResult();
@@ -54,7 +59,6 @@ export default function Results({ navigation }) {
       }
     });
   }, [navigation, fib4]);
-
 
   return (
     <>
