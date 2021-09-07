@@ -11,7 +11,7 @@ import TextBasic from "../components/global/textBasic";
 
 /**
  * Navigate
- * 
+ *
  * This is kind of the like the central nervous system of the entire thing. It helps the user,
  * like the title of the page says, navigate between various areas of the app. Nothing super special going on here.
  */
@@ -33,27 +33,27 @@ const ButtonContainer = styled.View`
 `;
 
 export default function Navigate({ navigation }) {
-  const {setPageId, setFib4} = useContext(ApplicationContext)
+  const { setPageId, setFib4 } = useContext(ApplicationContext);
   useEffect(() => {
-    navigation.addListener('focus', () => {
+    navigation.addListener("focus", () => {
       setPageId("Navigate");
     });
-  }, [navigation])
+  }, [navigation]);
 
   const handleLowRisk = () => {
     setFib4(1.29);
-    navigation.navigate('RiskManagement')
-  }
+    navigation.navigate("RiskManagement");
+  };
 
   const handleIndeterminateRisk = () => {
     setFib4(2);
-    navigation.navigate('RiskManagement')
-  }
+    navigation.navigate("RiskManagement");
+  };
 
   const handleHighRisk = () => {
     setFib4(3);
-    navigation.navigate('RiskManagement')
-  }
+    navigation.navigate("RiskManagement");
+  };
   return (
     <>
       <GoldenTitle>
@@ -61,7 +61,7 @@ export default function Navigate({ navigation }) {
           buttonText="START FROM BEGINNING"
           textClr="#FAA719"
           textWidth="75%"
-          buttonHeight={'60px'}
+          buttonHeight={"60px"}
           border="none"
           onPress={() => navigation.navigate("Conditions")}
         />
@@ -69,10 +69,7 @@ export default function Navigate({ navigation }) {
       <Container justifyContent="space-evenly">
         <SectionContainer>
           <TextContainer>
-            <TextBasic 
-              fontSize={ 20 }
-              fontWeight="bold"
-            >
+            <TextBasic fontSize={20} fontWeight="bold">
               EXPLORE:
             </TextBasic>
           </TextContainer>
@@ -80,10 +77,10 @@ export default function Navigate({ navigation }) {
             <Button
               buttonText="LOW RISK MANAGEMENT"
               buttonBgClr="#77C83F"
-              borderRadius={'30px'}
-              borderWidth={'0.1px'}
+              borderRadius={"30px"}
+              borderWidth={"0.1px"}
               textClr="white"
-              buttonHeight={'60px'}
+              buttonHeight={"60px"}
               textWidth="75%"
               onPress={handleLowRisk}
             />
@@ -92,10 +89,10 @@ export default function Navigate({ navigation }) {
             <Button
               buttonText="INDETERMINATE RISK MANAGEMENT"
               buttonBgClr="#E49917"
-              borderRadius={'30px'}
-              borderWidth={'0.1px'}
+              borderRadius={"30px"}
+              borderWidth={"0.1px"}
               textClr="white"
-              buttonHeight={'60px'}
+              buttonHeight={"60px"}
               textWidth="75%"
               onPress={handleIndeterminateRisk}
             />
@@ -104,10 +101,10 @@ export default function Navigate({ navigation }) {
             <Button
               buttonText="HIGH RISK MANAGEMENT"
               buttonBgClr="#FC1B1F"
-              borderRadius={'30px'}
-              borderWidth={'0.1px'}
+              borderRadius={"30px"}
+              borderWidth={"0.1px"}
               textClr="white"
-              buttonHeight={'60px'}
+              buttonHeight={"60px"}
               textWidth="75%"
               onPress={handleHighRisk}
             />
@@ -115,10 +112,7 @@ export default function Navigate({ navigation }) {
         </SectionContainer>
         <SectionContainer>
           <TextContainer>
-            <TextBasic 
-              fontSize={20 }
-              fontWeight="bold"
-            >
+            <TextBasic fontSize={20} fontWeight="bold">
               JUMP TO:
             </TextBasic>
           </TextContainer>
@@ -126,12 +120,12 @@ export default function Navigate({ navigation }) {
             <Button
               buttonText="LSM TEST"
               buttonBgClr="#112034"
-              borderRadius={'30px'}
-              borderWidth={'0.1px'}
+              borderRadius={"30px"}
+              borderWidth={"0.1px"}
               textClr="white"
-              buttonHeight={'60px'}
+              buttonHeight={"60px"}
               textWidth="75%"
-              onPress={() => navigation.navigate('LSM')}
+              onPress={() => navigation.navigate("LSM")}
             />
           </ButtonContainer>
         </SectionContainer>

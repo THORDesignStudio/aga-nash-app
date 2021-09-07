@@ -35,7 +35,7 @@ export default function Results({ navigation }) {
 
   useEffect(() => {
     navigation.addListener("focus", () => {
-      if (fib4 < 1.3 && age < 65) {
+      if (fib4 < 1.3 && age <= 65) {
         LowResult();
       } else if (fib4 < 2 && age >= 65) {
         LowResult();
@@ -47,9 +47,9 @@ export default function Results({ navigation }) {
         } else {
           setNextPage("RiskManagement");
         }
-      } else if (age < 65 && 1.3 < fib4 < 2.67) {
+      } else if (age <= 65 && 1.3 < fib4 < 2.67) {
         IndeterminateResult();
-      } else if (age > 65 && 2 < fib4 < 2.67) {
+      } else if (age >= 65 && 2 < fib4 < 2.67) {
         IndeterminateResult();
       }
     });

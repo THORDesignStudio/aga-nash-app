@@ -47,7 +47,7 @@ export default function LSM({navigation}){
   }
 
   const handleIndeterminateRisk = () => {
-    setFib4(1.4);
+    setFib4(2.1);
     navigation.navigate('RiskManagement')
   }
 
