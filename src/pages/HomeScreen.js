@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { View, Text, StyleSheet, ImageBackground, ActivityIndicator } from "react-native";
-import { useFonts } from 'expo-font'
+import { View, StyleSheet, ImageBackground } from "react-native";
 
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
 
@@ -11,9 +10,11 @@ import Button from "../components/primitives/button";
 import Container from "../components/primitives/container";
 
 /**
- * Homescreen
+ * <HomeScreen>
  * 
- * This is the first page that users see. This takes them to the @param {page} Navigate page. 
+ * This is the first page that users see, kind of a modified splash screen
+ * 
+ * @param { object } navigation - object of destination pages 
  */
 
 export default function HomeScreen({ navigation }) {
@@ -78,6 +79,7 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    flexShrink: 1,
     resizeMode: "cover",
     justifyContent: "center",
     width: "100%",
@@ -92,16 +94,5 @@ const styles = StyleSheet.create({
     borderBottomColor: "black",
     borderBottomWidth: 1,
     marginHorizontal: 20,
-  },
-  riskContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  splashText: {
-    textAlign: "center",
-    fontSize: 18,
-    marginHorizontal: 15,
-    fontWeight: "500",
-    fontFamily: 'NunitoSans-Regular',
   },
 });
