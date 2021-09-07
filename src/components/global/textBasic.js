@@ -27,7 +27,7 @@ export default function TextBasic({
   marginHorizontal = 0,
   marginVertical = 0,
   textAlign,
-  textTransform = 'inherit',
+  textTransform = 'none',
   width
  }) {
 
