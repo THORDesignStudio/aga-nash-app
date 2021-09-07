@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
 
+import TextBasic from "../../global/textBasic"
 
 const RiskMngHeader = styled.View`
   height: 320px;
@@ -9,109 +10,103 @@ const RiskMngHeader = styled.View`
   alignItems: center;
 `;
 const MngHeaderBox = styled.View`
-  height: 180px;
   width: 80%;
   backgroundColor: #ffffff;
   justifyContent: center;
   alignItems: center;
+  padding: 30px;
 `;
-
 const MainHeaderBox = styled.View`
   borderBottomWidth: 1px;
   borderBottomColor: #d8d8d8;
-  marginHorizontal: 20px;
-  width: 80%;
   justifyContent: center;
   alignItems: center;
 `;
-
-const MainHeaderText = styled.Text`
-  fontFamily: "NunitoSans-Bold";
-  fontSize: 20px;
-  width: 120px;
-  textAlign: center;
-  marginBottom: 10px;
-`;
-
 const SecondaryHeaderBox = styled.View`
   justifyContent: center;
   alignItems: center;
   textAlign: center;
   marginTop: 10px;
 `;
-
-const SecondaryHeaderText = styled.Text`
-  fontSize: 16px;
-  fontFamily: "NunitoSans-Regular";
-  textAlign: center;
-`;
 const MainContent = styled.View`
+  backgroundColor: #fff;
   borderBottomWidth: 1px;
   borderBottomColor: #D8D8D8;
-  marginHorizontal: 20px;
-  marginVertical: 20px;
+  paddingHorizontal: 20px;
+  paddingVertical: 10px;
   paddingBottom: 20px;
 `;
-
-const MainText = styled.Text`
-  fontFamily: "NunitoSans-Regular";
-  fontSize: 16px;
-  marginVertical: 6px;
-  textAlign: left;
-`;
-
 const BottomContent = styled.View`
-  marginHorizontal: 20px;
-  marginVertical: 20px;
-`;
-
-const BottomText = styled.Text`
-  fontFamily: "NunitoSans-Regular";
-  fontSize: 16px;
-  textAlign: left;
+  backgroundColor: #fff;
+  padding: 20px;
 `;
 
 export default function HighRiskManagement() {
-  
-
   return (
     <>
         <RiskMngHeader>
           <MngHeaderBox>
             <MainHeaderBox>
-              <MainHeaderText>High Risk Management</MainHeaderText>
+              <TextBasic
+                fontSize={ 20 }
+                fontWeight="bold"
+                marginVertical={ 10 }
+              >
+                High Risk Management
+              </TextBasic>
             </MainHeaderBox>
             <SecondaryHeaderBox>
-              <SecondaryHeaderText>FIB-4 {'>'} 2.67</SecondaryHeaderText>
-              <SecondaryHeaderText>LSM {'>'} 12 kPa and</SecondaryHeaderText>
-              <SecondaryHeaderText>liver biopsy F0-F1</SecondaryHeaderText>
+              <TextBasic>FIB-4 {'>'} 2.67</TextBasic>
+              <TextBasic>LSM {'>'} 12 kPa and</TextBasic>
+              <TextBasic>liver biopsy F0-F1</TextBasic>
             </SecondaryHeaderBox>
           </MngHeaderBox>
         </RiskMngHeader>
         <MainContent>
-          <MainText>
+          <TextBasic 
+            marginVertical={5}
+            textAlign="left"
+          >
             {`\u2022 Management by hepatologist with multidisciplinary team (PCP, dietician, endocrinologist, cardiologist, others)`}
-          </MainText>
-          <MainText>
+          </TextBasic>
+          <TextBasic 
+            marginVertical={5}
+            textAlign="left"
+          >
             {`\u2022 Lifestyle intervention `}
-          </MainText>
-          <MainText>
+          </TextBasic>
+          <TextBasic 
+            marginVertical={5}
+            textAlign="left"
+          >
             {`\u2022 Strong need for structured weight loss programs, anti-obesity medications, bariatric surgery `}
-          </MainText>
-          <MainText>
+          </TextBasic>
+          <TextBasic 
+            marginVertical={5}
+            textAlign="left"
+          >
             {`\u2022 Pharmacotherapy for NASH `}
-          </MainText>
-          <MainText>
+          </TextBasic>
+          <TextBasic 
+            marginVertical={5}
+            textAlign="left"
+          >
           {`\u2022 CVD risk reduction `}
-          </MainText>
-          <MainText>
+          </TextBasic>
+          <TextBasic 
+            marginVertical={5}
+            textAlign="left"
+          >
             {`\u2022 Diabetes care - Prefer medications with efficacy in NASH (pioglitazone, GLP-1RA)  `}
-          </MainText>
+          </TextBasic>
         </MainContent>
         <BottomContent>
-          <BottomText>
+          <TextBasic 
+            marginVertical={5}
+            textAlign="left"
+          >
             Refer to Hepatologist 
-          </BottomText>
+          </TextBasic>
         </BottomContent>
     </>
   );
