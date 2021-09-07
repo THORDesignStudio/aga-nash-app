@@ -9,13 +9,8 @@ const LowRiskDial = styled.View`
   marginVertical: 40px;
 `;
 
-const GreenText = styled.Text`
-  color: #77c83f;
-`;
-
-
 export default function LowRiskContent() {
-const {alt, fib4} = useContext(ApplicationContext);
+  const {alt, fib4} = useContext(ApplicationContext);
 
   return (
     <>

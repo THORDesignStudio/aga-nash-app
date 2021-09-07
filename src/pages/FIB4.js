@@ -109,19 +109,19 @@ export default function Fib4({ navigation }) {
           />
         </CalcContainer>
         <TextContainer>
-        <TextBasic fontSize={18} textAlign='left'>
-          Note: AST and ALT can easily be confused. Please confirm your entries before proceeding.
-        </TextBasic>
+          <TextBasic fontSize={18} textAlign='left'>
+            Note: AST and ALT can easily be confused. Please confirm your entries before proceeding.
+          </TextBasic>
         </TextContainer>
+        <NextBack
+          navigation={navigation}
+          nextPage={nextPage}
+          backPage="Conditions"
+          marginVertical="0px"
+          paddingVertical="20px"
+          backgroundColor="#F1F6F8"
+        />
       </ScrollView>
-      <NextBack
-        navigation={navigation}
-        nextPage={nextPage}
-        backPage="Conditions"
-        marginVertical="0px"
-        paddingVertical="20px"
-        backgroundColor="#F1F6F8"
-      />
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>

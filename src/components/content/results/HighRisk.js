@@ -8,8 +8,7 @@ const HighRiskDial = styled.View`
   marginVertical: 40px;
 `;
 
-
-export default function HighRiskContent({ navigation }) {
+export default function HighRiskContent() {
   
   const {alt, fib4} = useContext(ApplicationContext);
 

@@ -15,6 +15,7 @@ import { useFonts } from 'expo-font'
  * @param { string } fontWeight - way to indicate how heavy of a font we want
  * @param { string } fontColor - way to choose the color of the text. Defaults to black.
  * @param { number } marginHorizontal - space you want on each text unit
+ * @param { number } marginVertical - space you want on each text unit
  * @param { string } textAlign - align text in the container. Defaults to center.
  */
 
@@ -26,6 +27,7 @@ export default function TextBasic({
   marginHorizontal = 0,
   marginVertical = 0,
   textAlign,
+  textTransform = 'none',
   width
  }) {
 
@@ -53,6 +55,7 @@ export default function TextBasic({
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textTransform: textTransform,
           width: width
         }
       ]}>
@@ -71,6 +74,7 @@ export default function TextBasic({
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textTransform: textTransform,
           width: width
         }
       ]}>
@@ -81,13 +85,15 @@ export default function TextBasic({
 
   else {
     return (
-      <Text style={ [ styles.text, 
+      <Text style={ [ 
+        styles.text, 
         { 
           color: fontColor, 
           fontSize: fontSize / PixelRatio.getFontScale(), 
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textTransform: textTransform,
           width: width
         }
       ]}>

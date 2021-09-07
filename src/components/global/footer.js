@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity} from "react-native";
+import { View, StyleSheet, TouchableOpacity} from "react-native";
 import NavigateIcon from "../../assets/images/NAVIGATE";
 import SourcesIcon from "../../assets/images/SOURCES";
 import AboutIcon from "../../assets/images/ABOUT";
@@ -10,8 +10,7 @@ import TextBasic from "./textBasic";
  *
  */
 
-export default function NashFooter({ navigation }) {
-
+export default function Footer({ navigation }) {
 
   return (
     <>
@@ -23,7 +22,7 @@ export default function NashFooter({ navigation }) {
           >
             <NavigateIcon />
           </TouchableOpacity>
-          <TextBasic fontColor='white' fontSize='14'>Navigate</TextBasic>
+          <TextBasic fontColor='#fff' fontSize={14}>Navigate</TextBasic>
         </View>
         <View style={styles.sectionView}>
           <TouchableOpacity 
@@ -32,7 +31,7 @@ export default function NashFooter({ navigation }) {
           >
             <SourcesIcon />
           </TouchableOpacity>
-          <TextBasic fontColor='white' fontSize='14'>Sources</TextBasic>
+          <TextBasic fontColor='#fff' fontSize={14}>Sources</TextBasic>
         </View>
         <View style={styles.sectionView}>
           <TouchableOpacity 
@@ -41,7 +40,7 @@ export default function NashFooter({ navigation }) {
           >
             <AboutIcon />
           </TouchableOpacity>
-          <TextBasic fontColor='white' fontSize='14'>About</TextBasic>
+          <TextBasic fontColor='#fff' fontSize={14}>About</TextBasic>
         </View>
       </View>
     </>

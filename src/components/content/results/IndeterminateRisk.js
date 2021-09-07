@@ -4,17 +4,12 @@ import IndeterminateRisk from '../../../assets/images/indeterminateRisk'
 import {ApplicationContext} from '../../../applicationProvider/applicationProvider'
 import TextBasic from "../../global/textBasic";
 
-
 const IndeterminateRiskDial = styled.View`
   marginVertical: 40px;
 `;
 
-
-
 export default function IndeterminateRiskContent({ navigation }) {
-const {alt, fib4} = useContext(ApplicationContext);
-
-
+  const {alt, fib4} = useContext(ApplicationContext);
 
   return (
     <>

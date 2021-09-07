@@ -1,9 +1,7 @@
 import * as React from "react";
 import { SvgXml } from "react-native-svg";
 
-export default function SourcesIcon(props) {
-  const SourcesIconSVG = `
-  <?xml version="1.0" encoding="UTF-8"?>
+const SourcesIconSVG = `
   <svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
           <filter color-interpolation-filters="auto" id="filter-1">
@@ -30,6 +28,4 @@ export default function SourcesIcon(props) {
   </svg>
 `;
 
-  const SourcesSVG = () => <SvgXml xml={SourcesIconSVG} />;
-  return <SourcesSVG />;
-}
+export default () => <SvgXml xml={ SourcesIconSVG } />

@@ -1,16 +1,21 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Text, ActivityIndicator } from "react-native";
-import { useFonts } from 'expo-font'
+import { View, 
+         StyleSheet, 
+         TouchableOpacity } from "react-native";
 import styled from 'styled-components/native'
 
+import TextBasic from '../global/textBasic'
 import NextIcon from "../../assets/images/nextIcon";
 import BackIcon from "../../assets/images/backIcon";
 
 
 /**
- * This component is used to go from one step of the path to the next, or to allow the user to move back to the last step.
+ * <NextBack>
  * 
- * @param {function} navigation - this allows the app to navigate between screens and is used for the navigation functionality
+ * This component is used to go from one step of the path to the next.
+ * It also allows the user to move back to the last step.
+ * 
+ * @param {function} navigation - this allows the app to navigate between screens 
  * @param {string}  nextPage - specifies what page to set as next
  */
 
@@ -30,47 +35,44 @@ export default function NextBack({
   paddingVertical 
 }) {
 
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
-    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
-  });
-  
-  if (!fontsLoaded) {
-    return (
-      <View style={ [styles.container, styles.horizontal] }>
-        <ActivityIndicator size="large" color="#122033" />
-      </View>
-    )
-  } 
-
-  else {
-    return (
-      <>
-        <Container 
-          marginVertical={marginVertical} 
-          backgroundColor={backgroundColor} 
-          paddingVertical={paddingVertical}
+  return (
+    <Container 
+      marginVertical={marginVertical} 
+      backgroundColor={backgroundColor} 
+      paddingVertical={paddingVertical}
+    >
+      <View style={ styles.backContainer }>
+        <TextBasic
+          fontColor="#faa61a"
+          fontSize={ 16 }
+          fontWeight="bold"
+          marginHorizontal={ 10 }
+          textTransform="uppercase"
         >
-          <View style={ styles.backContainer }>
-            <Text style={ styles.backText }>
-              Back
-            </Text>
-            <TouchableOpacity onPress={() => navigation.goBack()}>
-              <BackIcon />
-            </TouchableOpacity>
-          </View>
-          <View style={ styles.nextContainer }>
-            <TouchableOpacity onPress={() => navigation.navigate(nextPage)}>
-              <NextIcon />
-            </TouchableOpacity>
-            <Text style={ styles.nextText }>
-              Next
-            </Text>
-          </View>
-        </Container>
-      </>
-    );
-  }
+          Back
+        </TextBasic>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <BackIcon />
+        </TouchableOpacity>
+      </View>
+      <View style={ styles.nextContainer }>
+        <TouchableOpacity onPress={() => navigation.navigate(nextPage)}>
+          <NextIcon />
+        </TouchableOpacity>
+        <View style={ styles.nextText }>
+          <TextBasic
+            fontColor="#faa61a"
+            fontSize={ 16 }
+            fontWeight="bold"
+            marginHorizontal={ 10 }
+            textTransform="uppercase"
+          >
+            Next
+          </TextBasic>
+        </View>
+      </View>
+    </Container>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -86,21 +88,7 @@ const styles = StyleSheet.create({
     width: 100,
     marginHorizontal: 30,
   },
-  backText: {
-    color: "#faa61a",
-    fontFamily: 'NunitoSans-Bold',
-    fontSize: 16,
-    fontWeight: "500",
-    paddingHorizontal: 10,
-    textTransform: "uppercase",
-  },
   nextText: {
-    color: "#faa61a",
-    fontFamily: 'NunitoSans-Bold',
-    fontSize: 16,
-    fontWeight: "500",
-    paddingHorizontal: 10,
     marginStart: -95,
-    textTransform: "uppercase",
   },
 });
