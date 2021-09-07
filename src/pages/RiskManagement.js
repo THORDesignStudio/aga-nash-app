@@ -30,7 +30,9 @@ export default function RiskManagement({ navigation }) {
 
   return (
     <>
-      <ScrollableView>{riskMng}</ScrollableView>
+      <ScrollableView>
+        { riskMng }
+      </ScrollableView>
       <BackNext
         navigation={navigation}
         marginVertical="0px"
