@@ -34,18 +34,61 @@ export default function Conditions({ navigation }) {
             pageTitle="Patients with these conditions are at greatest risk of advanced fibrosis related to NAFLD/NASH:" 
           />
         </TitleContainer>
-        <View style={styles.conditions}>
-          <View style={styles.singleCondition}>
-            <TextBasic>Two or more metabolic risk factors</TextBasic>
+
+        <View style={styles.conditionsContainer}>
+          {/* 1 */}
+          <View style={styles.singleConditionContainer}>
+            <View style={styles.numberButton}>
+              <TextBasic
+                fontColor="#fff"
+                fontWeight="bold"
+              >
+                1
+              </TextBasic>
+            </View>
+            <View style={styles.singleCondition}>
+              <TextBasic textAlign='left'>
+                Two or more metabolic risk factors
+              </TextBasic>
+            </View>            
           </View>
-          <View style={styles.singleCondition}>
-            <TextBasic>Type 2 diabetes</TextBasic>
+
+          {/* 2 */}
+          <View style={styles.singleConditionContainer}>
+            <View style={styles.numberButton}>
+              <TextBasic
+                fontColor="#fff"
+                fontWeight="bold"
+              >
+                2
+              </TextBasic>
+            </View>
+            <View style={styles.singleCondition}>
+              <TextBasic textAlign='left'>
+                Type 2 diabetes
+              </TextBasic>
+            </View>
           </View>
-          <View style={styles.singleCondition}>
-            <TextBasic>Steatosis on any imaging modality</TextBasic>
+
+          {/* 3 */}
+          <View style={styles.singleConditionContainer}>
+            <View style={styles.numberButton}>
+              <TextBasic
+                fontColor="#fff"
+                fontWeight="bold"
+              >
+                3
+              </TextBasic>
+            </View>
+            <View style={styles.singleCondition}>
+              <TextBasic textAlign='left'>
+                Steatosis on any imaging modality
+              </TextBasic>
+            </View>
           </View>
         </View>
       </View>
+
       <NextBack 
         navigation={navigation} 
         nextPage="FIB4" 
@@ -63,14 +106,34 @@ export default function Conditions({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    flex: 1,
+    flex: 1
   },
-  conditions: {
+  conditionsContainer: {
     flex: 1,
     marginHorizontal: 20,
+    marginVertical: 15
+  },
+  numberButton: {
+    backgroundColor: "#faa61a",
+    borderRadius: 20,
+    height: 40,
+    marginEnd: 10,
+    paddingVertical: 7,
+    width: 40
   },
   singleCondition: {
-    flexDirection: "row",
-    marginVertical: 20,
+    borderColor: "#222",
+    borderRadius: 20,
+    borderWidth: 1,
+    flex: 1,
+    justifyContent: 'center',
+    minHeight: 70,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
+  singleConditionContainer: {
+    alignItems: 'center',
+    flexDirection: "row",
+    marginVertical: 8
+  }
 });
