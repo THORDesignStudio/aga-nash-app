@@ -1,4 +1,6 @@
 import React, { useContext, useEffect} from 'react'
+import { ApplicationContext } from '../applicationProvider/applicationProvider'
+
 import Footer from '../components/global/footer'
 import AbbreviationsFootnotes from '../components/global/abbreviationsFootnotes'
 import Button from '../components/primitives/button'
@@ -7,7 +9,6 @@ import TitleContainer from '../components/global/titleContainer'
 import PageTitle from '../components/global/pageTitle'
 import styled from 'styled-components/native'
 import TextBasic from '../components/global/textBasic'
-import {ApplicationContext} from '../applicationProvider/applicationProvider'
 
 
 const SectionContainer = styled.View`
@@ -17,7 +18,6 @@ const SectionContainer = styled.View`
   textAlign: center;
   marginVertical: 20px;
 `;
-
 
 const ButtonContainer = styled.View`
   alignItems: center;
@@ -31,7 +31,7 @@ const ButtonView = styled.View`
 `
 
 
-export default function LSM({navigation}){
+export default function LSM({ navigation }){
   const {setPageId, setFib4} = useContext(ApplicationContext)
 
   useEffect(() => {
@@ -40,14 +40,13 @@ export default function LSM({navigation}){
     });
   }, [navigation]);
 
-
   const handleLowRisk = () => {
     setFib4(1.29);
     navigation.navigate('RiskManagement')
   }
 
   const handleIndeterminateRisk = () => {
-    setFib4(1.4);
+    setFib4(2.1);
     navigation.navigate('RiskManagement')
   }
 
