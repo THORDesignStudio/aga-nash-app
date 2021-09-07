@@ -27,6 +27,7 @@ export default function TextBasic({
   marginHorizontal = 0,
   marginVertical = 0,
   textAlign,
+  textTransform = 'inherit',
   width
  }) {
 
@@ -54,6 +55,7 @@ export default function TextBasic({
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textTransform: textTransform,
           width: width
         }
       ]}>
@@ -72,6 +74,7 @@ export default function TextBasic({
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textTransform: textTransform,
           width: width
         }
       ]}>
@@ -82,13 +85,15 @@ export default function TextBasic({
 
   else {
     return (
-      <Text style={ [ styles.text, 
+      <Text style={ [ 
+        styles.text, 
         { 
           color: fontColor, 
           fontSize: fontSize / PixelRatio.getFontScale(), 
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textTransform: textTransform,
           width: width
         }
       ]}>
