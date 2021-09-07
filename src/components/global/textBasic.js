@@ -15,6 +15,7 @@ import { useFonts } from 'expo-font'
  * @param { string } fontWeight - way to indicate how heavy of a font we want
  * @param { string } fontColor - way to choose the color of the text. Defaults to black.
  * @param { number } marginHorizontal - space you want on each text unit
+ * @param { number } marginVertical - space you want on each text unit
  * @param { string } textAlign - align text in the container. Defaults to center.
  */
 
