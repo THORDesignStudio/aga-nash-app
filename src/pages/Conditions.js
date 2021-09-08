@@ -28,88 +28,68 @@ export default function Conditions({ navigation }) {
 
   return (
     <>
-      <ScrollView 
-        style={styles.container}
-        showsVerticalScrollIndicator={false}
-      >
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         <TitleContainer>
-          <PageTitle 
-            pageTitle="Screen for advanced fibrosis related to NAFLD/NASH in patients with any of these conditions:" 
-          />
+          <PageTitle pageTitle="Screen for advanced fibrosis related to NAFLD/NASH in patients with any of these conditions:" />
         </TitleContainer>
 
         <View style={styles.conditionsContainer}>
-
           {/* 1 */}
           <View style={styles.singleConditionContainer}>
             <View style={styles.numberButton}>
-              <TextBasic
-                fontColor="#fff"
-                fontWeight="bold"
-              >
+              <TextBasic fontColor="#fff" fontWeight="bold">
                 1
               </TextBasic>
             </View>
             <View style={styles.singleCondition}>
-              <TextBasic textAlign='left'>
-                Two or more metabolic risk factors{ `\u00B9` } 
+              <TextBasic textAlign="left">
+                Two or more metabolic risk factors{`\u00B9`}
               </TextBasic>
-            </View>            
+            </View>
           </View>
 
           {/* 2 */}
           <View style={styles.singleConditionContainer}>
             <View style={styles.numberButton}>
-              <TextBasic
-                fontColor="#fff"
-                fontWeight="bold"
-              >
+              <TextBasic fontColor="#fff" fontWeight="bold">
                 2
               </TextBasic>
             </View>
             <View style={styles.singleCondition}>
-              <TextBasic textAlign='left'>
-                Type 2 diabetes
-              </TextBasic>
+              <TextBasic textAlign="left">Type 2 diabetes</TextBasic>
             </View>
           </View>
 
           {/* 3 */}
           <View style={styles.singleConditionContainer}>
             <View style={styles.numberButton}>
-              <TextBasic
-                fontColor="#fff"
-                fontWeight="bold"
-              >
+              <TextBasic fontColor="#fff" fontWeight="bold">
                 3
               </TextBasic>
             </View>
             <View style={styles.singleCondition}>
-              <TextBasic textAlign='left'>
+              <TextBasic textAlign="left">
                 Steatosis on any imaging modality or elevated aminotransferases
               </TextBasic>
             </View>
           </View>
-          <TextBasic 
-            marginVertical={15}
-            textAlign='left'
-          >
+          <TextBasic marginVertical={15} textAlign="left">
             Tap Next to assess risk.
           </TextBasic>
-          <TextBasic textAlign='left'>          
-            Tap Navigate for guidance on management of patients at low, indeterminate and high risk.
+          <TextBasic textAlign="left">
+            Tap Navigate for guidance on management of patients at low,
+            indeterminate and high risk.
           </TextBasic>
         </View>
+        <NextBack
+          navigation={navigation}
+          nextPage="FIB4"
+          backPage="Navigate"
+          marginVertical="0px"
+          paddingVertical="20px"
+          backgroundColor="#F1F6F8"
+        />
       </ScrollView>
-
-      <NextBack 
-        navigation={navigation} 
-        nextPage="FIB4" 
-        backPage='Navigate' 
-        marginVertical="0px"
-        paddingVertical="20px"
-        backgroundColor="#F1F6F8"
-      />
       <Pearls navigation={navigation} />
       <Footer navigation={navigation} />
     </>
