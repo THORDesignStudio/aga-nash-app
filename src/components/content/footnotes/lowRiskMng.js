@@ -20,11 +20,12 @@ export default function LowRiskMng() {
           </Text>
         </TextBasic>
         , with less evidence in patients with T2D 
-        <TextBasic 
-          fontColor="#69badf" 
-          fontSize={16}
-          onPress={() => Linking.openURL('https://care.diabetesjournals.org/content/42/8/1481.long')}>
-          {`\u00a0`}[Bril F et al. 2019]
+        <TextBasic fontColor="#69badf">
+          <Text 
+            style={{ fontSize: 16 }}
+            onPress={() => Linking.openURL('https://care.diabetesjournals.org/content/42/8/1481.long')}>
+            {`\u00a0`}[Bril F et al. 2019]
+          </Text>
         </TextBasic>
       </ContentContainer>
     </>
