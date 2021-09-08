@@ -15,10 +15,9 @@ import LowRiskMng from '../components/content/footnotes/lowRiskMng'
 import IndeterminateRiskMng from '../components/content/footnotes/indeterminateRiskMng'
 import HighRiskMng from '../components/content/footnotes/highRiskMng'
 import LSM from '../components/content/footnotes/lsm'
-import { useFonts } from "expo-font";
 
 /**
- * Footnotes
+ * <Footnotes>
  *
  * This page is set up to be reusable across the app. It would suck to have to create a new page for every
  * set of footnotes.
@@ -30,11 +29,6 @@ import { useFonts } from "expo-font";
 
 export default function Footnotes({ navigation }) {
   const { pageId } = useContext(ApplicationContext);
-
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
-    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
-  });
 
   let content;
 
