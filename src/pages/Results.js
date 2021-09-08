@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
+
+import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
 import Footer from "../components/global/footer";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import NextBack from "../components/global/nextBackButtons";
-import PageContainer from "../components/primitives/container";
+import Container from "../components/primitives/container";
 import LowRiskContent from "../components/content/results/LowRisk";
 import IndeterminateRiskContent from "../components/content/results/IndeterminateRisk";
 import HighRiskContent from "../components/content/results/HighRisk";
-import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
 
 export default function Results({ navigation }) {
   const { fib4, setPageId, alt, age } = useContext(ApplicationContext);
@@ -58,9 +61,14 @@ export default function Results({ navigation }) {
 
   return (
     <>
-      <PageContainer justifyContent="center" marginTop={40} flex={1}>
+      <Container 
+        backgroundColor="#fff"
+        flex={1}
+        justifyContent="center" 
+        marginTop={40}
+      >
         {resultContent}
-      </PageContainer>
+      </Container>
       <NextBack
         navigation={navigation}
         nextPage={nextPage}
