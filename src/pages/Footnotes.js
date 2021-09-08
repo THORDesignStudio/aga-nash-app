@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import PageTitle from "../components/global/pageTitle";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
+import PageTitle from "../components/global/pageTitle";
 import ScrollableView from "../components/primitives/scrollableContainer";
 import TitleContainer from "../components/global/titleContainer";
 import BackButton from "../components/global/backButton";
@@ -69,7 +70,9 @@ export default function Footnotes({ navigation }) {
       <TitleContainer marginBottom="20px">
         <PageTitle pageTitle="FOOTNOTES" color='#122033'/>
       </TitleContainer>
-      <ScrollableView>{content}</ScrollableView>
+      <ScrollableView>
+        {content}
+      </ScrollableView>
       <BackButton navigation={navigation} />
       <Footer navigation={navigation} />
     </>
