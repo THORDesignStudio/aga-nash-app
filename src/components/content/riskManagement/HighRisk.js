@@ -52,13 +52,13 @@ export default function HighRiskManagement() {
                 fontWeight="bold"
                 marginVertical={ 10 }
               >
-                High Risk Management
+                {`High Risk Management\u00B9`}
               </TextBasic>
             </MainHeaderBox>
             <SecondaryHeaderBox>
               <TextBasic>FIB-4 {'>'} 2.67</TextBasic>
               <TextBasic>LSM {'>'} 12 kPa and</TextBasic>
-              <TextBasic>liver biopsy F0-F1</TextBasic>
+              <TextBasic>liver biopsy F2-F4</TextBasic>
             </SecondaryHeaderBox>
           </MngHeaderBox>
         </RiskMngHeader>
@@ -67,37 +67,37 @@ export default function HighRiskManagement() {
             marginVertical={5}
             textAlign="left"
           >
-            {`\u2022 Management by hepatologist with multidisciplinary team (PCP, dietician, endocrinologist, cardiologist, others)`}
+            {`\u2022 Management by hepatologist with multidisciplinary team (PCP, dietician, endocrinologist, cardiologist, others) `}
           </TextBasic>
           <TextBasic 
             marginVertical={5}
             textAlign="left"
           >
-            {`\u2022 Lifestyle intervention `}
+            {`\u2022 Lifestyle intervention: Yes. All patients require regular physical activity, healthy diet, avoid excess alcohol intake `}
           </TextBasic>
           <TextBasic 
             marginVertical={5}
             textAlign="left"
           >
-            {`\u2022 Strong need for structured weight loss programs, anti-obesity medications, bariatric surgery `}
+            {`\u2022 Weight loss recommended if overweight or obese\u00B2: Yes. Strong need for structured weight loss programs, anti-obesity medications, bariatric surgery `}
           </TextBasic>
           <TextBasic 
             marginVertical={5}
             textAlign="left"
           >
-            {`\u2022 Pharmacotherapy for NASH `}
+            {`\u2022 Pharmacotherapy for NASH: Yes\u00B3. Individualize based on further work-up and efforts to confirm the diagnosis of NASH. A liver biopsy provides helpful information and should be considered for cases where there is a diagnostic doubt such as patients with indeterminate, unreliable, or conflicting non-invasive assessments or as part of phase 2 or 3 clinical trials `}
           </TextBasic>
           <TextBasic 
             marginVertical={5}
             textAlign="left"
           >
-          {`\u2022 CVD risk reduction `}
+          {`\u2022 CVD risk reduction\u2074: Yes `}
           </TextBasic>
           <TextBasic 
             marginVertical={5}
             textAlign="left"
           >
-            {`\u2022 Diabetes care - Prefer medications with efficacy in NASH (pioglitazone, GLP-1RA)  `}
+            {`\u2022 Diabetes care: Prefer medications with efficacy in NASH (pioglitazone, GLP-1 RA)`}
           </TextBasic>
         </MainContent>
         <BottomContent>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
 
-import { View, StyleSheet } from "react-native";
+import { ScrollView, View, StyleSheet } from "react-native";
 
 import Footer from "../components/global/footer";
 import Pearls from "../components/global/abbreviationsFootnotes";
@@ -28,14 +28,18 @@ export default function Conditions({ navigation }) {
 
   return (
     <>
-      <View style={styles.container}>
+      <ScrollView 
+        style={styles.container}
+        showsVerticalScrollIndicator={false}
+      >
         <TitleContainer>
           <PageTitle 
-            pageTitle="Patients with these conditions are at greatest risk of advanced fibrosis related to NAFLD/NASH:" 
+            pageTitle="Screen for advanced fibrosis related to NAFLD/NASH in patients with any of these conditions:" 
           />
         </TitleContainer>
 
         <View style={styles.conditionsContainer}>
+
           {/* 1 */}
           <View style={styles.singleConditionContainer}>
             <View style={styles.numberButton}>
@@ -48,7 +52,7 @@ export default function Conditions({ navigation }) {
             </View>
             <View style={styles.singleCondition}>
               <TextBasic textAlign='left'>
-                Two or more metabolic risk factors
+                Two or more metabolic risk factors{ `\u00B9` } 
               </TextBasic>
             </View>            
           </View>
@@ -82,12 +86,21 @@ export default function Conditions({ navigation }) {
             </View>
             <View style={styles.singleCondition}>
               <TextBasic textAlign='left'>
-                Steatosis on any imaging modality
+                Steatosis on any imaging modality or elevated aminotransferases
               </TextBasic>
             </View>
           </View>
+          <TextBasic 
+            marginVertical={15}
+            textAlign='left'
+          >
+            Tap Next to assess risk.
+          </TextBasic>
+          <TextBasic textAlign='left'>          
+            Tap Navigate for guidance on management of patients at low, indeterminate and high risk.
+          </TextBasic>
         </View>
-      </View>
+      </ScrollView>
 
       <NextBack 
         navigation={navigation} 

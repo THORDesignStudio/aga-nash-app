@@ -50,7 +50,7 @@ export default function OtherForms({ navigation }) {
           marginHorizontal={20}
           textAlign='left'
         >
-          Alcohol intake history (≥ 14 drinks/week for women or ≥ 21 drinks/week for men)
+          {`\u2022 Alcohol intake history (≥ 14 drinks/week for women or ≥ 21 drinks/week for men) `}
         </TextBasic>
         <TextBasic 
           fontSize={18}
@@ -58,7 +58,7 @@ export default function OtherForms({ navigation }) {
           marginHorizontal={20}
           textAlign='left'
         >
-          HCV antibody with reflex testing of HCV RNA
+          {`\u2022 Clinical signs of advanced liver disease/cirrhosis `}
         </TextBasic>
         <TextBasic
           fontSize={18}
@@ -66,7 +66,23 @@ export default function OtherForms({ navigation }) {
           marginHorizontal={20}   
           textAlign='left'     
         >
-          Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT 
+          {`\u2022 HCV antibody with reflex testing of HCV RNA `}
+        </TextBasic>
+        <TextBasic
+          fontSize={18}
+          marginVertical={5}
+          marginHorizontal={20}   
+          textAlign='left'     
+        >
+          {`\u2022 Consider\u00B9 HBsAg, HBsAb, HBcAb `}
+        </TextBasic>
+        <TextBasic
+          fontSize={18}
+          marginVertical={5}
+          marginHorizontal={20}   
+          textAlign='left'     
+        >
+          {`\u2022 Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT  `}
         </TextBasic>
         <TextBasic 
           fontSize={18} 

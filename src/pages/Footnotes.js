@@ -15,7 +15,7 @@ import OtherDiseases from "../components/content/footnotes/otherDiseases";
 import LowRiskMng from '../components/content/footnotes/lowRiskMng'
 import IndeterminateRiskMng from '../components/content/footnotes/indeterminateRiskMng'
 import HighRiskMng from '../components/content/footnotes/highRiskMng'
-import LSM from '../components/content/footnotes/lsm'
+import LSMFootnotes from '../components/content/footnotes/lsm'
 
 /**
  * <Footnotes>
@@ -56,7 +56,7 @@ export default function Footnotes({ navigation }) {
       content = <IndeterminateRiskMng />
       break;
     case 'LSM':
-      content = <LSM />
+      content = <LSMFootnotes />
     case "ResultHigh":
       content = <HighRiskResult />
       break;

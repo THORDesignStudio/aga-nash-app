@@ -13,8 +13,6 @@ const Content = styled.Text`
 `
 
 export default function ContentContainer ({children}){
-
-
   return(
     <Content>
       {children}

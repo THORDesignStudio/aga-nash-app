@@ -76,8 +76,8 @@ export default function Fib4({ navigation }) {
           paddingBottom={0}
         >
           <PageTitle
-            pageTitle="Enter the following lab results for Non Invasive Testing (NIT) for fibrosis"
-            fontSize="20px"
+            pageTitle={ `Enter the following lab results for Non Invasive Testing (NIT) for fibrosis \u00B9 \u00B2 \u00B3 ` }
+            fontSize="22px"
           />
         </TitleContainer>
 

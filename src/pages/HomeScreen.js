@@ -39,7 +39,7 @@ export default function HomeScreen({ navigation }) {
                 fontWeight="bold"
                 textAlign="center"
               >
-                NONALCOHOLIC FATTY LIVER DISEASE (NASH)
+                NON-ALCOHOLIC FATTY LIVER DISEASE (NASH)
               </TextBasic>
               <View style={styles.rule} />
               <TextBasic 
