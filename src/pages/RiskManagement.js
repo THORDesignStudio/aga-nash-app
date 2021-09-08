@@ -12,6 +12,13 @@ export default function RiskManagement({ navigation }) {
   const { fib4, setPageId, age } = useContext(ApplicationContext);
   const [riskMng, setRiskMng] = useState(<></>);
 
+  /**
+   * NOTE: React native seems to compile if else statements strangely. 
+   *       In this case, you must have the Low Risk case and High Risk cases first (the two extremes).
+   *       This can then be followed by the catch all case. Not sure why it acts this way. 
+   *       When you don't have it in this format and hit the High Risk Management handler, 
+   *       it'll render the page meant for Indeterminate Risk.
+   */
   useEffect(() => {
     navigation.addListener("focus", () => {
       /**
@@ -36,7 +43,9 @@ export default function RiskManagement({ navigation }) {
 
   return (
     <>
-      <ScrollableView>{riskMng}</ScrollableView>
+      <ScrollableView>
+        { riskMng }
+      </ScrollableView>
       <BackNext
         navigation={navigation}
         marginVertical="0px"

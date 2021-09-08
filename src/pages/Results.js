@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
+
+import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
 import Footer from "../components/global/footer";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import NextBack from "../components/global/nextBackButtons";
-import PageContainer from "../components/primitives/container";
+import Container from "../components/primitives/container";
 import LowRiskContent from "../components/content/results/LowRisk";
 import IndeterminateRiskContent from "../components/content/results/IndeterminateRisk";
 import HighRiskContent from "../components/content/results/HighRisk";
-import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
 
 export default function Results({ navigation }) {
   const { fib4, setPageId, alt, age } = useContext(ApplicationContext);
@@ -33,6 +36,13 @@ export default function Results({ navigation }) {
     }
   }
 
+  /**
+   * NOTE: React native seems to compile if else statements strangely. 
+   *       In this case, you must have the Low Risk case and High Risk cases first (the two extremes).
+   *       This can then be followed by the catch all case. Not sure why it acts this way. 
+   *       When you don't have it in this format and hit the High Risk Management handler, 
+   *       it'll render the page meant for Indeterminate Risk.
+   */
   useEffect(() => {
     /**
      * NOTE: React native seems to compile if else statments strangely. In this case, you must have the Low Risk case and High Risk cases first (the two extremes).
@@ -62,9 +72,14 @@ export default function Results({ navigation }) {
 
   return (
     <>
-      <PageContainer justifyContent="center" marginTop={40} flex={1}>
+      <Container 
+        backgroundColor="#fff"
+        flex={1}
+        justifyContent="center" 
+        marginTop={40}
+      >
         {resultContent}
-      </PageContainer>
+      </Container>
       <NextBack
         navigation={navigation}
         nextPage={nextPage}

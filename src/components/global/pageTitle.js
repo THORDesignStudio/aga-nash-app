@@ -1,7 +1,5 @@
 import React from "react";
-import { useFonts } from "expo-font";
 import styled from 'styled-components/native'
-import {View, StyleSheet, ActivityIndicator} from 'react-native'
 
 /**
  * This is a simple wrapper component that formats the basic page titles you see in place like the
@@ -20,29 +18,21 @@ const Title = styled.Text`
  color: ${(props) => props.color || 'black'}
 `
 
-export default function PageTitle({ pageTitle, fontSize, marginBottom, marginHorizontal, color }) {
-  let [fontsLoaded] = useFonts({
-    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
-  });
-
-  if (!fontsLoaded) {
-    return (
-      <View style={ [styles.container, styles.horizontal] }>
-        <ActivityIndicator size="large" color="#122033" />
-      </View>
-    )
-  } else {return <Title fontSize={fontSize} marginBottom={marginBottom} marginHorizontal={marginHorizontal} color={color}>{pageTitle}</Title>};
+export default function PageTitle({ 
+  pageTitle, 
+  fontSize, 
+  marginBottom, 
+  marginHorizontal, 
+  color 
+}) {
+  return (
+    <Title 
+      fontSize={fontSize} 
+      marginBottom={marginBottom} 
+      marginHorizontal={marginHorizontal} 
+      color={color}
+    >
+      {pageTitle}
+    </Title>
+  ) 
 }
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center"
-  },
-  horizontal: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    padding: 10
-  }
-});

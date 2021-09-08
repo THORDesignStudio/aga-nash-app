@@ -10,7 +10,6 @@ import PageTitle from '../components/global/pageTitle'
 import styled from 'styled-components/native'
 import TextBasic from '../components/global/textBasic'
 
-
 const SectionContainer = styled.View`
   flexDirection: column;
   alignItems: center;
@@ -29,7 +28,6 @@ const ButtonView = styled.View`
   display: flex;
   flexDirection: column;
 `
-
 
 export default function LSM({ navigation }){
   const {setPageId, setFib4} = useContext(ApplicationContext)
@@ -57,7 +55,7 @@ export default function LSM({ navigation }){
 
   const LowRiskText = (
     <ButtonView>
-      <TextBasic fontWeigh='bold' fontColor='white'>
+      <TextBasic fontWeight='bold' fontColor='white'>
         LOW RISK {"\n"} LSM {'<'} 8 kPa
       </TextBasic>
     </ButtonView>
@@ -65,7 +63,7 @@ export default function LSM({ navigation }){
 
   const IndeterminateRiskText = (
     <ButtonView>
-      <TextBasic fontWeigh='bold' fontColor='white'>
+      <TextBasic fontWeight='bold' fontColor='white'>
         INDETERMINATE RISK {"\n"} LSM 8 to 12 kPa
       </TextBasic>
     </ButtonView>
@@ -73,22 +71,29 @@ export default function LSM({ navigation }){
 
   const HighRiskText = (
     <ButtonView>
-      <TextBasic fontWeigh='bold' fontColor='white'>
+      <TextBasic fontWeight='bold' fontColor='white'>
         HIGH RISK {"\n"} LSM {'>'} 12 kPa
       </TextBasic>
     </ButtonView>
   )
 
-  return(
+  return (
     <>
       <PageContainer justifyContent='flex-start'>
         <TitleContainer>
-          <PageTitle pageTitle='Order VCTE (FibroScan®) for liver stiffness measurement (LSM)' />
+          <PageTitle 
+            fontSize="20px"
+            pageTitle={`Order liver stiffness measurement (LSM) \u00B9 \u00B2 \u00B3`} 
+          />
         </TitleContainer>
         <SectionContainer>
-          <TextBasic fontWeight='bold' fontSize={18} >
+          <TextBasic 
+            fontWeight='bold' 
+            fontSize={18} 
+            marginVertical={15}
+          >
             Pick one based on LSM results:
-          </TextBasic >
+          </TextBasic>
             <ButtonContainer>
               <Button
                 buttonText={LowRiskText}

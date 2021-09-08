@@ -10,7 +10,7 @@ import Container from "../components/primitives/container";
 import TextBasic from "../components/global/textBasic";
 
 /**
- * Navigate
+ * <Navigate>
  *
  * This is kind of the like the central nervous system of the entire thing. It helps the user,
  * like the title of the page says, navigate between various areas of the app. Nothing super special going on here.
@@ -67,6 +67,7 @@ export default function Navigate({ navigation }) {
         />
       </GoldenTitle>
       <Container justifyContent="space-evenly">
+        
         <SectionContainer>
           <TextContainer>
             <TextBasic fontSize={20} fontWeight="bold">
@@ -110,6 +111,7 @@ export default function Navigate({ navigation }) {
             />
           </ButtonContainer>
         </SectionContainer>
+
         <SectionContainer>
           <TextContainer>
             <TextBasic fontSize={20} fontWeight="bold">

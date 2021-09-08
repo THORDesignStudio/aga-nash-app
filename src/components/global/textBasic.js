@@ -30,11 +30,11 @@ export default function TextBasic({
   textTransform = 'none',
   width
  }) {
-
+  
   let [fontsLoaded] = useFonts({
-    'NunitoSans-Bold': require('../../assets/fonts/NunitoSans-Bold.ttf'),
+    "NunitoSans-Bold": require('../../assets/fonts/NunitoSans-Bold.ttf'),
     "NunitoSans-Light": require("../../assets/fonts/NunitoSans-Light.ttf"),
-    'NunitoSans-Regular': require('../../assets/fonts/NunitoSans-Regular.ttf'),
+    "NunitoSans-Regular": require('../../assets/fonts/NunitoSans-Regular.ttf'),
   });
 
   if (!fontsLoaded) {
@@ -115,14 +115,14 @@ const styles = StyleSheet.create({
     padding: 10
   },
   text: {
-    fontFamily: 'NunitoSans-Regular',
+    fontFamily: "NunitoSans-Regular",
     fontWeight: "500",
   },
   textBold: {
-    fontFamily: 'NunitoSans-Bold',
+    fontFamily: "NunitoSans-Bold",
     fontWeight: "700",
   },
   textLight: {
-    fontFamily: 'NunitoSans-Light'
+    fontFamily: "NunitoSans-Light"
   },
 });

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import PageTitle from "../components/global/pageTitle";
 import { ApplicationContext } from "../applicationProvider/applicationProvider";
+
+import PageTitle from "../components/global/pageTitle";
 import ScrollableView from "../components/primitives/scrollableContainer";
 import TitleContainer from "../components/global/titleContainer";
 import BackButton from "../components/global/backButton";
@@ -14,11 +15,10 @@ import OtherDiseases from "../components/content/footnotes/otherDiseases";
 import LowRiskMng from '../components/content/footnotes/lowRiskMng'
 import IndeterminateRiskMng from '../components/content/footnotes/indeterminateRiskMng'
 import HighRiskMng from '../components/content/footnotes/highRiskMng'
-import LSM from '../components/content/footnotes/lsm'
-import { useFonts } from "expo-font";
+import LSMFootnotes from '../components/content/footnotes/lsm'
 
 /**
- * Footnotes
+ * <Footnotes>
  *
  * This page is set up to be reusable across the app. It would suck to have to create a new page for every
  * set of footnotes.
@@ -30,11 +30,6 @@ import { useFonts } from "expo-font";
 
 export default function Footnotes({ navigation }) {
   const { pageId } = useContext(ApplicationContext);
-
-  let [fontsLoaded] = useFonts({
-    "NunitoSans-Bold": require("../assets/fonts/NunitoSans-Bold.ttf"),
-    "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
-  });
 
   let content;
 
@@ -61,7 +56,7 @@ export default function Footnotes({ navigation }) {
       content = <IndeterminateRiskMng />
       break;
     case 'LSM':
-      content = <LSM />
+      content = <LSMFootnotes />
     case "ResultHigh":
       content = <HighRiskResult />
       break;
@@ -72,10 +67,12 @@ export default function Footnotes({ navigation }) {
 
   return (
     <>
-      <TitleContainer marginBottom={20}>
+      <TitleContainer marginBottom="20px">
         <PageTitle pageTitle="FOOTNOTES" color='#122033'/>
       </TitleContainer>
-      <ScrollableView>{content}</ScrollableView>
+      <ScrollableView>
+        {content}
+      </ScrollableView>
       <BackButton navigation={navigation} />
       <Footer navigation={navigation} />
     </>

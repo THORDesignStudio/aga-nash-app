@@ -5,17 +5,13 @@ export default function Fib4Footnotes() {
   return (
     <>
       <ContentContainer>
-        { `\u00B9` } Other non-invasive tests (NITs) derived from routine laboratories can
-        be used instead of FIB-4, such as the NAFLD fibrosis score (NFS) and AST
-        to platelet ratio index (APRI).
+        { `\u00B9 or patients 65+, use FIB-4 < 2.0 as the lower cutoff. Higher cutoff does not change. ` } 
       </ContentContainer>
       <ContentContainer>
-        { `\u00B2` } FIB-4, a simple non-proprietary fibrosis score is used to stratify
-        risk: Age ([yr] x AST [U/L]) / ((PLT [10(9)/L]) x (ALT [U/L])(1/2))
+        { `\u00B2 Other NITs derived from routine laboratories can be used instead of FIB-4, such as the NAFLD fibrosis score (NFS) and AST to platelet ratio index (APRI). ` }
       </ContentContainer>
       <ContentContainer>
-        { `\u00B3` } Excessive alcohol intake {'>'} 14 drinks/week for women or {'>'} 21
-        drinks/week for men
+        { `\u00B3 Many online FIB-4 calculators are available such as the MDCalc FIB-4 Index for Liver Fibrosis ` }
       </ContentContainer>
     </>
   );

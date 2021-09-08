@@ -10,12 +10,22 @@
     ],
     "description": "The AGA’s Call-to-Action initiative and mobile app are part of a multidisciplinary effort to align gastroenterologists, hepatologists, endocrinologists, and primary care providers to improve diagnosis and management of NAFLD/NASH.",
     "githubUrl": "https://github.com/THORDesignStudio/aga-nash-app",
+    "icon": "./src/assets/icon.png",
     "ios": {
       "bundleIdentifier": "com.aga.nash"
     },
     "name": "NASH App",  
+    "notification": {
+      "icon": "./src/assets/icon.png",
+      "color": "#122033",
+      "iosDisplayInForeground": true
+    },
     "privacy": "public",
     "slug": "aga-nash-app",
-    "version": "1.2.1"
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "cover"
+    },
+    "version": "1.3.0"
   }
 }
