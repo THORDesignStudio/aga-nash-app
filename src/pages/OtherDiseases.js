@@ -4,7 +4,7 @@ import Footer from "../components/global/footer";
 import NextBack from "../components/global/nextBackButtons";
 import AbbreviationsFootnotes from "../components/global/abbreviationsFootnotes";
 import Radio from "../components/primitives/radio";
-import Container from '../components/primitives/container'
+import ScrollableContainer from '../components/primitives/scrollableContainer'
 import styled from 'styled-components/native'
 import TextBasic from "../components/global/textBasic";
 import {ApplicationContext} from '../applicationProvider/applicationProvider'
@@ -35,79 +35,75 @@ export default function OtherForms({ navigation }) {
 
   return (
     <>
-      <Container 
-        alignItems='flex-start' 
-        justifyContent='flex-start'
-      >
+      <ScrollableContainer alignItems="flex-start" justifyContent="flex-start">
         <TitleContainer>
-        <PageTitle
-          pageTitle="Evaluate for other forms of liver disease:"
-        />
+          <PageTitle pageTitle="Evaluate for other forms of liver disease:" />
         </TitleContainer>
-        <TextBasic 
+        <TextBasic
           fontSize={18}
           marginVertical={5}
           marginHorizontal={20}
-          textAlign='left'
+          textAlign="left"
         >
           {`\u2022 Alcohol intake history (≥ 14 drinks/week for women or ≥ 21 drinks/week for men) `}
         </TextBasic>
-        <TextBasic 
+        <TextBasic
           fontSize={18}
           marginVertical={5}
           marginHorizontal={20}
-          textAlign='left'
+          textAlign="left"
         >
           {`\u2022 Clinical signs of advanced liver disease/cirrhosis `}
         </TextBasic>
         <TextBasic
           fontSize={18}
           marginVertical={5}
-          marginHorizontal={20}   
-          textAlign='left'     
+          marginHorizontal={20}
+          textAlign="left"
         >
           {`\u2022 HCV antibody with reflex testing of HCV RNA `}
         </TextBasic>
         <TextBasic
           fontSize={18}
           marginVertical={5}
-          marginHorizontal={20}   
-          textAlign='left'     
+          marginHorizontal={20}
+          textAlign="left"
         >
           {`\u2022 Consider\u00B9 HBsAg, HBsAb, HBcAb `}
         </TextBasic>
         <TextBasic
           fontSize={18}
           marginVertical={5}
-          marginHorizontal={20}   
-          textAlign='left'     
+          marginHorizontal={20}
+          textAlign="left"
         >
           {`\u2022 Consider ANA, AMA, ASMA, immunoglobulins, ferritin, A1AT  `}
         </TextBasic>
-        <TextBasic 
-          fontSize={18} 
-          fontWeight='bold' 
-          fontColor='#FC1B1F'
+        <TextBasic
+          fontSize={18}
+          fontWeight="bold"
+          fontColor="#FC1B1F"
           marginVertical={25}
-          marginHorizontal={20}  
-          textAlign='left'
+          marginHorizontal={20}
+          textAlign="left"
         >
-          *If there are other forms of liver disease, click on the button below and then hit 'Next'. Otherwise, simply click 'Next'.
+          *If there are other forms of liver disease, click on the button below
+          and then hit 'Next'. Otherwise, simply click 'Next'.
         </TextBasic>
-        <Radio 
-          label='Other forms of liver disease present' 
-          marginHorizontal={20} 
-          onPressSelected={handleNextPresentSelected} 
+        <Radio
+          label="Other forms of liver disease present"
+          marginHorizontal={20}
+          onPressSelected={handleNextPresentSelected}
           onPressUnselected={handleNextPresentUnselected}
         />
-      </Container>
-      <NextBack 
-        navigation={navigation} 
-        marginVertical="0px"
-        paddingVertical="20px"
-        nextPage={nextPage}
-        backgroundColor="#F1F6F8"
-      />
+        <NextBack
+          navigation={navigation}
+          marginVertical="0px"
+          paddingVertical="20px"
+          nextPage={nextPage}
+          backgroundColor="#F1F6F8"
+        />
+      </ScrollableContainer>
       <AbbreviationsFootnotes navigation={navigation} />
       <Footer navigation={navigation} />
     </>

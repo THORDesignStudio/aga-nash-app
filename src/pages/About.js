@@ -47,7 +47,7 @@ export default function About({ navigation }) {
           </ParagraphContainer>
           <ParagraphContainer>
             <TextBasic textAlign='left' fontSize={18} >
-              AGA assembled a multidisciplinary panel of experts to develop the clinical care pathway and app applicable for use in any setting in any setting where care for patients with NAFLD is provided, including primary care, endocrine, obesity medicine and gastroenterology practices.
+              AGA assembled a multidisciplinary panel of experts to develop the clinical care pathway and app applicable for use in any setting where care for patients with NAFLD is provided, including primary care, endocrine, obesity medicine and gastroenterology practices.
             </TextBasic>
           </ParagraphContainer>
           <ParagraphContainer>

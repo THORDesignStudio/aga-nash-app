@@ -34,30 +34,24 @@ export default function HomeScreen({ navigation }) {
             style={styles.background}
           >
             <View style={styles.box}>
-              <TextBasic 
-                fontSize={28}
-                fontWeight="bold"
-                textAlign="center"
-              >
-                NON-ALCOHOLIC FATTY LIVER DISEASE (NASH)
-              </TextBasic>
-              <View style={styles.rule} />
-              <TextBasic 
-                fontColor='#eb9705'
-                fontSize={16}
-                fontWeight="bold"
-                marginHorizontal={ 30 }
-                textAlign="center"              
-              >
-                Clinical Care Pathway for Risk Stratification and Patient Management
+              <TextBasic fontSize={28} fontWeight="bold" textAlign="center">
+                Non-Alcoholic Fatty Liver Disease and NASH
               </TextBasic>
               <View style={styles.rule} />
               <TextBasic
-                fontSize={18}
-                marginHorizontal={ 20 }
-                textAlign="center"                                 
+                fontColor="#eb9705"
+                fontSize={16}
+                fontWeight="bold"
+                marginHorizontal={30}
+                textAlign="center"
               >
-                For use in primary care, endocrine, obesity medicine and gastroenterology practices
+                Clinical Care Pathway for Risk Stratification and Patient
+                Management
+              </TextBasic>
+              <View style={styles.rule} />
+              <TextBasic fontSize={18} marginHorizontal={20} textAlign="center">
+                For use in primary care, endocrine, obesity medicine and
+                gastroenterology practices
               </TextBasic>
             </View>
             <Button
