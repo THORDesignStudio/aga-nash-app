@@ -16,7 +16,9 @@ import { useFonts } from 'expo-font'
  * @param { string } fontColor - way to choose the color of the text. Defaults to black.
  * @param { number } marginHorizontal - space you want on each text unit
  * @param { number } marginVertical - space you want on each text unit
+ * @param { obj } onPress - destination function for an active user selection
  * @param { string } textAlign - align text in the container. Defaults to center.
+ * @param { string } textTransform - change capitalization if you're feeling it.
  */
 
 export default function TextBasic({ 
@@ -26,7 +28,9 @@ export default function TextBasic({
   fontColor,
   marginHorizontal = 0,
   marginVertical = 0,
+  onPress,
   textAlign,
+  textDecoration,
   textTransform = 'none',
   width
  }) {
@@ -55,10 +59,13 @@ export default function TextBasic({
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textDecorationLine: textDecoration,
           textTransform: textTransform,
           width: width
         }
-      ]}>
+      ]}
+        onPress={ onPress }
+      >
         { children }
       </Text>
     );
@@ -74,10 +81,13 @@ export default function TextBasic({
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textDecorationLine: textDecoration,
           textTransform: textTransform,
           width: width
         }
-      ]}>
+      ]}
+        onPress={ onPress }
+      >
         { children }
       </Text>
     );
@@ -93,10 +103,13 @@ export default function TextBasic({
           marginVertical: marginVertical, 
           paddingHorizontal: marginHorizontal, 
           textAlign: textAlign || 'center',
+          textDecorationLine: textDecoration,
           textTransform: textTransform,
           width: width
         }
-      ]}>
+      ]}
+        onPress={ onPress }
+      >
         { children }
       </Text>
     );
