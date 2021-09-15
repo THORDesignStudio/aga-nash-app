@@ -82,7 +82,7 @@ export default function LSM({ navigation }){
       <PageContainer justifyContent='flex-start'>
         <TitleContainer>
           <PageTitle 
-            fontSize="20px"
+            fontSize="24px"
             pageTitle={`Order liver stiffness measurement (LSM) \u00B9 \u00B2 \u00B3`} 
           />
         </TitleContainer>
@@ -133,6 +133,13 @@ export default function LSM({ navigation }){
                 onPress={handleHighRisk}
               />
             </ButtonContainer>
+            <TextBasic
+              marginVertical={15}
+              onPress={handleIndeterminateRisk}
+              textDecoration="underline"
+            >
+              LSM Results Unavailable
+            </TextBasic>
           </SectionContainer>
       </PageContainer>
       <AbbreviationsFootnotes navigation={navigation}/>

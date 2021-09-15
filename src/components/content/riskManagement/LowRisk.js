@@ -73,13 +73,13 @@ export default function LowRiskManagement() {
           marginVertical={5}
           textAlign="left"
         >
-          {`\u2022 Lifestyle intervention: Yes. All patients require regular physical activity, healthy diet, avoid excess alcohol intake`}
+          {`\u2022 Lifestyle intervention: All patients require regular physical activity, healthy diet, avoid excess alcohol intake`}
         </TextBasic>
         <TextBasic 
           marginVertical={5}
           textAlign="left"
         >
-          {`\u2022 Weight loss recommended if overweight or obese\u00B9: Yes. May benefit from structured weight loss programs, anti-obesity medications, bariatric surgery`}
+          {`\u2022 Weight loss recommended if overweight or obese\u00B9: May benefit from structured weight loss programs, anti-obesity medications, bariatric surgery`}
         </TextBasic>
         <TextBasic 
           marginVertical={5}
@@ -91,14 +91,8 @@ export default function LowRiskManagement() {
           marginVertical={5}
           textAlign="left"
         >
-          {`\u2022 CVD risk reduction\u00B2: Yes`}
-        </TextBasic>
-        <TextBasic 
-          marginVertical={5}
-          textAlign="left"
-        >
-          {`\u2022 Diabetes care: Standard of care`}
-        </TextBasic>        
+          {`\u2022 Cardiovascular disease (CVD) risk reduction\u00B2 and diabetes care: Standard of care`}
+        </TextBasic>      
       </MainContent>
       <BottomContent>
         <TextBasic 

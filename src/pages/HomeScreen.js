@@ -35,7 +35,7 @@ export default function HomeScreen({ navigation }) {
           >
             <View style={styles.box}>
               <TextBasic fontSize={28} fontWeight="bold" textAlign="center">
-                Non-Alcoholic Fatty Liver Disease and NASH
+                Non-Alcoholic Fatty Liver Disease (NAFLD) and NASH
               </TextBasic>
               <View style={styles.rule} />
               <TextBasic

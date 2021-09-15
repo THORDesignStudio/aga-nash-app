@@ -30,7 +30,7 @@ export default function Conditions({ navigation }) {
     <>
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         <TitleContainer>
-          <PageTitle pageTitle="Screen for advanced fibrosis related to NAFLD/NASH in patients with any of these conditions:" />
+          <PageTitle pageTitle="Screen for advanced fibrosis related to NAFLD and NASH in patients with any of these conditions:" />
         </TitleContainer>
 
         <View style={styles.conditionsContainer}>
@@ -77,8 +77,7 @@ export default function Conditions({ navigation }) {
             Tap Next to assess risk.
           </TextBasic>
           <TextBasic textAlign="left">
-            Tap Navigate for guidance on management of patients at low,
-            indeterminate and high risk.
+            Tap Navigate for guidance on management of patients at low, indeterminate and high risk.
           </TextBasic>
         </View>
         <NextBack
