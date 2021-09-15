@@ -85,7 +85,7 @@ export default function HighRiskManagement() {
             marginVertical={5}
             textAlign="left"
           >
-            {`\u2022 Pharmacotherapy for NASH: Yes\u00B3. Individualize based on further work-up and efforts to confirm the diagnosis of NASH. A liver biopsy provides helpful information and should be considered for cases where there is a diagnostic doubt such as patients with indeterminate, unreliable, or conflicting non-invasive assessments or as part of phase 2 or 3 clinical trials `}
+            {`\u2022 Pharmacotherapy for NASH\u00B3: Individualize based on further work-up and efforts to confirm the diagnosis of NASH. A liver biopsy provides helpful information and should be considered for cases where there is a diagnostic doubt such as patients with indeterminate, unreliable, or conflicting non-invasive assessments or as part of phase 2 or 3 clinical trials `}
           </TextBasic>
           <TextBasic 
             marginVertical={5}
