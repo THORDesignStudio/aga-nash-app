@@ -27,7 +27,7 @@
       "image": "./src/assets/splash.png",
       "resizeMode": "cover"
     },
-    "sdkVersion": "42.0.4",
+    "sdkVersion": "42.0.0",
     "version": "2.0.0"
   }
 }
