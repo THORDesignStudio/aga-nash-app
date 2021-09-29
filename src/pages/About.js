@@ -57,17 +57,30 @@ export default function About({ navigation }) {
           </ParagraphContainer>
           <ParagraphContainer>
             <TextBasic textAlign='left' fontSize={18} >
-              For more information visit 
+              For more information visit{`\u00a0`}
               <TextBasic fontColor="#69badf">
                 <Text 
                   style={{ fontSize: 16 }}
                   onPress={() => Linking.openURL('https://nash.gastro.org')}>
-                  {`\u00a0`}NASH.gastro.org
+                  NASH.gastro.org
                 </Text>
               </TextBasic>              
-              {`.`}
+              { `.` }
             </TextBasic>
           </ParagraphContainer>
+          <ParagraphContainer>
+            <TextBasic textAlign='left' fontSize={18} >
+              This app does not retain any user information. For a complete review of how your data is used, please see the AGA's privacy policy at:{`\u00a0`}
+              <TextBasic fontColor="#69badf">
+                <Text 
+                  style={{ fontSize: 16 }}
+                  onPress={() => Linking.openURL('https://gastro.org/privacy-policy/')}>
+                  https://gastro.org/privacy-policy/
+                </Text>
+              </TextBasic>              
+              { `.` }
+            </TextBasic>
+          </ParagraphContainer>          
         </TextContainer>
         <BackButton 
           destination="Navigate"
