@@ -3,7 +3,8 @@
   "displayName": "NASH App",
   "expo": {
     "android": {
-      "package": "com.aga.nash"
+      "package": "com.aga.nash",
+      "permissions": []
     },
     "assetBundlePatterns": [
       "**/*"
@@ -17,7 +18,7 @@
     "name": "NASH App",
     "notification": {
       "icon": "./src/assets/icon.png",
-      "color": "#122033",
+      "color": "#FFFFFF",
       "iosDisplayInForeground": true
     },
     "privacy": "public",
