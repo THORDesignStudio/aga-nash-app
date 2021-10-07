@@ -1,0 +1,2 @@
+Apple asks for a unique identifier for the iOS, so I made a uuid (v4):
+6aafd8f6-5c8a-48b2-88fd-4967d7b609f0

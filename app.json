@@ -14,7 +14,7 @@
     "githubUrl": "https://github.com/THORDesignStudio/aga-nash-app",
     "icon": "./src/assets/icon.png",
     "ios": {
-      "bundleIdentifier": "com.aga.nash",
+      "bundleIdentifier": "com.aga.nash-app",
       "buildNumber": "2.0.0"
     },
     "name": "NASH App",
